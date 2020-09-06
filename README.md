@@ -1,4 +1,4 @@
-### Hi there 👋
+[![trophy](https://github-profile-trophy.vercel.app/?username=matt-riley&theme=gruvbox)](https://github.com/ryo-ma/github-profile-trophy)
 
 <!--
 **matt-riley/matt-riley** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
