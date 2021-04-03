@@ -14,10 +14,7 @@ jobs:
           plugin_music_provider: spotify
           plugin_music_mode: recent
           plugin_music_limit: 5
-          plugin_music_played_at: yes
           plugin_music_token: "${{ secrets.SPOTIFY_CLIENT_ID }}, ${{ secrets.SPOTIFY_CLIENT_SECRET }}, ${{ secrets.SPOTIFY_REFRESH_TOKEN }}"
-          filename: metrics-languages.svg
           plugin_languages: yes
-          plugin_languages_threshold: 2%
           plugin_languages_ignored: css
           
