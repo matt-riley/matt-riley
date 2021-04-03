@@ -2,4 +2,4 @@
 
 ![Languages](https://github.com/matt-riley/matt-riley/blob/master/metrics-languages.svg)
 
-![Music]((https://github.com/matt-riley/matt-riley/blob/master/metrics-music.svg)
+![Music](https://github.com/matt-riley/matt-riley/blob/master/metrics-music.svg)
