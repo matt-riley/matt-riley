@@ -1,0 +1,11 @@
+name: "Update SVG"
+description: "Updates the SVG"
+author: "Matt Riley"
+inputs:
+  name:
+    description: "Your or the orgs name"
+    required: true
+    default: "Viktor Vaughan"
+runs:
+  using: "node14"
+  main: "dist/index.js"
