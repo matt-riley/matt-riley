@@ -7,4 +7,22 @@ owner: matt-riley
 # Schema:
 # assignments:
 #   owner/repo: list-id
-assignments: {}
+assignments:
+  Adversis/tailsnitch: golang
+  Xithrius/twitch-tui: cli-tools
+  aperturerobotics/goscript: typescript
+  awesome-opencode/awesome-opencode: awesome-lists
+  block/goose: rust
+  charmbracelet/fantasy: golang
+  danyjacob45/go-concurrency-exercises: golang
+  github/copilot-sdk: typescript
+  github/gh-aw: github-actions
+  lucasgelfond/zerobrew: cli-tools
+  magicalne/nvim.ai: neovim
+  maximhq/bifrost: golang
+  mucansever/widelogger: golang
+  mutablelogic/go-whisper: golang
+  olimorris/codecompanion.nvim: neovim
+  openclaw/openclaw: typescript
+  rapidaai/voice-ai: golang
+  yoanbernabeu/grepai: golang
