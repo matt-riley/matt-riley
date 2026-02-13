@@ -119,18 +119,23 @@ jobs:
           if not recent_starred:
               lines.append("_No repositories starred in the past week._")
           else:
-              for index, item in enumerate(recent_starred, start=1):
+              for i, item in enumerate(recent_starred):
                   repo = item.get("repo", {})
                   full_name = repo.get("full_name", "unknown/unknown")
                   html_url = repo.get("html_url", "")
                   description = text(repo.get("description"))
                   homepage = text(repo.get("homepage"))
+                  homepage_display = f"[{homepage}]({homepage})" if homepage != "n/a" else homepage
 
-                  lines.append(f"### {index}. [{full_name}]({html_url})")
+                  lines.append(f"### [{full_name}]({html_url})")
                   lines.append("")
-                  lines.append(f"- Description: {description}")
-                  lines.append(f"- Homepage: {homepage}")
+                  lines.append(f"> {description}")
                   lines.append("")
+                  lines.append(f"**Homepage:** {homepage_display}")
+                  if i < len(recent_starred) - 1:
+                      lines.append("")
+                      lines.append("---")
+                      lines.append("")
 
           block = f"{START_MARKER}\n" + "\n".join(lines).rstrip() + f"\n{END_MARKER}"
           readme_path = Path("README.md")
