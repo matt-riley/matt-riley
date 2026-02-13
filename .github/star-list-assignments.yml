@@ -1,68 +1,81 @@
----
-# Source of truth for expected star -> list placement.
-# Update this file after you complete manual moves from workflow reports.
-#
-# Schema:
-# assignments:
-#   owner/repo:
-#     - list-id
-#     - another-list-id
 version: 1
 owner: matt-riley
 assignments:
+  3rd/image.nvim:
+  - neovim
+  4TWIGGERS/React-Native-Reflective-UI:
+  - javascript
+  AFK-surf/open-agent:
+  - typescript
   Adversis/tailsnitch:
-    - golang
-    - cli-tools
+  - cli-tools
+  - golang
   ChartGPU/ChartGPU:
-    - typescript
+  - typescript
   ClavixDev/Clavix:
-    - typescript
+  - typescript
+  CodyReichert/awesome-cl:
+  - awesome-lists
+  ContainerSSH/ContainerSSH:
+  - golang
+  CopilotC-Nvim/CopilotChat.nvim:
+  - neovim
+  DaikyXendo/nvim-material-icon:
+  - neovim
+  David-Kunz/markid:
+  - neovim
   Dispatcharr/Dispatcharr:
-    - self-hosting
+  - self-hosting
+  Effect-TS/effect:
+  - typescript
+  Fildo7525/pretty_hover:
+  - neovim
+  GitoxideLabs/gitoxide:
+  - rust
   Lissy93/Brewfile:
-    - mac-apps
-    - ruby
+  - mac-apps
+  - ruby
   Xithrius/twitch-tui:
-    - cli-tools
-    - golang
+  - cli-tools
+  - golang
   aperturerobotics/goscript:
-    - typescript
+  - typescript
   awesome-opencode/awesome-opencode:
-    - awesome-lists
+  - awesome-lists
   block/goose:
-    - rust
+  - rust
   charmbracelet/fantasy:
-    - golang
+  - golang
   danyjacob45/go-concurrency-exercises:
-    - golang
+  - golang
   different-ai/openwork:
-    - typescript
+  - typescript
   enulus/OpenPackage:
-    - typescript
+  - typescript
   github/copilot-sdk:
-    - typescript
+  - typescript
   github/gh-aw:
-    - github-actions
+  - github-actions
   huseyinbabal/taws:
-    - cli-tools
+  - cli-tools
   lucasgelfond/zerobrew:
-    - cli-tools
-    - rust
+  - cli-tools
+  - rust
   magicalne/nvim.ai:
-    - neovim
+  - neovim
   maximhq/bifrost:
-    - golang
+  - golang
   mucansever/widelogger:
-    - golang
+  - golang
   mutablelogic/go-whisper:
-    - golang
+  - golang
   olimorris/codecompanion.nvim:
-    - neovim
+  - neovim
   openclaw/openclaw:
-    - typescript
+  - typescript
   rapidaai/voice-ai:
-    - golang
+  - golang
   tw93/Mole:
-    - mac-apps
+  - mac-apps
   yoanbernabeu/grepai:
-    - golang
+  - golang
