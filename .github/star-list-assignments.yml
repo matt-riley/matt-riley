@@ -7,4 +7,5 @@ owner: matt-riley
 # Schema:
 # assignments:
 #   owner/repo: list-id
-assignments: {}
+assignments:
+  Xithrius/twitch-tui: cli-tools
