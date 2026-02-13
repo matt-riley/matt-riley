@@ -1,12 +1,5 @@
 version: 1
 owner: matt-riley
-
-# Source of truth for expected star -> list placement.
-# Update this file after you complete manual moves from workflow reports.
-#
-# Schema:
-# assignments:
-#   owner/repo: list-id
 assignments:
   Adversis/tailsnitch: golang
   ChartGPU/ChartGPU: typescript
