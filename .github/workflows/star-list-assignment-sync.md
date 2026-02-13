@@ -6,10 +6,6 @@ description: |
 on:
   schedule:
     - cron: "0 3 * * *"
-  issues:
-    types: [edited, reopened]
-  issue_comment:
-    types: [created, edited]
   workflow_dispatch:
 
 permissions:
@@ -44,9 +40,7 @@ Find the star-list tracking issue, apply checked checklist commands to `.github/
 
 ## Instructions
 
-1. Resolve the star-list tracking issue:
-   - for `issues` and `issue_comment` events, start from the triggering issue
-   - for `workflow_dispatch`, find the open issue titled `[star-list-maintainer] Star list maintenance actions` (prefer one with label `star-list-maintainer`)
+1. Resolve the star-list tracking issue by finding the open issue titled `[star-list-maintainer] Star list maintenance actions` (prefer one with label `star-list-maintainer`).
    If no matching issue is found, no-op.
 2. Read the resolved issue body plus `.github/star-lists.yml` and `.github/star-list-assignments.yml`.
 3. Parse only checked markdown task lines from the issue body (`- [x]` or `- [X]`) that match exactly:
