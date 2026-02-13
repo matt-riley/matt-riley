@@ -38,7 +38,7 @@ Produce reliable star-list maintenance recommendations from repository state fil
 
 ## Instructions
 
-1. Read `.github/workflows/star-lists.yml` (list catalog) and `.github/workflows/star-list-assignments.yml` (expected repo-to-list mapping).
+1. Read `.github/star-lists.yml` (list catalog) and `.github/star-list-assignments.yml` (expected repo-to-list mapping).
 2. Read currently starred repositories for the authenticated user.
 3. Infer the best list for each starred repo using list names/descriptions and repository metadata (name, description, topics, language, README summary if needed).
 4. Compare inferred placement with `star-list-assignments.yml` and produce actionable diffs:
