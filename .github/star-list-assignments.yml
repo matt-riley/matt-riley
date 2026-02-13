@@ -1,11 +1,30 @@
 version: 1
 owner: matt-riley
-
-# Source of truth for expected star -> list placement.
-# Update this file after you complete manual moves from workflow reports.
-#
-# Schema:
-# assignments:
-#   owner/repo: list-id
 assignments:
+  Adversis/tailsnitch: golang
+  ChartGPU/ChartGPU: typescript
+  ClavixDev/Clavix: typescript
+  Dispatcharr/Dispatcharr: self-hosting
+  Lissy93/Brewfile: mac-apps
+  Xithrius/twitch-tui: cli-tools
+  aperturerobotics/goscript: typescript
+  awesome-opencode/awesome-opencode: awesome-lists
+  block/goose: rust
+  charmbracelet/fantasy: golang
+  danyjacob45/go-concurrency-exercises: golang
+  different-ai/openwork: typescript
+  enulus/OpenPackage: typescript
+  github/copilot-sdk: typescript
+  github/gh-aw: github-actions
+  huseyinbabal/taws: cli-tools
+  lucasgelfond/zerobrew: cli-tools
+  magicalne/nvim.ai: neovim
+  maximhq/bifrost: golang
+  mucansever/widelogger: golang
+  mutablelogic/go-whisper: golang
+  olimorris/codecompanion.nvim: neovim
+  openclaw/openclaw: typescript
+  rapidaai/voice-ai: golang
+  tw93/Mole: mac-apps
+  yoanbernabeu/grepai: golang
   Xithrius/twitch-tui: cli-tools
