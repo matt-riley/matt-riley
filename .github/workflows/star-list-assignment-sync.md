@@ -51,15 +51,17 @@ Find the star-list tracking issue, apply checked checklist commands to `.github/
 2. Read the resolved issue body plus `.github/star-lists.yml` and `.github/star-list-assignments.yml`.
 3. Parse only checked markdown task lines from the issue body (`- [x]` or `- [X]`) that match exactly:
    - `ASSIGN owner/repo -> list-id`
-   - `REMOVE owner/repo`
+   - `REMOVE owner/repo -> list-id`
 4. Validate commands:
    - `owner/repo` must be valid `owner/name` format
-   - `list-id` in `ASSIGN` must exist in `.github/star-lists.yml`
+   - `list-id` in `ASSIGN` and `REMOVE` must exist in `.github/star-lists.yml`
    Ignore invalid commands and include them in the workflow summary.
 5. Apply valid commands idempotently:
-   - `ASSIGN` sets or updates `assignments[owner/repo] = list-id`
-   - `REMOVE` deletes `assignments[owner/repo]`
-6. Write `.github/star-list-assignments.yml` with assignment keys sorted alphabetically.
+   - normalize any legacy scalar assignment values to single-item lists before applying commands
+   - `ASSIGN` ensures `list-id` is present in `assignments[owner/repo]` (a list of list-ids)
+   - `REMOVE` removes only that `list-id` from `assignments[owner/repo]`
+   - if a repo has no list-ids left, remove that repo key entirely
+6. Write `.github/star-list-assignments.yml` with assignment keys sorted alphabetically and each repo list sorted alphabetically.
 7. Remove all checked checklist command lines (`- [x]`/`- [X]`) from the issue body so processed items are no longer mentioned in the issue.
 8. If the issue body changed, update the tracking issue body using `update-issue` with replace semantics.
 9. If file changes, create one draft pull request that includes:

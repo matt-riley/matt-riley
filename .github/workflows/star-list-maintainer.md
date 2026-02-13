@@ -39,12 +39,13 @@ Produce reliable star-list maintenance recommendations from repository state fil
 
 ## Instructions
 
-1. Read `.github/star-lists.yml` (list catalog) and `.github/star-list-assignments.yml` (expected repo-to-list mapping).
+1. Read `.github/star-lists.yml` (list catalog) and `.github/star-list-assignments.yml` (expected repo-to-lists mapping).
 2. Read currently starred repositories for the authenticated user.
-3. Infer the best list for each starred repo using list names/descriptions and repository metadata (name, description, topics, language, README summary if needed).
+3. Infer one or more best-fit lists for each starred repo using list names/descriptions and repository metadata (name, description, topics, language, README summary if needed).
 4. Compare inferred placement with `star-list-assignments.yml` and produce actionable diffs:
    - new starred repos without assignments
-   - reassignment recommendations where best list differs
+   - missing list memberships where a repo should be in additional lists
+   - removal recommendations where a repo is assigned to a list that no longer fits
    - stale assignments for repos that are no longer starred
    - repos with no clear fit (include top candidates and why)
 5. Never attempt to mutate GitHub Star Lists directly. This workflow is recommendation-only.
@@ -54,12 +55,13 @@ Produce reliable star-list maintenance recommendations from repository state fil
    - if found, add one comment with the current run report
    - if not found, create that issue with the full report
 8. In every actionable report, include an `## Action checklist` section using strict checkbox command lines:
-   - `- [ ] ASSIGN owner/repo -> list-id` for add/move recommendations
-   - `- [ ] REMOVE owner/repo` for stale assignment removals
+   - `- [ ] ASSIGN owner/repo -> list-id` to ensure membership in a specific list
+   - `- [ ] REMOVE owner/repo -> list-id` to remove membership from a specific list
 9. Also include:
    - confidence/reasoning for each recommendation
    - optional notes section for repos with no clear fit
-10. Keep command lines machine-parseable and unique per action (no duplicate command entries).
+10. A repo may appear in multiple checklist commands when it belongs in multiple lists; keep one command per repo/list pair.
+11. Keep command lines machine-parseable and unique per action (no duplicate command entries).
 
 ## Notes
 
