@@ -1,0 +1,32 @@
+﻿2026-02-13T12:37:59.9933569Z ##[group]Run # Fix permissions on firewall logs so they can be uploaded as artifacts
+2026-02-13T12:37:59.9934012Z [36;1m# Fix permissions on firewall logs so they can be uploaded as artifacts[0m
+2026-02-13T12:37:59.9934166Z [36;1m# AWF runs with sudo, creating files owned by root[0m
+2026-02-13T12:37:59.9934379Z [36;1msudo chmod -R a+r /tmp/gh-aw/sandbox/firewall/logs 2>/dev/null || true[0m
+2026-02-13T12:37:59.9934541Z [36;1mawf logs summary | tee -a "$GITHUB_STEP_SUMMARY"[0m
+2026-02-13T12:37:59.9981737Z shell: /usr/bin/bash -e {0}
+2026-02-13T12:37:59.9981826Z env:
+2026-02-13T12:37:59.9981922Z   DEFAULT_BRANCH: master
+2026-02-13T12:37:59.9982025Z   GH_AW_ASSETS_ALLOWED_EXTS: 
+2026-02-13T12:37:59.9982111Z   GH_AW_ASSETS_BRANCH: 
+2026-02-13T12:37:59.9982206Z   GH_AW_ASSETS_MAX_SIZE_KB: 0
+2026-02-13T12:37:59.9982365Z   GH_AW_MCP_LOG_DIR: /tmp/gh-aw/mcp-logs/safeoutputs
+2026-02-13T12:37:59.9982526Z   GH_AW_SAFE_OUTPUTS: /opt/gh-aw/safeoutputs/outputs.jsonl
+2026-02-13T12:37:59.9982721Z   GH_AW_SAFE_OUTPUTS_CONFIG_PATH: /opt/gh-aw/safeoutputs/config.json
+2026-02-13T12:37:59.9982914Z   GH_AW_SAFE_OUTPUTS_TOOLS_PATH: /opt/gh-aw/safeoutputs/tools.json
+2026-02-13T12:37:59.9983044Z   GH_AW_AGENT_OUTPUT: /tmp/gh-aw/agent_output.json
+2026-02-13T12:37:59.9983162Z   AWF_LOGS_DIR: /tmp/gh-aw/sandbox/firewall/logs
+2026-02-13T12:37:59.9983253Z ##[endgroup]
+2026-02-13T12:38:00.1282662Z <details>
+2026-02-13T12:38:00.1282897Z <summary>Firewall Activity</summary>
+2026-02-13T12:38:00.1282906Z 
+2026-02-13T12:38:00.1283392Z ▼ 7 requests | 5 allowed | 2 blocked | 4 unique domains
+2026-02-13T12:38:00.1283401Z 
+2026-02-13T12:38:00.1283519Z | Domain | Allowed | Denied |
+2026-02-13T12:38:00.1283632Z |--------|---------|--------|
+2026-02-13T12:38:00.1284007Z | api.individual.githubcopilot.com | 3 | 0 |
+2026-02-13T12:38:00.1284230Z | telemetry.individual.githubcopilot.com | 0 | 2 |
+2026-02-13T12:38:00.1284356Z | api.github.com | 1 | 0 |
+2026-02-13T12:38:00.1284479Z | api.githubcopilot.com | 1 | 0 |
+2026-02-13T12:38:00.1284486Z 
+2026-02-13T12:38:00.1284604Z </details>
+2026-02-13T12:38:00.1284611Z 

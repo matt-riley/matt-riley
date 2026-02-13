@@ -1,0 +1,125 @@
+{
+  "summary": {
+    "total_runs": 1,
+    "total_duration": "3.0m",
+    "total_tokens": 53659,
+    "total_cost": 0,
+    "total_turns": 0,
+    "total_errors": 0,
+    "total_warnings": 0,
+    "total_missing_tools": 1,
+    "total_missing_data": 0
+  },
+  "runs": [
+    {
+      "database_id": 21986494867,
+      "number": 2,
+      "workflow_name": "Star List Maintainer",
+      "workflow_path": "",
+      "agent": "copilot",
+      "status": "completed",
+      "conclusion": "success",
+      "duration": "3.0m",
+      "token_usage": 53659,
+      "error_count": 0,
+      "warning_count": 0,
+      "missing_tool_count": 1,
+      "missing_data_count": 0,
+      "created_at": "2026-02-13T12:15:50Z",
+      "started_at": "2026-02-13T12:36:16Z",
+      "updated_at": "2026-02-13T12:39:19Z",
+      "url": "https://github.com/matt-riley/matt-riley/actions/runs/21986494867",
+      "logs_path": ".github/aw/logs-latest-check/run-21986494867",
+      "event": "workflow_dispatch",
+      "branch": "master"
+    }
+  ],
+  "missing_tools": [
+    {
+      "tool": "GitHub Star Lists API and authenticated GitHub access",
+      "count": 1,
+      "workflows": [
+        "Star List Maintainer"
+      ],
+      "first_reason": "Cannot access GitHub API for starred repositories or star lists. GitHub token lacks required permissions (403 errors), and no star list read/move APIs are available in the toolset.",
+      "run_ids": [
+        21986494867
+      ]
+    }
+  ],
+  "firewall_log": {
+    "total_requests": 12,
+    "allowed_requests": 5,
+    "blocked_requests": 7,
+    "allowed_domains": [
+      "api.github.com:443",
+      "api.githubcopilot.com:443",
+      "api.individual.githubcopilot.com:443"
+    ],
+    "blocked_domains": [
+      "-",
+      "telemetry.individual.githubcopilot.com:443"
+    ],
+    "requests_by_domain": {
+      "-": {
+        "allowed": 0,
+        "blocked": 5
+      },
+      "api.github.com:443": {
+        "allowed": 1,
+        "blocked": 0
+      },
+      "api.githubcopilot.com:443": {
+        "allowed": 1,
+        "blocked": 0
+      },
+      "api.individual.githubcopilot.com:443": {
+        "allowed": 3,
+        "blocked": 0
+      },
+      "telemetry.individual.githubcopilot.com:443": {
+        "allowed": 0,
+        "blocked": 2
+      }
+    },
+    "by_workflow": {
+      "Star List Maintainer": {
+        "allowed_domains": [
+          "api.github.com:443",
+          "api.githubcopilot.com:443",
+          "api.individual.githubcopilot.com:443"
+        ],
+        "blocked_domains": [
+          "-",
+          "telemetry.individual.githubcopilot.com:443"
+        ],
+        "total_requests": 12,
+        "allowed_requests": 5,
+        "blocked_requests": 7,
+        "requests_by_domain": {
+          "-": {
+            "allowed": 0,
+            "blocked": 5
+          },
+          "api.github.com:443": {
+            "allowed": 1,
+            "blocked": 0
+          },
+          "api.githubcopilot.com:443": {
+            "allowed": 1,
+            "blocked": 0
+          },
+          "api.individual.githubcopilot.com:443": {
+            "allowed": 3,
+            "blocked": 0
+          },
+          "telemetry.individual.githubcopilot.com:443": {
+            "allowed": 0,
+            "blocked": 2
+          }
+        }
+      }
+    }
+  },
+  "logs_location": "/home/mattriley/Documents/projects/personal/matt-riley/.github/aw/logs-latest-check"
+}

@@ -1,0 +1,11 @@
+﻿2026-02-13T12:38:56.5433312Z ##[group]Run mkdir -p /tmp/gh-aw/safeoutputs/
+2026-02-13T12:38:56.5434095Z [36;1mmkdir -p /tmp/gh-aw/safeoutputs/[0m
+2026-02-13T12:38:56.5434753Z [36;1mfind "/tmp/gh-aw/safeoutputs/" -type f -print[0m
+2026-02-13T12:38:56.5435766Z [36;1mecho "GH_AW_AGENT_OUTPUT=/tmp/gh-aw/safeoutputs/agent_output.json" >> "$GITHUB_ENV"[0m
+2026-02-13T12:38:56.5443592Z shell: /usr/bin/bash -e {0}
+2026-02-13T12:38:56.5444104Z env:
+2026-02-13T12:38:56.5444493Z   GH_AW_ENGINE_ID: copilot
+2026-02-13T12:38:56.5444998Z   GH_AW_WORKFLOW_ID: star-list-maintainer
+2026-02-13T12:38:56.5445576Z   GH_AW_WORKFLOW_NAME: Star List Maintainer
+2026-02-13T12:38:56.5446121Z ##[endgroup]
+2026-02-13T12:38:56.5533418Z /tmp/gh-aw/safeoutputs/agent_output.json

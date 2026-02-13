@@ -1,0 +1,7 @@
+﻿2026-02-13T12:38:21.2982527Z ##[group]Run echo "Agent output-types: $AGENT_OUTPUT_TYPES"
+2026-02-13T12:38:21.2982987Z [36;1mecho "Agent output-types: $AGENT_OUTPUT_TYPES"[0m
+2026-02-13T12:38:21.3034486Z shell: /usr/bin/bash -e {0}
+2026-02-13T12:38:21.3034782Z env:
+2026-02-13T12:38:21.3034984Z   AGENT_OUTPUT_TYPES: missing_tool
+2026-02-13T12:38:21.3035249Z ##[endgroup]
+2026-02-13T12:38:21.3101235Z Agent output-types: missing_tool

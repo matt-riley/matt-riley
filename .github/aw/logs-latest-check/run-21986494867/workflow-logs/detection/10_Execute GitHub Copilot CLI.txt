@@ -1,0 +1,36 @@
+﻿2026-02-13T12:38:25.5385831Z ##[group]Run set -o pipefail
+2026-02-13T12:38:25.5386154Z [36;1mset -o pipefail[0m
+2026-02-13T12:38:25.5386503Z [36;1mCOPILOT_CLI_INSTRUCTION="$(cat /tmp/gh-aw/aw-prompts/prompt.txt)"[0m
+2026-02-13T12:38:25.5387080Z [36;1mmkdir -p /tmp/[0m
+2026-02-13T12:38:25.5387318Z [36;1mmkdir -p /tmp/gh-aw/[0m
+2026-02-13T12:38:25.5387569Z [36;1mmkdir -p /tmp/gh-aw/agent/[0m
+2026-02-13T12:38:25.5387865Z [36;1mmkdir -p /tmp/gh-aw/sandbox/agent/logs/[0m
+2026-02-13T12:38:25.5392381Z [36;1mcopilot --add-dir /tmp/ --add-dir /tmp/gh-aw/ --add-dir /tmp/gh-aw/agent/ --log-level all --log-dir /tmp/gh-aw/sandbox/agent/logs/ --disable-builtin-mcps --allow-tool 'shell(cat)' --allow-tool 'shell(grep)' --allow-tool 'shell(head)' --allow-tool 'shell(jq)' --allow-tool 'shell(ls)' --allow-tool 'shell(tail)' --allow-tool 'shell(wc)' --share /tmp/gh-aw/sandbox/agent/logs/conversation.md --prompt "$COPILOT_CLI_INSTRUCTION"${GH_AW_MODEL_DETECTION_COPILOT:+ --model "$GH_AW_MODEL_DETECTION_COPILOT"} 2>&1 | tee /tmp/gh-aw/threat-detection/detection.log[0m
+2026-02-13T12:38:25.5444048Z shell: /usr/bin/bash -e {0}
+2026-02-13T12:38:25.5444303Z env:
+2026-02-13T12:38:25.5444538Z   GH_AW_PROMPT: /tmp/gh-aw/aw-prompts/prompt.txt
+2026-02-13T12:38:25.5444875Z   COPILOT_AGENT_RUNNER_TYPE: STANDALONE
+2026-02-13T12:38:25.5445603Z   COPILOT_GITHUB_TOKEN: ***
+2026-02-13T12:38:25.5445858Z   GH_AW_MODEL_DETECTION_COPILOT: 
+2026-02-13T12:38:25.5446103Z   GITHUB_HEAD_REF: 
+2026-02-13T12:38:25.5446306Z   GITHUB_REF_NAME: master
+2026-02-13T12:38:25.5446528Z   GITHUB_STEP_SUMMARY: 
+2026-02-13T12:38:25.5446812Z   GITHUB_WORKSPACE: /home/runner/work/matt-riley/matt-riley
+2026-02-13T12:38:25.5447143Z   XDG_CONFIG_HOME: /home/runner
+2026-02-13T12:38:25.5447375Z ##[endgroup]
+2026-02-13T12:38:33.0646317Z ● Read /tmp/gh-aw/threat-detection/aw-prompts/prompt.txt
+2026-02-13T12:38:33.0646781Z   └ 83 lines read
+2026-02-13T12:38:33.0646915Z 
+2026-02-13T12:38:33.0701157Z ● Read /tmp/gh-aw/threat-detection/agent_output.json
+2026-02-13T12:38:33.0701898Z   └ 1 line read
+2026-02-13T12:38:33.0702179Z 
+2026-02-13T12:38:35.4018284Z THREAT_DETECTION_RESULT:{"prompt_injection":false,"secret_leak":false,"malicious_patch":false,"reasons":[]}
+2026-02-13T12:38:35.4019441Z 
+2026-02-13T12:38:35.4080506Z 
+2026-02-13T12:38:35.4080853Z Total usage est:        1 Premium request
+2026-02-13T12:38:35.4081527Z API time spent:         6s
+2026-02-13T12:38:35.4082046Z Total session time:     8s
+2026-02-13T12:38:35.4082400Z Total code changes:     +0 -0
+2026-02-13T12:38:35.4082924Z Breakdown by AI model:
+2026-02-13T12:38:35.4083766Z  claude-sonnet-4.5       27.5k in, 272 out, 11.9k cached (Est. 1 Premium request)
+2026-02-13T12:38:35.4150365Z Session exported to: /tmp/gh-aw/sandbox/agent/logs/conversation.md

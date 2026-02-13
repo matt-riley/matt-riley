@@ -1,0 +1,52 @@
+﻿2026-02-13T12:38:56.5684703Z ##[group]Run actions/github-script@ed597411d8f924073f98dfc5c65a23a2325f34cd
+2026-02-13T12:38:56.5685570Z with:
+2026-02-13T12:38:56.5686260Z   github-token: ***
+2026-02-13T12:38:56.5687708Z   script: const { setupGlobals } = require('/opt/gh-aw/actions/setup_globals.cjs');
+setupGlobals(core, github, context, exec, io);
+const { main } = require('/opt/gh-aw/actions/safe_output_handler_manager.cjs');
+await main();
+
+2026-02-13T12:38:56.5689256Z   debug: false
+2026-02-13T12:38:56.5689685Z   user-agent: actions/github-script
+2026-02-13T12:38:56.5690529Z   result-encoding: json
+2026-02-13T12:38:56.5691002Z   retries: 0
+2026-02-13T12:38:56.5691454Z   retry-exempt-status-codes: 400,401,403,404,422
+2026-02-13T12:38:56.5691997Z env:
+2026-02-13T12:38:56.5692377Z   GH_AW_ENGINE_ID: copilot
+2026-02-13T12:38:56.5692862Z   GH_AW_WORKFLOW_ID: star-list-maintainer
+2026-02-13T12:38:56.5693458Z   GH_AW_WORKFLOW_NAME: Star List Maintainer
+2026-02-13T12:38:56.5694119Z   GH_AW_AGENT_OUTPUT: /tmp/gh-aw/safeoutputs/agent_output.json
+2026-02-13T12:38:56.5695355Z   GH_AW_SAFE_OUTPUTS_HANDLER_CONFIG: {"create_issue":{"max":10,"title_prefix":"[star-list-maintainer] "},"missing_data":{},"missing_tool":{}}
+2026-02-13T12:38:56.5696431Z ##[endgroup]
+2026-02-13T12:38:56.8955898Z Safe Output Handler Manager starting...
+2026-02-13T12:38:56.8963319Z Loaded config from GH_AW_SAFE_OUTPUTS_HANDLER_CONFIG: {"create_issue":{"max":10,"title_prefix":"[star-list-maintainer] "},"missing_data":{},"missing_tool":{}}
+2026-02-13T12:38:56.8973999Z Agent output content length: 441
+2026-02-13T12:38:56.8977238Z Found 1 message(s) in agent output
+2026-02-13T12:38:56.8982666Z Loading and initializing safe output handlers based on configuration...
+2026-02-13T12:38:56.8988718Z Default target repo: matt-riley/matt-riley
+2026-02-13T12:38:56.8992174Z Title prefix: [star-list-maintainer] 
+2026-02-13T12:38:56.8995415Z Max count: 10
+2026-02-13T12:38:56.9000615Z ✓ Loaded and initialized handler for: create_issue
+2026-02-13T12:38:56.9054240Z Max count: unlimited
+2026-02-13T12:38:56.9055997Z ✓ Loaded and initialized handler for: missing_tool
+2026-02-13T12:38:56.9062500Z Max count: unlimited
+2026-02-13T12:38:56.9064063Z ✓ Loaded and initialized handler for: missing_data
+2026-02-13T12:38:56.9070096Z Loaded 3 handler(s)
+2026-02-13T12:38:56.9076118Z Collected 1 missing tool(s), 0 missing data item(s), and 0 noop message(s)
+2026-02-13T12:38:56.9077948Z Processing 1 message(s) in order of appearance...
+2026-02-13T12:38:56.9079422Z Processing message 1/1: missing_tool
+2026-02-13T12:38:56.9308949Z ✓ Recorded missing tool: GitHub Star Lists API and authenticated GitHub access
+2026-02-13T12:38:56.9312712Z    Reason: Cannot access GitHub API for starred repositories or star lists. GitHub token lacks required permissions (403 errors), and no star list read/move APIs are available in the toolset.
+2026-02-13T12:38:56.9315380Z    Alternatives: Manual maintenance via GitHub web UI, or workflow needs enhanced GitHub token permissions and star list management tools.
+2026-02-13T12:38:56.9317644Z ✓ Message 1 (missing_tool) completed successfully
+2026-02-13T12:38:56.9320054Z Stored 1 missing tool(s), 0 missing data item(s), and 0 noop message(s) for footer generation
+2026-02-13T12:38:56.9359675Z 📝 Safe output summaries written to step summary
+2026-02-13T12:38:56.9361877Z 
+2026-02-13T12:38:56.9362268Z === Processing Summary ===
+2026-02-13T12:38:56.9363649Z Total messages: 1
+2026-02-13T12:38:56.9364857Z Successful: 1
+2026-02-13T12:38:56.9366066Z Failed: 0
+2026-02-13T12:38:56.9367349Z Temporary IDs registered: 0
+2026-02-13T12:38:56.9368603Z Synthetic updates: 0
+2026-02-13T12:38:56.9375664Z Exported temporary ID map with 0 mapping(s)
+2026-02-13T12:38:56.9380044Z Safe Output Handler Manager completed

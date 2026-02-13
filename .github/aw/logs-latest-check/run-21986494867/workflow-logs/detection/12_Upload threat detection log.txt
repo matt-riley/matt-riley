@@ -1,0 +1,22 @@
+﻿2026-02-13T12:38:35.5573288Z ##[group]Run actions/upload-artifact@b7c566a772e6b6bfb58ed0dc250532a479d7789f
+2026-02-13T12:38:35.5573709Z with:
+2026-02-13T12:38:35.5573906Z   name: threat-detection.log
+2026-02-13T12:38:35.5574199Z   path: /tmp/gh-aw/threat-detection/detection.log
+2026-02-13T12:38:35.5574508Z   if-no-files-found: ignore
+2026-02-13T12:38:35.5574744Z   compression-level: 6
+2026-02-13T12:38:35.5575138Z   overwrite: false
+2026-02-13T12:38:35.5575348Z   include-hidden-files: false
+2026-02-13T12:38:35.5575580Z env:
+2026-02-13T12:38:35.5575798Z   GH_AW_PROMPT: /tmp/gh-aw/aw-prompts/prompt.txt
+2026-02-13T12:38:35.5576084Z ##[endgroup]
+2026-02-13T12:38:35.7115394Z With the provided path, there will be 1 file uploaded
+2026-02-13T12:38:35.7122287Z Artifact name is valid!
+2026-02-13T12:38:35.7123078Z Root directory input is valid!
+2026-02-13T12:38:35.9750949Z Beginning upload of artifact content to blob storage
+2026-02-13T12:38:36.2711424Z Uploaded bytes 496
+2026-02-13T12:38:36.3489437Z Finished uploading artifact content to blob storage!
+2026-02-13T12:38:36.3490614Z SHA256 digest of uploaded artifact zip is 99a9d11ea6c4c6023cc022f36d07b2c6579d093f4892be4fe6e9b9fabd5be62b
+2026-02-13T12:38:36.3492351Z Finalizing artifact upload
+2026-02-13T12:38:36.6349997Z Artifact threat-detection.log.zip successfully finalized. Artifact ID 5499058447
+2026-02-13T12:38:36.6351503Z Artifact threat-detection.log has been successfully uploaded! Final size is 496 bytes. Artifact ID is 5499058447
+2026-02-13T12:38:36.6355298Z Artifact download URL: https://github.com/matt-riley/matt-riley/actions/runs/21986494867/artifacts/5499058447

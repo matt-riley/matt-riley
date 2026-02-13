@@ -1,0 +1,31 @@
+﻿2026-02-13T12:39:16.7147136Z ##[group]Run actions/github-script@ed597411d8f924073f98dfc5c65a23a2325f34cd
+2026-02-13T12:39:16.7148574Z with:
+2026-02-13T12:39:16.7149637Z   github-token: ***
+2026-02-13T12:39:16.7152646Z   script: const { setupGlobals } = require('/opt/gh-aw/actions/setup_globals.cjs');
+setupGlobals(core, github, context, exec, io);
+const { main } = require('/opt/gh-aw/actions/handle_agent_failure.cjs');
+await main();
+
+2026-02-13T12:39:16.7155577Z   debug: false
+2026-02-13T12:39:16.7156352Z   user-agent: actions/github-script
+2026-02-13T12:39:16.7157303Z   result-encoding: json
+2026-02-13T12:39:16.7158317Z   retries: 0
+2026-02-13T12:39:16.7159863Z   retry-exempt-status-codes: 400,401,403,404,422
+2026-02-13T12:39:16.7160931Z env:
+2026-02-13T12:39:16.7162112Z   GH_AW_AGENT_OUTPUT: /tmp/gh-aw/safeoutputs/agent_output.json
+2026-02-13T12:39:16.7163385Z   GH_AW_WORKFLOW_NAME: Star List Maintainer
+2026-02-13T12:39:16.7170727Z   GH_AW_RUN_URL: https://github.com/matt-riley/matt-riley/actions/runs/21986494867
+2026-02-13T12:39:16.7173051Z   GH_AW_AGENT_CONCLUSION: success
+2026-02-13T12:39:16.7174046Z   GH_AW_WORKFLOW_ID: star-list-maintainer
+2026-02-13T12:39:16.7175717Z   GH_AW_SECRET_VERIFICATION_RESULT: success
+2026-02-13T12:39:16.7176784Z   GH_AW_CHECKOUT_PR_SUCCESS: true
+2026-02-13T12:39:16.7177677Z ##[endgroup]
+2026-02-13T12:39:16.8623906Z Agent conclusion: success
+2026-02-13T12:39:16.8652048Z Workflow name: Star List Maintainer
+2026-02-13T12:39:16.8680896Z Workflow ID: star-list-maintainer
+2026-02-13T12:39:16.8691996Z Secret verification result: success
+2026-02-13T12:39:16.8759359Z Assignment error count: 0
+2026-02-13T12:39:16.8760601Z Create discussion error count: 0
+2026-02-13T12:39:16.8761822Z Checkout PR success: true
+2026-02-13T12:39:16.8780761Z Agent output content length: 441
+2026-02-13T12:39:16.8793445Z Agent job did not fail and no assignment/discussion errors and has safe outputs (conclusion: success), skipping failure handling

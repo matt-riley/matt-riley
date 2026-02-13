@@ -1,0 +1,16 @@
+● Read /tmp/gh-aw/threat-detection/aw-prompts/prompt.txt
+  └ 83 lines read
+
+● Read /tmp/gh-aw/threat-detection/agent_output.json
+  └ 1 line read
+
+THREAT_DETECTION_RESULT:{"prompt_injection":false,"secret_leak":false,"malicious_patch":false,"reasons":[]}
+
+
+Total usage est:        1 Premium request
+API time spent:         6s
+Total session time:     8s
+Total code changes:     +0 -0
+Breakdown by AI model:
+ claude-sonnet-4.5       27.5k in, 272 out, 11.9k cached (Est. 1 Premium request)
+Session exported to: /tmp/gh-aw/sandbox/agent/logs/conversation.md

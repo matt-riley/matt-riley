@@ -1,0 +1,22 @@
+﻿2026-02-13T12:36:35.7867530Z ##[group]Run actions/github-script@ed597411d8f924073f98dfc5c65a23a2325f34cd
+2026-02-13T12:36:35.7868438Z with:
+2026-02-13T12:36:35.7870228Z   script: const { setupGlobals } = require('/opt/gh-aw/actions/setup_globals.cjs');
+setupGlobals(core, github, context, exec, io);
+const { main } = require('/opt/gh-aw/actions/check_workflow_timestamp_api.cjs');
+await main();
+
+2026-02-13T12:36:35.7872175Z   github-token: ***
+2026-02-13T12:36:35.7872643Z   debug: false
+2026-02-13T12:36:35.7873104Z   user-agent: actions/github-script
+2026-02-13T12:36:35.7873665Z   result-encoding: json
+2026-02-13T12:36:35.7874119Z   retries: 0
+2026-02-13T12:36:35.7874594Z   retry-exempt-status-codes: 400,401,403,404,422
+2026-02-13T12:36:35.7875180Z env:
+2026-02-13T12:36:35.7875676Z   GH_AW_WORKFLOW_FILE: star-list-maintainer.lock.yml
+2026-02-13T12:36:35.7876301Z ##[endgroup]
+2026-02-13T12:36:36.0778030Z Checking workflow timestamps using GitHub API:
+2026-02-13T12:36:36.0782511Z   Source: .github/workflows/star-list-maintainer.md
+2026-02-13T12:36:36.0784296Z   Lock file: .github/workflows/star-list-maintainer.lock.yml
+2026-02-13T12:36:36.5419913Z   Source last commit: 2026-02-13T11:50:54.000Z (3ca1b00)
+2026-02-13T12:36:36.5422349Z   Lock last commit: 2026-02-13T11:50:54.000Z (3ca1b00)
+2026-02-13T12:36:36.5424706Z ✅ Lock file is up to date (same commit)

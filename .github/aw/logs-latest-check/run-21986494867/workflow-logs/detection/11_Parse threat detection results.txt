@@ -1,0 +1,18 @@
+﻿2026-02-13T12:38:35.4684263Z ##[group]Run actions/github-script@ed597411d8f924073f98dfc5c65a23a2325f34cd
+2026-02-13T12:38:35.4684682Z with:
+2026-02-13T12:38:35.4685495Z   script: const { setupGlobals } = require('/opt/gh-aw/actions/setup_globals.cjs');
+setupGlobals(core, github, context, exec, io);
+const { main } = require('/opt/gh-aw/actions/parse_threat_detection_results.cjs');
+await main();
+
+2026-02-13T12:38:35.4686505Z   github-token: ***
+2026-02-13T12:38:35.4686710Z   debug: false
+2026-02-13T12:38:35.4686932Z   user-agent: actions/github-script
+2026-02-13T12:38:35.4687199Z   result-encoding: json
+2026-02-13T12:38:35.4687412Z   retries: 0
+2026-02-13T12:38:35.4687635Z   retry-exempt-status-codes: 400,401,403,404,422
+2026-02-13T12:38:35.4687914Z env:
+2026-02-13T12:38:35.4688134Z   GH_AW_PROMPT: /tmp/gh-aw/aw-prompts/prompt.txt
+2026-02-13T12:38:35.4688414Z ##[endgroup]
+2026-02-13T12:38:35.5457849Z Threat detection verdict: {"prompt_injection":false,"secret_leak":false,"malicious_patch":false,"reasons":[]}
+2026-02-13T12:38:35.5459064Z ✅ No security threats detected. Safe outputs may proceed.

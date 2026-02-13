@@ -1,0 +1,78 @@
+﻿2026-02-13T12:37:13.0252193Z ##[group]Run bash /opt/gh-aw/actions/create_prompt_first.sh
+2026-02-13T12:37:13.0252696Z [36;1mbash /opt/gh-aw/actions/create_prompt_first.sh[0m
+2026-02-13T12:37:13.0253061Z [36;1mcat << 'GH_AW_PROMPT_EOF' > "$GH_AW_PROMPT"[0m
+2026-02-13T12:37:13.0253353Z [36;1m<system>[0m
+2026-02-13T12:37:13.0253552Z [36;1mGH_AW_PROMPT_EOF[0m
+2026-02-13T12:37:13.0254406Z [36;1mcat "/opt/gh-aw/prompts/temp_folder_prompt.md" >> "$GH_AW_PROMPT"[0m
+2026-02-13T12:37:13.0255158Z [36;1mcat "/opt/gh-aw/prompts/markdown.md" >> "$GH_AW_PROMPT"[0m
+2026-02-13T12:37:13.0255772Z [36;1mcat << 'GH_AW_PROMPT_EOF' >> "$GH_AW_PROMPT"[0m
+2026-02-13T12:37:13.0256247Z [36;1m<safe-outputs>[0m
+2026-02-13T12:37:13.0256761Z [36;1m<description>GitHub API Access Instructions</description>[0m
+2026-02-13T12:37:13.0257231Z [36;1m<important>[0m
+2026-02-13T12:37:13.0257595Z [36;1mThe gh CLI is NOT authenticated. Do NOT use gh commands for GitHub operations.[0m
+2026-02-13T12:37:13.0258018Z [36;1m</important>[0m
+2026-02-13T12:37:13.0258297Z [36;1m<instructions>[0m
+2026-02-13T12:37:13.0259106Z [36;1mTo create or modify GitHub resources (issues, discussions, pull requests, etc.), you MUST call the appropriate safe output tool. Simply writing content will NOT work - the workflow requires actual tool calls.[0m
+2026-02-13T12:37:13.0259954Z [36;1m[0m
+2026-02-13T12:37:13.0260227Z [36;1mDiscover available tools from the safeoutputs MCP server.[0m
+2026-02-13T12:37:13.0260568Z [36;1m[0m
+2026-02-13T12:37:13.0261065Z [36;1m**Critical**: Tool calls write structured data that downstream jobs process. Without tool calls, follow-up actions will be skipped.[0m
+2026-02-13T12:37:13.0261662Z [36;1m[0m
+2026-02-13T12:37:13.0262355Z [36;1m**Note**: If you made no other safe output tool calls during this workflow execution, call the "noop" tool to provide a status message indicating completion or that no actions were needed.[0m
+2026-02-13T12:37:13.0263116Z [36;1m</instructions>[0m
+2026-02-13T12:37:13.0263342Z [36;1m</safe-outputs>[0m
+2026-02-13T12:37:13.0263998Z [36;1m<github-context>[0m
+2026-02-13T12:37:13.0264365Z [36;1mThe following GitHub context information is available for this workflow:[0m
+2026-02-13T12:37:13.0264782Z [36;1m{{#if __GH_AW_GITHUB_ACTOR__ }}[0m
+2026-02-13T12:37:13.0265067Z [36;1m- **actor**: __GH_AW_GITHUB_ACTOR__[0m
+2026-02-13T12:37:13.0265323Z [36;1m{{/if}}[0m
+2026-02-13T12:37:13.0265538Z [36;1m{{#if __GH_AW_GITHUB_REPOSITORY__ }}[0m
+2026-02-13T12:37:13.0265858Z [36;1m- **repository**: __GH_AW_GITHUB_REPOSITORY__[0m
+2026-02-13T12:37:13.0266141Z [36;1m{{/if}}[0m
+2026-02-13T12:37:13.0266341Z [36;1m{{#if __GH_AW_GITHUB_WORKSPACE__ }}[0m
+2026-02-13T12:37:13.0266637Z [36;1m- **workspace**: __GH_AW_GITHUB_WORKSPACE__[0m
+2026-02-13T12:37:13.0266912Z [36;1m{{/if}}[0m
+2026-02-13T12:37:13.0267144Z [36;1m{{#if __GH_AW_GITHUB_EVENT_ISSUE_NUMBER__ }}[0m
+2026-02-13T12:37:13.0267506Z [36;1m- **issue-number**: #__GH_AW_GITHUB_EVENT_ISSUE_NUMBER__[0m
+2026-02-13T12:37:13.0267829Z [36;1m{{/if}}[0m
+2026-02-13T12:37:13.0268078Z [36;1m{{#if __GH_AW_GITHUB_EVENT_DISCUSSION_NUMBER__ }}[0m
+2026-02-13T12:37:13.0268482Z [36;1m- **discussion-number**: #__GH_AW_GITHUB_EVENT_DISCUSSION_NUMBER__[0m
+2026-02-13T12:37:13.0268841Z [36;1m{{/if}}[0m
+2026-02-13T12:37:13.0269071Z [36;1m{{#if __GH_AW_GITHUB_EVENT_PULL_REQUEST_NUMBER__ }}[0m
+2026-02-13T12:37:13.0269496Z [36;1m- **pull-request-number**: #__GH_AW_GITHUB_EVENT_PULL_REQUEST_NUMBER__[0m
+2026-02-13T12:37:13.0269870Z [36;1m{{/if}}[0m
+2026-02-13T12:37:13.0270089Z [36;1m{{#if __GH_AW_GITHUB_EVENT_COMMENT_ID__ }}[0m
+2026-02-13T12:37:13.0270419Z [36;1m- **comment-id**: __GH_AW_GITHUB_EVENT_COMMENT_ID__[0m
+2026-02-13T12:37:13.0270719Z [36;1m{{/if}}[0m
+2026-02-13T12:37:13.0270916Z [36;1m{{#if __GH_AW_GITHUB_RUN_ID__ }}[0m
+2026-02-13T12:37:13.0271219Z [36;1m- **workflow-run-id**: __GH_AW_GITHUB_RUN_ID__[0m
+2026-02-13T12:37:13.0271500Z [36;1m{{/if}}[0m
+2026-02-13T12:37:13.0271700Z [36;1m</github-context>[0m
+2026-02-13T12:37:13.0271918Z [36;1m[0m
+2026-02-13T12:37:13.0272302Z [36;1mGH_AW_PROMPT_EOF[0m
+2026-02-13T12:37:13.0272573Z [36;1mcat << 'GH_AW_PROMPT_EOF' >> "$GH_AW_PROMPT"[0m
+2026-02-13T12:37:13.0272855Z [36;1m</system>[0m
+2026-02-13T12:37:13.0273054Z [36;1mGH_AW_PROMPT_EOF[0m
+2026-02-13T12:37:13.0273298Z [36;1mcat << 'GH_AW_PROMPT_EOF' >> "$GH_AW_PROMPT"[0m
+2026-02-13T12:37:13.0273886Z [36;1m{{#runtime-import .github/workflows/star-list-maintainer.md}}[0m
+2026-02-13T12:37:13.0274291Z [36;1mGH_AW_PROMPT_EOF[0m
+2026-02-13T12:37:13.0322376Z shell: /usr/bin/bash -e {0}
+2026-02-13T12:37:13.0322618Z env:
+2026-02-13T12:37:13.0322797Z   DEFAULT_BRANCH: master
+2026-02-13T12:37:13.0323025Z   GH_AW_ASSETS_ALLOWED_EXTS: 
+2026-02-13T12:37:13.0323257Z   GH_AW_ASSETS_BRANCH: 
+2026-02-13T12:37:13.0323486Z   GH_AW_ASSETS_MAX_SIZE_KB: 0
+2026-02-13T12:37:13.0323963Z   GH_AW_MCP_LOG_DIR: /tmp/gh-aw/mcp-logs/safeoutputs
+2026-02-13T12:37:13.0324347Z   GH_AW_SAFE_OUTPUTS: /opt/gh-aw/safeoutputs/outputs.jsonl
+2026-02-13T12:37:13.0324752Z   GH_AW_SAFE_OUTPUTS_CONFIG_PATH: /opt/gh-aw/safeoutputs/config.json
+2026-02-13T12:37:13.0325199Z   GH_AW_SAFE_OUTPUTS_TOOLS_PATH: /opt/gh-aw/safeoutputs/tools.json
+2026-02-13T12:37:13.0325583Z   GH_AW_PROMPT: /tmp/gh-aw/aw-prompts/prompt.txt
+2026-02-13T12:37:13.0325888Z   GH_AW_GITHUB_ACTOR: matt-riley
+2026-02-13T12:37:13.0326135Z   GH_AW_GITHUB_EVENT_COMMENT_ID: 
+2026-02-13T12:37:13.0326403Z   GH_AW_GITHUB_EVENT_DISCUSSION_NUMBER: 
+2026-02-13T12:37:13.0326662Z   GH_AW_GITHUB_EVENT_ISSUE_NUMBER: 
+2026-02-13T12:37:13.0326922Z   GH_AW_GITHUB_EVENT_PULL_REQUEST_NUMBER: 
+2026-02-13T12:37:13.0327226Z   GH_AW_GITHUB_REPOSITORY: matt-riley/matt-riley
+2026-02-13T12:37:13.0327515Z   GH_AW_GITHUB_RUN_ID: 21986494867
+2026-02-13T12:37:13.0327825Z   GH_AW_GITHUB_WORKSPACE: /home/runner/work/matt-riley/matt-riley
+2026-02-13T12:37:13.0328155Z ##[endgroup]

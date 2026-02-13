@@ -1,0 +1,7 @@
+[2026-02-13T12:37:10Z] [DEBUG] [backend] GetOrLaunch called for server: safeoutputs
+[2026-02-13T12:37:10Z] [INFO] [backend] Configuring HTTP MCP backend: safeoutputs, url=http://host.docker.internal:3001
+[2026-02-13T12:37:10Z] [INFO] [backend] Successfully configured HTTP MCP backend: safeoutputs
+[2026-02-13T12:37:10Z] [INFO] [backend] Successfully registered tools from safeoutputs (took 206.068553ms)
+[2026-02-13T12:37:40Z] [DEBUG] [backend] GetOrLaunchForSession called: server=safeoutputs, session=QmiP44OeCNemp7weYMMRtjoRi1VLch5yC6kC8n8WaCni407snQHlDd9cPK
+[2026-02-13T12:37:40Z] [DEBUG] [backend] GetOrLaunch called for server: safeoutputs
+[2026-02-13T12:37:40Z] [DEBUG] [backend] Reusing existing backend connection: safeoutputs

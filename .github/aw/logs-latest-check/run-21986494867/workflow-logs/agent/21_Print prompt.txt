@@ -1,0 +1,99 @@
+﻿2026-02-13T12:37:13.2471601Z ##[group]Run bash /opt/gh-aw/actions/print_prompt_summary.sh
+2026-02-13T12:37:13.2472056Z [36;1mbash /opt/gh-aw/actions/print_prompt_summary.sh[0m
+2026-02-13T12:37:13.2516725Z shell: /usr/bin/bash -e {0}
+2026-02-13T12:37:13.2516969Z env:
+2026-02-13T12:37:13.2517157Z   DEFAULT_BRANCH: master
+2026-02-13T12:37:13.2517391Z   GH_AW_ASSETS_ALLOWED_EXTS: 
+2026-02-13T12:37:13.2517622Z   GH_AW_ASSETS_BRANCH: 
+2026-02-13T12:37:13.2517840Z   GH_AW_ASSETS_MAX_SIZE_KB: 0
+2026-02-13T12:37:13.2518119Z   GH_AW_MCP_LOG_DIR: /tmp/gh-aw/mcp-logs/safeoutputs
+2026-02-13T12:37:13.2518491Z   GH_AW_SAFE_OUTPUTS: /opt/gh-aw/safeoutputs/outputs.jsonl
+2026-02-13T12:37:13.2518917Z   GH_AW_SAFE_OUTPUTS_CONFIG_PATH: /opt/gh-aw/safeoutputs/config.json
+2026-02-13T12:37:13.2519373Z   GH_AW_SAFE_OUTPUTS_TOOLS_PATH: /opt/gh-aw/safeoutputs/tools.json
+2026-02-13T12:37:13.2519764Z   GH_AW_PROMPT: /tmp/gh-aw/aw-prompts/prompt.txt
+2026-02-13T12:37:13.2520224Z ##[endgroup]
+2026-02-13T12:37:13.2595708Z Generated Prompt:
+2026-02-13T12:37:13.2605507Z <system>
+2026-02-13T12:37:13.2605879Z <temporary-files>
+2026-02-13T12:37:13.2606168Z <path>/tmp/gh-aw/agent/</path>
+2026-02-13T12:37:13.2607931Z <instruction>When you need to create temporary files or directories during your work, always use the /tmp/gh-aw/agent/ directory that has been pre-created for you. Do NOT use the root /tmp/ directory directly.</instruction>
+2026-02-13T12:37:13.2609876Z </temporary-files>
+2026-02-13T12:37:13.2610266Z <file-editing>
+2026-02-13T12:37:13.2610603Z <allowed-paths>
+2026-02-13T12:37:13.2610902Z   <path name="workspace">$GITHUB_WORKSPACE</path>
+2026-02-13T12:37:13.2611304Z   <path name="temporary">/tmp/gh-aw/</path>
+2026-02-13T12:37:13.2611646Z </allowed-paths>
+2026-02-13T12:37:13.2612298Z <restriction>Do NOT attempt to edit files outside these directories as you do not have the necessary permissions.</restriction>
+2026-02-13T12:37:13.2613019Z </file-editing>
+2026-02-13T12:37:13.2613264Z <markdown-generation>
+2026-02-13T12:37:13.2614559Z <instruction>When generating markdown text, use 6 backticks instead of 3 to avoid creating unbalanced code regions where the text looks broken because the code regions are opening and closing out of sync.</instruction>
+2026-02-13T12:37:13.2615702Z <example>
+2026-02-13T12:37:13.2615911Z Correct:
+2026-02-13T12:37:13.2616119Z ``````markdown
+2026-02-13T12:37:13.2616336Z # Example
+2026-02-13T12:37:13.2616537Z ```javascript
+2026-02-13T12:37:13.2616764Z console.log('hello');
+2026-02-13T12:37:13.2617006Z ```
+2026-02-13T12:37:13.2617199Z ``````
+2026-02-13T12:37:13.2617323Z 
+2026-02-13T12:37:13.2617411Z Incorrect:
+2026-02-13T12:37:13.2617622Z ```markdown
+2026-02-13T12:37:13.2617830Z # Example
+2026-02-13T12:37:13.2618031Z ```javascript
+2026-02-13T12:37:13.2618260Z console.log('hello');
+2026-02-13T12:37:13.2618500Z ```
+2026-02-13T12:37:13.2618791Z ```
+2026-02-13T12:37:13.2619129Z </example>
+2026-02-13T12:37:13.2619492Z </markdown-generation>
+2026-02-13T12:37:13.2619980Z <safe-outputs>
+2026-02-13T12:37:13.2620568Z <description>GitHub API Access Instructions</description>
+2026-02-13T12:37:13.2621307Z <important>
+2026-02-13T12:37:13.2621931Z The gh CLI is NOT authenticated. Do NOT use gh commands for GitHub operations.
+2026-02-13T12:37:13.2622451Z </important>
+2026-02-13T12:37:13.2622669Z <instructions>
+2026-02-13T12:37:13.2623607Z To create or modify GitHub resources (issues, discussions, pull requests, etc.), you MUST call the appropriate safe output tool. Simply writing content will NOT work - the workflow requires actual tool calls.
+2026-02-13T12:37:13.2625235Z 
+2026-02-13T12:37:13.2625508Z Discover available tools from the safeoutputs MCP server.
+2026-02-13T12:37:13.2625918Z 
+2026-02-13T12:37:13.2626423Z **Critical**: Tool calls write structured data that downstream jobs process. Without tool calls, follow-up actions will be skipped.
+2026-02-13T12:37:13.2626928Z 
+2026-02-13T12:37:13.2627513Z **Note**: If you made no other safe output tool calls during this workflow execution, call the "noop" tool to provide a status message indicating completion or that no actions were needed.
+2026-02-13T12:37:13.2628481Z </instructions>
+2026-02-13T12:37:13.2628689Z </safe-outputs>
+2026-02-13T12:37:13.2628881Z <github-context>
+2026-02-13T12:37:13.2629196Z The following GitHub context information is available for this workflow:
+2026-02-13T12:37:13.2629578Z - **actor**: matt-riley
+2026-02-13T12:37:13.2629820Z - **repository**: matt-riley/matt-riley
+2026-02-13T12:37:13.2630144Z - **workspace**: /home/runner/work/matt-riley/matt-riley
+2026-02-13T12:37:13.2630463Z - **workflow-run-id**: 21986494867
+2026-02-13T12:37:13.2630701Z </github-context>
+2026-02-13T12:37:13.2630822Z 
+2026-02-13T12:37:13.2630893Z </system>
+2026-02-13T12:37:13.2630989Z 
+2026-02-13T12:37:13.2631072Z # Star List Maintainer
+2026-02-13T12:37:13.2631196Z 
+2026-02-13T12:37:13.2631377Z Ensure every starred repository is in one of my existing star lists.
+2026-02-13T12:37:13.2631654Z 
+2026-02-13T12:37:13.2631728Z ## Instructions
+2026-02-13T12:37:13.2631977Z 
+2026-02-13T12:37:13.2632129Z 1. Read my existing star lists and their names/descriptions.
+2026-02-13T12:37:13.2632643Z 2. Read my currently starred repositories and determine which list(s) each repo is already in.
+2026-02-13T12:37:13.2633560Z 3. For every starred repo, infer the best-matching list from list names/descriptions and repository metadata (name, description, topics, language, README summary when needed).
+2026-02-13T12:37:13.2634664Z 4. If a repo is not in any list, add it to the best-matching existing list.
+2026-02-13T12:37:13.2635282Z 5. If a repo is already in a list but another existing list is clearly a better match, move it to the better list automatically.
+2026-02-13T12:37:13.2636051Z 6. If there is no clear fit in any existing list, create a GitHub issue in this repository for manual review with:
+2026-02-13T12:37:13.2636555Z    - repo owner/name and URL
+2026-02-13T12:37:13.2636801Z    - why no list was a clear fit
+2026-02-13T12:37:13.2637075Z    - top 2 candidate lists (if any) and reasoning
+2026-02-13T12:37:13.2637460Z 7. Never create new star lists automatically; only use existing lists.
+2026-02-13T12:37:13.2637969Z 8. Be idempotent: avoid duplicate list operations and only change what needs changing.
+2026-02-13T12:37:13.2638399Z 9. At the end, summarize:
+2026-02-13T12:37:13.2638624Z    - repos added to lists
+2026-02-13T12:37:13.2638836Z    - repos moved between lists
+2026-02-13T12:37:13.2639084Z    - repos escalated for manual review
+2026-02-13T12:37:13.2639257Z 
+2026-02-13T12:37:13.2639334Z ## Notes
+2026-02-13T12:37:13.2639429Z 
+2026-02-13T12:37:13.2639584Z - Run `gh aw compile` to generate the GitHub Actions workflow
+2026-02-13T12:37:13.2640004Z - Keep operations limited to list maintenance and review issue creation
+2026-02-13T12:37:13.2640296Z 

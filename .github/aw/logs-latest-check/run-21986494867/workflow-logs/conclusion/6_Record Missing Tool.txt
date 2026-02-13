@@ -1,0 +1,18 @@
+﻿2026-02-13T12:39:16.5815097Z ##[group]Run actions/github-script@ed597411d8f924073f98dfc5c65a23a2325f34cd
+2026-02-13T12:39:16.5816540Z with:
+2026-02-13T12:39:16.5817703Z   github-token: ***
+2026-02-13T12:39:16.5821802Z   script: const { setupGlobals } = require('/opt/gh-aw/actions/setup_globals.cjs');
+setupGlobals(core, github, context, exec, io);
+const { main } = require('/opt/gh-aw/actions/missing_tool.cjs');
+await main();
+
+2026-02-13T12:39:16.5824630Z   debug: false
+2026-02-13T12:39:16.5825408Z   user-agent: actions/github-script
+2026-02-13T12:39:16.5826351Z   result-encoding: json
+2026-02-13T12:39:16.5828975Z   retries: 0
+2026-02-13T12:39:16.5829823Z   retry-exempt-status-codes: 400,401,403,404,422
+2026-02-13T12:39:16.5830850Z env:
+2026-02-13T12:39:16.5832027Z   GH_AW_AGENT_OUTPUT: /tmp/gh-aw/safeoutputs/agent_output.json
+2026-02-13T12:39:16.5833288Z   GH_AW_WORKFLOW_NAME: Star List Maintainer
+2026-02-13T12:39:16.5834257Z ##[endgroup]
+2026-02-13T12:39:16.6865032Z Max count: unlimited

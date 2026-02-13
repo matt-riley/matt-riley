@@ -1,0 +1,27 @@
+﻿2026-02-13T12:39:16.9064513Z ##[group]Run actions/github-script@ed597411d8f924073f98dfc5c65a23a2325f34cd
+2026-02-13T12:39:16.9066023Z with:
+2026-02-13T12:39:16.9067550Z   github-token: ***
+2026-02-13T12:39:16.9070219Z   script: const { setupGlobals } = require('/opt/gh-aw/actions/setup_globals.cjs');
+setupGlobals(core, github, context, exec, io);
+const { main } = require('/opt/gh-aw/actions/handle_noop_message.cjs');
+await main();
+
+2026-02-13T12:39:16.9076125Z   debug: false
+2026-02-13T12:39:16.9076997Z   user-agent: actions/github-script
+2026-02-13T12:39:16.9078257Z   result-encoding: json
+2026-02-13T12:39:16.9079079Z   retries: 0
+2026-02-13T12:39:16.9080188Z   retry-exempt-status-codes: 400,401,403,404,422
+2026-02-13T12:39:16.9081826Z env:
+2026-02-13T12:39:16.9083629Z   GH_AW_AGENT_OUTPUT: /tmp/gh-aw/safeoutputs/agent_output.json
+2026-02-13T12:39:16.9084925Z   GH_AW_WORKFLOW_NAME: Star List Maintainer
+2026-02-13T12:39:16.9087661Z   GH_AW_RUN_URL: https://github.com/matt-riley/matt-riley/actions/runs/21986494867
+2026-02-13T12:39:16.9091776Z   GH_AW_AGENT_CONCLUSION: success
+2026-02-13T12:39:16.9093516Z   GH_AW_NOOP_MESSAGE: 
+2026-02-13T12:39:16.9094415Z   GH_AW_NOOP_REPORT_AS_ISSUE: true
+2026-02-13T12:39:16.9095333Z ##[endgroup]
+2026-02-13T12:39:17.0625716Z Workflow name: Star List Maintainer
+2026-02-13T12:39:17.0632532Z Run URL: https://github.com/matt-riley/matt-riley/actions/runs/21986494867
+2026-02-13T12:39:17.0636660Z No-op message: 
+2026-02-13T12:39:17.0664676Z Agent conclusion: success
+2026-02-13T12:39:17.0671525Z Report as issue: true
+2026-02-13T12:39:17.0673934Z No no-op message found, skipping

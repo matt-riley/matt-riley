@@ -1,0 +1,94 @@
+﻿2026-02-13T12:37:13.1368084Z ##[group]Run actions/github-script@ed597411d8f924073f98dfc5c65a23a2325f34cd
+2026-02-13T12:37:13.1368572Z with:
+2026-02-13T12:37:13.1369322Z   script: const { setupGlobals } = require('/opt/gh-aw/actions/setup_globals.cjs');
+setupGlobals(core, github, context, exec, io);
+const { main } = require('/opt/gh-aw/actions/interpolate_prompt.cjs');
+await main();
+
+2026-02-13T12:37:13.1370288Z   github-token: ***
+2026-02-13T12:37:13.1370492Z   debug: false
+2026-02-13T12:37:13.1370698Z   user-agent: actions/github-script
+2026-02-13T12:37:13.1370956Z   result-encoding: json
+2026-02-13T12:37:13.1371166Z   retries: 0
+2026-02-13T12:37:13.1371384Z   retry-exempt-status-codes: 400,401,403,404,422
+2026-02-13T12:37:13.1371659Z env:
+2026-02-13T12:37:13.1371835Z   DEFAULT_BRANCH: master
+2026-02-13T12:37:13.1372051Z   GH_AW_ASSETS_ALLOWED_EXTS: 
+2026-02-13T12:37:13.1372277Z   GH_AW_ASSETS_BRANCH: 
+2026-02-13T12:37:13.1372483Z   GH_AW_ASSETS_MAX_SIZE_KB: 0
+2026-02-13T12:37:13.1372748Z   GH_AW_MCP_LOG_DIR: /tmp/gh-aw/mcp-logs/safeoutputs
+2026-02-13T12:37:13.1373136Z   GH_AW_SAFE_OUTPUTS: /opt/gh-aw/safeoutputs/outputs.jsonl
+2026-02-13T12:37:13.1373538Z   GH_AW_SAFE_OUTPUTS_CONFIG_PATH: /opt/gh-aw/safeoutputs/config.json
+2026-02-13T12:37:13.1374103Z   GH_AW_SAFE_OUTPUTS_TOOLS_PATH: /opt/gh-aw/safeoutputs/tools.json
+2026-02-13T12:37:13.1374473Z   GH_AW_PROMPT: /tmp/gh-aw/aw-prompts/prompt.txt
+2026-02-13T12:37:13.1374756Z ##[endgroup]
+2026-02-13T12:37:13.2099936Z ========================================
+2026-02-13T12:37:13.2101551Z [main] Starting interpolate_prompt processing
+2026-02-13T12:37:13.2102210Z ========================================
+2026-02-13T12:37:13.2103179Z [main] Prompt path: /tmp/gh-aw/aw-prompts/prompt.txt
+2026-02-13T12:37:13.2104281Z [main] Workspace directory: /home/runner/work/matt-riley/matt-riley
+2026-02-13T12:37:13.2104900Z [main] Reading prompt file...
+2026-02-13T12:37:13.2105390Z [main] Original content length: 2505 characters
+2026-02-13T12:37:13.2107449Z [main] First 200 characters: <system>\n<temporary-files>\n<path>/tmp/gh-aw/agent/</path>\n<instruction>When you need to create temporary files or directories during your work, always use the /tmp/gh-aw/agent/ directory that has been
+2026-02-13T12:37:13.2108668Z 
+2026-02-13T12:37:13.2108778Z ========================================
+2026-02-13T12:37:13.2109144Z [main] STEP 1: Runtime Imports
+2026-02-13T12:37:13.2109466Z ========================================
+2026-02-13T12:37:13.2109883Z Processing 1 runtime import macro(s) (files and URLs)
+2026-02-13T12:37:13.2110476Z   Import 1: {{#runtime-import .github/workflows/star-list-maintainer.md}}
+2026-02-13T12:37:13.2116771Z ##[warning]File workflows/star-list-maintainer.md contains front matter which will be ignored in runtime import
+2026-02-13T12:37:13.2118397Z Runtime imports processed successfully
+2026-02-13T12:37:13.2118715Z Content length change: 2505 -> 3745 (+1240)
+2026-02-13T12:37:13.2118927Z 
+2026-02-13T12:37:13.2119013Z ========================================
+2026-02-13T12:37:13.2119304Z [main] STEP 2: Variable Interpolation
+2026-02-13T12:37:13.2119595Z ========================================
+2026-02-13T12:37:13.2122056Z No expression variables found, skipping interpolation
+2026-02-13T12:37:13.2122459Z 
+2026-02-13T12:37:13.2122592Z ========================================
+2026-02-13T12:37:13.2123037Z [main] STEP 3: Template Rendering
+2026-02-13T12:37:13.2123446Z ========================================
+2026-02-13T12:37:13.2124126Z Processing 8 conditional template block(s)
+2026-02-13T12:37:13.2124698Z [renderMarkdownTemplate] Starting template rendering
+2026-02-13T12:37:13.2125333Z [renderMarkdownTemplate] Input length: 3745 characters
+2026-02-13T12:37:13.2126106Z [renderMarkdownTemplate] Found 8 block conditional(s) and 0 inline conditional(s)
+2026-02-13T12:37:13.2126955Z [renderMarkdownTemplate] Block 1: condition="matt-riley" -> KEEP
+2026-02-13T12:37:13.2127710Z [renderMarkdownTemplate]   Body preview: "- **actor**: matt-riley\n"
+2026-02-13T12:37:13.2128512Z [renderMarkdownTemplate]   Action: Keeping body with leading newline=true
+2026-02-13T12:37:13.2129716Z [renderMarkdownTemplate] Block 2: condition="matt-riley/matt-riley" -> KEEP
+2026-02-13T12:37:13.2130412Z [renderMarkdownTemplate]   Body preview: "- **repository**: matt-riley/matt-riley\n"
+2026-02-13T12:37:13.2131243Z [renderMarkdownTemplate]   Action: Keeping body with leading newline=false
+2026-02-13T12:37:13.2132071Z [renderMarkdownTemplate] Block 3: condition="/home/runner/work/matt-riley/matt-riley" -> KEEP
+2026-02-13T12:37:13.2132840Z [renderMarkdownTemplate]   Body preview: "- **workspace**: /home/runner/work/matt-riley/matt-riley\n"
+2026-02-13T12:37:13.2133577Z [renderMarkdownTemplate]   Action: Keeping body with leading newline=false
+2026-02-13T12:37:13.2134216Z [renderMarkdownTemplate] Block 4: condition="" -> REMOVE
+2026-02-13T12:37:13.2134621Z [renderMarkdownTemplate]   Body preview: "- **issue-number**: #\n"
+2026-02-13T12:37:13.2135022Z [renderMarkdownTemplate]   Action: Removing entire block
+2026-02-13T12:37:13.2135393Z [renderMarkdownTemplate] Block 5: condition="" -> REMOVE
+2026-02-13T12:37:13.2135820Z [renderMarkdownTemplate]   Body preview: "- **discussion-number**: #\n"
+2026-02-13T12:37:13.2136243Z [renderMarkdownTemplate]   Action: Removing entire block
+2026-02-13T12:37:13.2136597Z [renderMarkdownTemplate] Block 6: condition="" -> REMOVE
+2026-02-13T12:37:13.2137013Z [renderMarkdownTemplate]   Body preview: "- **pull-request-number**: #\n"
+2026-02-13T12:37:13.2137430Z [renderMarkdownTemplate]   Action: Removing entire block
+2026-02-13T12:37:13.2137903Z [renderMarkdownTemplate] Block 7: condition="" -> REMOVE
+2026-02-13T12:37:13.2138853Z [renderMarkdownTemplate]   Body preview: "- **comment-id**: \n"
+2026-02-13T12:37:13.2139562Z [renderMarkdownTemplate]   Action: Removing entire block
+2026-02-13T12:37:13.2140252Z [renderMarkdownTemplate] Block 8: condition="21986494867" -> KEEP
+2026-02-13T12:37:13.2141065Z [renderMarkdownTemplate]   Body preview: "- **workflow-run-id**: 21986494867\n"
+2026-02-13T12:37:13.2141943Z [renderMarkdownTemplate]   Action: Keeping body with leading newline=false
+2026-02-13T12:37:13.2142768Z [renderMarkdownTemplate] First pass complete: 4 kept, 4 removed
+2026-02-13T12:37:13.2143476Z [renderMarkdownTemplate] Second pass complete: 0 kept, 0 removed
+2026-02-13T12:37:13.2144311Z [renderMarkdownTemplate] Final output length: 3423 characters
+2026-02-13T12:37:13.2144887Z Template rendered successfully
+2026-02-13T12:37:13.2145331Z Content length change: 3745 -> 3423 (-322)
+2026-02-13T12:37:13.2145515Z 
+2026-02-13T12:37:13.2145604Z ========================================
+2026-02-13T12:37:13.2145855Z [main] STEP 4: Writing Output
+2026-02-13T12:37:13.2146091Z ========================================
+2026-02-13T12:37:13.2146440Z Writing processed content back to: /tmp/gh-aw/aw-prompts/prompt.txt
+2026-02-13T12:37:13.2146807Z Final content length: 3423 characters
+2026-02-13T12:37:13.2147065Z Total length change: 2505 -> 3423 (+918)
+2026-02-13T12:37:13.2148005Z Last 200 characters:  between lists\n   - repos escalated for manual review\n\n## Notes\n\n- Run `gh aw compile` to generate the GitHub Actions workflow\n- Keep operations limited to list maintenance and review issue creation\n\n
+2026-02-13T12:37:13.2148909Z ========================================
+2026-02-13T12:37:13.2149174Z [main] Processing complete - SUCCESS
+2026-02-13T12:37:13.2149415Z ========================================

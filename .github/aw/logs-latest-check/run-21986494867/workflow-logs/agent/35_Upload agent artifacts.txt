@@ -1,0 +1,38 @@
+﻿2026-02-13T12:38:00.1390298Z ##[group]Run actions/upload-artifact@b7c566a772e6b6bfb58ed0dc250532a479d7789f
+2026-02-13T12:38:00.1390420Z with:
+2026-02-13T12:38:00.1390531Z   name: agent-artifacts
+2026-02-13T12:38:00.1391053Z   path: /tmp/gh-aw/aw-prompts/prompt.txt
+/tmp/gh-aw/aw_info.json
+/tmp/gh-aw/mcp-logs/
+/tmp/gh-aw/sandbox/firewall/logs/
+/tmp/gh-aw/agent-stdio.log
+/tmp/gh-aw/agent/
+
+2026-02-13T12:38:00.1391162Z   if-no-files-found: ignore
+2026-02-13T12:38:00.1391260Z   compression-level: 6
+2026-02-13T12:38:00.1391346Z   overwrite: false
+2026-02-13T12:38:00.1391449Z   include-hidden-files: false
+2026-02-13T12:38:00.1391527Z env:
+2026-02-13T12:38:00.1391625Z   DEFAULT_BRANCH: master
+2026-02-13T12:38:00.1391729Z   GH_AW_ASSETS_ALLOWED_EXTS: 
+2026-02-13T12:38:00.1391820Z   GH_AW_ASSETS_BRANCH: 
+2026-02-13T12:38:00.1391913Z   GH_AW_ASSETS_MAX_SIZE_KB: 0
+2026-02-13T12:38:00.1392050Z   GH_AW_MCP_LOG_DIR: /tmp/gh-aw/mcp-logs/safeoutputs
+2026-02-13T12:38:00.1392210Z   GH_AW_SAFE_OUTPUTS: /opt/gh-aw/safeoutputs/outputs.jsonl
+2026-02-13T12:38:00.1392416Z   GH_AW_SAFE_OUTPUTS_CONFIG_PATH: /opt/gh-aw/safeoutputs/config.json
+2026-02-13T12:38:00.1392592Z   GH_AW_SAFE_OUTPUTS_TOOLS_PATH: /opt/gh-aw/safeoutputs/tools.json
+2026-02-13T12:38:00.1392726Z   GH_AW_AGENT_OUTPUT: /tmp/gh-aw/agent_output.json
+2026-02-13T12:38:00.1392809Z ##[endgroup]
+2026-02-13T12:38:00.3002540Z Multiple search paths detected. Calculating the least common ancestor of all paths
+2026-02-13T12:38:00.3005848Z The least common ancestor is /tmp/gh-aw. This will be the root directory of the artifact
+2026-02-13T12:38:00.3006695Z With the provided path, there will be 14 files uploaded
+2026-02-13T12:38:00.3011051Z Artifact name is valid!
+2026-02-13T12:38:00.3011998Z Root directory input is valid!
+2026-02-13T12:38:00.5551098Z Beginning upload of artifact content to blob storage
+2026-02-13T12:38:00.9923205Z Uploaded bytes 43230
+2026-02-13T12:38:01.0660516Z Finished uploading artifact content to blob storage!
+2026-02-13T12:38:01.0661730Z SHA256 digest of uploaded artifact zip is c256797007a977b3390a992d2b9a8d4c5d5a8b676e983017c6eb21307266391b
+2026-02-13T12:38:01.0663317Z Finalizing artifact upload
+2026-02-13T12:38:01.3475728Z Artifact agent-artifacts.zip successfully finalized. Artifact ID 5499051987
+2026-02-13T12:38:01.3477172Z Artifact agent-artifacts has been successfully uploaded! Final size is 43230 bytes. Artifact ID is 5499051987
+2026-02-13T12:38:01.3480791Z Artifact download URL: https://github.com/matt-riley/matt-riley/actions/runs/21986494867/artifacts/5499051987

@@ -1,0 +1,29 @@
+﻿2026-02-13T12:37:55.6675084Z ##[group]Run actions/upload-artifact@b7c566a772e6b6bfb58ed0dc250532a479d7789f
+2026-02-13T12:37:55.6675509Z with:
+2026-02-13T12:37:55.6675694Z   name: safe-output
+2026-02-13T12:37:55.6676102Z   path: /opt/gh-aw/safeoutputs/outputs.jsonl
+2026-02-13T12:37:55.6676399Z   if-no-files-found: warn
+2026-02-13T12:37:55.6676623Z   compression-level: 6
+2026-02-13T12:37:55.6676836Z   overwrite: false
+2026-02-13T12:37:55.6677047Z   include-hidden-files: false
+2026-02-13T12:37:55.6677280Z env:
+2026-02-13T12:37:55.6677459Z   DEFAULT_BRANCH: master
+2026-02-13T12:37:55.6677682Z   GH_AW_ASSETS_ALLOWED_EXTS: 
+2026-02-13T12:37:55.6677916Z   GH_AW_ASSETS_BRANCH: 
+2026-02-13T12:37:55.6678125Z   GH_AW_ASSETS_MAX_SIZE_KB: 0
+2026-02-13T12:37:55.6678401Z   GH_AW_MCP_LOG_DIR: /tmp/gh-aw/mcp-logs/safeoutputs
+2026-02-13T12:37:55.6678783Z   GH_AW_SAFE_OUTPUTS: /opt/gh-aw/safeoutputs/outputs.jsonl
+2026-02-13T12:37:55.6679189Z   GH_AW_SAFE_OUTPUTS_CONFIG_PATH: /opt/gh-aw/safeoutputs/config.json
+2026-02-13T12:37:55.6679619Z   GH_AW_SAFE_OUTPUTS_TOOLS_PATH: /opt/gh-aw/safeoutputs/tools.json
+2026-02-13T12:37:55.6679983Z ##[endgroup]
+2026-02-13T12:37:55.8212424Z With the provided path, there will be 1 file uploaded
+2026-02-13T12:37:55.8218265Z Artifact name is valid!
+2026-02-13T12:37:55.8219262Z Root directory input is valid!
+2026-02-13T12:37:56.0634154Z Beginning upload of artifact content to blob storage
+2026-02-13T12:37:56.3712544Z Uploaded bytes 392
+2026-02-13T12:37:56.4503446Z Finished uploading artifact content to blob storage!
+2026-02-13T12:37:56.4504831Z SHA256 digest of uploaded artifact zip is 6331d9e898583239e58c0d4c72b88e97f33554f6a8a206ed4858808794fe4d58
+2026-02-13T12:37:56.4506164Z Finalizing artifact upload
+2026-02-13T12:37:56.7416021Z Artifact safe-output.zip successfully finalized. Artifact ID 5499051200
+2026-02-13T12:37:56.7417614Z Artifact safe-output has been successfully uploaded! Final size is 392 bytes. Artifact ID is 5499051200
+2026-02-13T12:37:56.7422023Z Artifact download URL: https://github.com/matt-riley/matt-riley/actions/runs/21986494867/artifacts/5499051200

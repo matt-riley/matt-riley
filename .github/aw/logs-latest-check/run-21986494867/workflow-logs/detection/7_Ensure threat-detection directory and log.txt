@@ -1,0 +1,7 @@
+﻿2026-02-13T12:38:21.4015383Z ##[group]Run mkdir -p /tmp/gh-aw/threat-detection
+2026-02-13T12:38:21.4015814Z [36;1mmkdir -p /tmp/gh-aw/threat-detection[0m
+2026-02-13T12:38:21.4016181Z [36;1mtouch /tmp/gh-aw/threat-detection/detection.log[0m
+2026-02-13T12:38:21.4065269Z shell: /usr/bin/bash -e {0}
+2026-02-13T12:38:21.4065530Z env:
+2026-02-13T12:38:21.4065769Z   GH_AW_PROMPT: /tmp/gh-aw/aw-prompts/prompt.txt
+2026-02-13T12:38:21.4066089Z ##[endgroup]

@@ -1,0 +1,30 @@
+﻿2026-02-13T12:39:17.1025653Z ##[group]Run actions/github-script@ed597411d8f924073f98dfc5c65a23a2325f34cd
+2026-02-13T12:39:17.1028318Z with:
+2026-02-13T12:39:17.1029548Z   github-token: ***
+2026-02-13T12:39:17.1032536Z   script: const { setupGlobals } = require('/opt/gh-aw/actions/setup_globals.cjs');
+setupGlobals(core, github, context, exec, io);
+const { main } = require('/opt/gh-aw/actions/notify_comment_error.cjs');
+await main();
+
+2026-02-13T12:39:17.1035423Z   debug: false
+2026-02-13T12:39:17.1036212Z   user-agent: actions/github-script
+2026-02-13T12:39:17.1037167Z   result-encoding: json
+2026-02-13T12:39:17.1037971Z   retries: 0
+2026-02-13T12:39:17.1038789Z   retry-exempt-status-codes: 400,401,403,404,422
+2026-02-13T12:39:17.1039830Z env:
+2026-02-13T12:39:17.1040765Z   GH_AW_AGENT_OUTPUT: /tmp/gh-aw/safeoutputs/agent_output.json
+2026-02-13T12:39:17.1042273Z   GH_AW_COMMENT_ID: 
+2026-02-13T12:39:17.1043081Z   GH_AW_COMMENT_REPO: 
+2026-02-13T12:39:17.1046125Z   GH_AW_RUN_URL: https://github.com/matt-riley/matt-riley/actions/runs/21986494867
+2026-02-13T12:39:17.1050542Z   GH_AW_WORKFLOW_NAME: Star List Maintainer
+2026-02-13T12:39:17.1051960Z   GH_AW_AGENT_CONCLUSION: success
+2026-02-13T12:39:17.1053549Z   GH_AW_DETECTION_CONCLUSION: success
+2026-02-13T12:39:17.1054525Z ##[endgroup]
+2026-02-13T12:39:17.2547073Z Comment ID: 
+2026-02-13T12:39:17.2580594Z Comment Repo: 
+2026-02-13T12:39:17.2585762Z Run URL: https://github.com/matt-riley/matt-riley/actions/runs/21986494867
+2026-02-13T12:39:17.2591227Z Workflow Name: Star List Maintainer
+2026-02-13T12:39:17.2600101Z Agent Conclusion: success
+2026-02-13T12:39:17.2604416Z Detection Conclusion: success
+2026-02-13T12:39:17.2611367Z Agent output content length: 441
+2026-02-13T12:39:17.2615158Z No comment ID found and no noop messages to process, skipping comment update

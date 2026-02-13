@@ -1,0 +1,1612 @@
+2026-02-13T12:37:21.175Z [INFO] Proxy configuration: HTTP_PROXY=http://172.30.0.10:3128, HTTPS_PROXY=http://172.30.0.10:3128, NO_PROXY=localhost,127.0.0.1,172.30.0.10,host.docker.internal,172.30.0.1
+2026-02-13T12:37:21.209Z [DEBUG] Sending telemetry event: copilot-cli/extension.activate
+2026-02-13T12:37:21.690Z [DEBUG] No auth info available, skipping custom agents load
+2026-02-13T12:37:21.691Z [DEBUG] No auth info available, skipping custom agents load
+2026-02-13T12:37:21.707Z [DEBUG] Sending telemetry event: copilot-cli/cli.telemetry
+2026-02-13T12:37:21.708Z [INFO] Starting Copilot CLI: 0.0.409
+2026-02-13T12:37:21.708Z [INFO] Node.js version: v24.11.1
+2026-02-13T12:37:21.708Z [DEBUG] [ADO] Starting Azure DevOps detection for cwd=/home/runner/work/matt-riley/matt-riley, featureFlagEnabled=false
+2026-02-13T12:37:21.708Z [DEBUG] [ADO] Feature flag ADO_DETECTION is disabled, skipping detection
+2026-02-13T12:37:21.726Z [DEBUG] Workspace initialized: c459cd0d-f0bd-4625-9886-20da567ef45b (checkpoints: 0)
+2026-02-13T12:37:22.415Z [DEBUG] Loaded workspace MCP config from /home/runner/work/matt-riley/matt-riley/.vscode/mcp.json
+2026-02-13T12:37:22.416Z [DEBUG] Loaded workspace MCP config: 1 server(s): github-agentic-workflows
+2026-02-13T12:37:22.417Z [ERROR] Starting remote MCP client for github with url: http://host.docker.internal:80/mcp/github
+2026-02-13T12:37:22.418Z [ERROR] Creating MCP client for github...
+2026-02-13T12:37:22.421Z [ERROR] Connecting MCP client for github...
+2026-02-13T12:37:22.422Z [ERROR] Starting remote MCP client for safeoutputs with url: http://host.docker.internal:80/mcp/safeoutputs
+2026-02-13T12:37:22.422Z [ERROR] Creating MCP client for safeoutputs...
+2026-02-13T12:37:22.423Z [ERROR] Connecting MCP client for safeoutputs...
+2026-02-13T12:37:22.423Z [ERROR] Starting MCP client for github-agentic-workflows with 
+command: gh 
+args: aw mcp-server 
+cwd: ${workspaceFolder}
+2026-02-13T12:37:22.423Z [ERROR] Starting MCP client for github-agentic-workflows with command: gh and args: aw mcp-server
+2026-02-13T12:37:22.424Z [ERROR] Creating MCP client for github-agentic-workflows...
+2026-02-13T12:37:22.424Z [ERROR] Connecting MCP client for github-agentic-workflows...
+2026-02-13T12:37:22.432Z [ERROR] Failed to start MCP client for github-agentic-workflows: Error: spawn gh ENOENT
+2026-02-13T12:37:22.434Z [ERROR] MCP transport for github-agentic-workflows closed
+2026-02-13T12:37:22.489Z [ERROR] MCP client for safeoutputs connected, took 66ms
+2026-02-13T12:37:22.489Z [ERROR] Started MCP client for remote server safeoutputs
+2026-02-13T12:37:22.493Z [ERROR] MCP client for github connected, took 72ms
+2026-02-13T12:37:22.493Z [ERROR] Started MCP client for remote server github
+2026-02-13T12:37:22.494Z [DEBUG] GitHub MCP server is disabled, skipping auto-configuration
+2026-02-13T12:37:22.494Z [DEBUG] Creating copilot-client for integration ID copilot-developer-cli with token authentication. User-agent: copilot/0.0.409 (linux v24.11.1) term/unknown
+2026-02-13T12:37:22.668Z [DEBUG] Successfully listed 38 models
+2026-02-13T12:37:22.669Z [INFO] Using default model: claude-sonnet-4.5
+2026-02-13T12:37:22.669Z [DEBUG] Sending telemetry event: copilot-cli/cli.telemetry
+2026-02-13T12:37:22.670Z [DEBUG] Could not initialize tools: buildSettingsAndTools returned undefined
+2026-02-13T12:37:22.674Z [DEBUG] Loading tools for client: safeoutputs
+2026-02-13T12:37:22.682Z [DEBUG] Adding tool: safeoutputs-create_issue
+2026-02-13T12:37:22.683Z [DEBUG] Adding tool: safeoutputs-missing_data
+2026-02-13T12:37:22.683Z [DEBUG] Adding tool: safeoutputs-missing_tool
+2026-02-13T12:37:22.683Z [DEBUG] Adding tool: safeoutputs-noop
+2026-02-13T12:37:22.683Z [DEBUG] Loading tools for client: github
+2026-02-13T12:37:22.690Z [DEBUG] Adding tool: github-get_commit
+2026-02-13T12:37:22.690Z [DEBUG] Adding tool: github-get_file_contents
+2026-02-13T12:37:22.690Z [DEBUG] Adding tool: github-get_latest_release
+2026-02-13T12:37:22.690Z [DEBUG] Adding tool: github-get_me
+2026-02-13T12:37:22.691Z [DEBUG] Adding tool: github-get_release_by_tag
+2026-02-13T12:37:22.691Z [DEBUG] Adding tool: github-get_tag
+2026-02-13T12:37:22.691Z [DEBUG] Adding tool: github-get_team_members
+2026-02-13T12:37:22.691Z [DEBUG] Adding tool: github-get_teams
+2026-02-13T12:37:22.691Z [DEBUG] Adding tool: github-list_branches
+2026-02-13T12:37:22.691Z [DEBUG] Adding tool: github-list_commits
+2026-02-13T12:37:22.691Z [DEBUG] Adding tool: github-list_releases
+2026-02-13T12:37:22.691Z [DEBUG] Adding tool: github-list_starred_repositories
+2026-02-13T12:37:22.691Z [DEBUG] Adding tool: github-list_tags
+2026-02-13T12:37:22.691Z [DEBUG] Adding tool: github-search_code
+2026-02-13T12:37:22.691Z [DEBUG] Adding tool: github-search_repositories
+2026-02-13T12:37:23.202Z [INFO] Memory enablement check: enabled
+2026-02-13T12:37:23.203Z [DEBUG] str_replace_editor: default options: {
+  "truncateBasedOn": "tokenCount",
+  "truncateStyle": "middle"
+}
+2026-02-13T12:37:23.229Z [DEBUG] Sending telemetry event: copilot-cli/cli.telemetry
+2026-02-13T12:37:23.230Z [DEBUG] Sending telemetry event: copilot-cli/cli.telemetry
+2026-02-13T12:37:23.562Z [INFO] Memory enablement check: enabled
+2026-02-13T12:37:23.562Z [DEBUG] str_replace_editor: default options: {
+  "truncateBasedOn": "tokenCount",
+  "truncateStyle": "middle"
+}
+2026-02-13T12:37:23.563Z [INFO]  
+2026-02-13T12:37:23.563Z [DEBUG] Using model: claude-sonnet-4.5
+2026-02-13T12:37:23.563Z [INFO] --- Start of group: configured settings: ---
+2026-02-13T12:37:23.564Z [DEBUG] {
+  "github": {
+    "serverUrl": "https://github.com",
+    "owner": {
+      "id": 2221636,
+      "name": "matt-riley"
+    },
+    "repo": {
+      "id": 278701787,
+      "name": "matt-riley/matt-riley",
+      "commit": "copilot-sdk-commit",
+      "readWrite": false
+    },
+    "token": "******"
+  },
+  "version": "latest",
+  "service": {
+    "instance": {
+      "id": "54bb732b-45fa-48e1-a35a-8257978b9751"
+    },
+    "agent": {
+      "model": "capi:claude-sonnet-4.5"
+    }
+  },
+  "blackbird": {
+    "mode": "initial-search"
+  },
+  "tools": {
+    "validation": {
+      "dependabotTimeout": 240
+    }
+  },
+  "problem": {
+    "statement": "<system>\n<temporary-files>\n<path>/tmp/gh-aw/agent/</path>\n<instruction>When you need to create temporary files or directories during your work, always use the /tmp/gh-aw/agent/ directory that has been pre-created for you. Do NOT use the root /tmp/ directory directly.</instruction>\n</temporary-files>\n<file-editing>\n<allowed-paths>\n  <path name=\"workspace\">$GITHUB_WORKSPACE</path>\n  <path name=\"temporary\">/tmp/gh-aw/</path>\n</allowed-paths>\n<restriction>Do NOT attempt to edit files outside these directories as you do not have the necessary permissions.</restriction>\n</file-editing>\n<markdown-generation>\n<instruction>When generating markdown text, use 6 backticks instead of 3 to avoid creating unbalanced code regions where the text looks broken because the code regions are opening and closing out of sync.</instruction>\n<example>\nCorrect:\n``````markdown\n# Example\n```javascript\nconsole.log('hello');\n```\n``````\n\nIncorrect:\n```markdown\n# Example\n```javascript\nconsole.log('hello');\n```\n```\n</example>\n</markdown-generation>\n<safe-outputs>\n<description>GitHub API Access Instructions</description>\n<important>\nThe gh CLI is NOT authenticated. Do NOT use gh commands for GitHub operations.\n</important>\n<instructions>\nTo create or modify GitHub resources (issues, discussions, pull requests, etc.), you MUST call the appropriate safe output tool. Simply writing content will NOT work - the workflow requires actual tool calls.\n\nDiscover available tools from the safeoutputs MCP server.\n\n**Critical**: Tool calls write structured data that downstream jobs process. Without tool calls, follow-up actions will be skipped.\n\n**Note**: If you made no other safe output tool calls during this workflow execution, call the \"noop\" tool to provide a status message indicating completion or that no actions were needed.\n</instructions>\n</safe-outputs>\n<github-context>\nThe following GitHub context information is available for this workflow:\n- **actor**: matt-riley\n- **repository**: matt-riley/matt-riley\n- **workspace**: /home/runner/work/matt-riley/matt-riley\n- **workflow-run-id**: 21986494867\n</github-context>\n\n</system>\n\n# Star List Maintainer\n\nEnsure every starred repository is in one of my existing star lists.\n\n## Instructions\n\n1. Read my existing star lists and their names/descriptions.\n2. Read my currently starred repositories and determine which list(s) each repo is already in.\n3. For every starred repo, infer the best-matching list from list names/descriptions and repository metadata (name, description, topics, language, README summary when needed).\n4. If a repo is not in any list, add it to the best-matching existing list.\n5. If a repo is already in a list but another existing list is clearly a better match, move it to the better list automatically.\n6. If there is no clear fit in any existing list, create a GitHub issue in this repository for manual review with:\n   - repo owner/name and URL\n   - why no list was a clear fit\n   - top 2 candidate lists (if any) and reasoning\n7. Never create new star lists automatically; only use existing lists.\n8. Be idempotent: avoid duplicate list operations and only change what needs changing.\n9. At the end, summarize:\n   - repos added to lists\n   - repos moved between lists\n   - repos escalated for manual review\n\n## Notes\n\n- Run `gh aw compile` to generate the GitHub Actions workflow\n- Keep operations limited to list maintenance and review issue creation"
+  },
+  "api": {
+    "copilot": {
+      "integrationId": "copilot-developer-cli",
+      "url": "https://api.individual.githubcopilot.com",
+      "token": "******"
+    }
+  },
+  "featureFlags": {
+    "CUSTOM_AGENTS": true,
+    "CCA_DELEGATE": true,
+    "CONTINUITY": true,
+    "CONTINUITY_REMOTE_CONTROL": false,
+    "FEATURE_FLAG_TEST": false,
+    "S2STOKENS": false,
+    "copilot-feature-agentic-memory": true,
+    "PLAN_COMMAND": true,
+    "PERSISTED_PERMISSIONS": false,
+    "PLUGIN_COMMAND": true,
+    "COPILOT_SWE_AGENT_BACKGROUND_AGENTS": true,
+    "COPILOT_SWE_AGENT_PARALLEL_TASK_EXECUTION": true,
+    "AUTOPILOT_MODE": false,
+    "QUEUED_COMMANDS": false,
+    "DISABLE_WEB_TOOLS": false,
+    "FLEET_COMMAND": false,
+    "LSP_TOOLS": true,
+    "CONTENT_EXCLUSION": false,
+    "SKILLS_INSTRUCTIONS": false,
+    "IMAGE_PASTE_FALLBACK": false,
+    "ADO_DETECTION": false,
+    "SESSION_CLEANUP": false,
+    "TUIKIT_COMMAND": false,
+    "CHILD_CUSTOM_INSTRUCTIONS": false,
+    "SUBAGENT_COMPACTION": false
+  },
+  "clientName": "cli"
+}
+2026-02-13T12:37:23.564Z [INFO] --- End of group ---
+2026-02-13T12:37:23.564Z [DEBUG] Using Copilot API at https://api.individual.githubcopilot.com with integration ID copilot-developer-cli
+2026-02-13T12:37:23.564Z [DEBUG] Using GitHub OAuth token for Copilot API
+2026-02-13T12:37:23.564Z [DEBUG] Creating copilot-client for integration ID copilot-developer-cli with token authentication. User-agent: copilot/0.0.409 (client/cli linux v24.11.1) term/unknown
+2026-02-13T12:37:23.884Z [DEBUG] Successfully listed 38 models
+2026-02-13T12:37:23.884Z [DEBUG] Got model info: {
+  "billing": {
+    "is_premium": true,
+    "multiplier": 1,
+    "restricted_to": [
+      "pro",
+      "pro_plus",
+      "max",
+      "business",
+      "enterprise",
+      "edu"
+    ]
+  },
+  "capabilities": {
+    "family": "claude-sonnet-4.5",
+    "limits": {
+      "max_context_window_tokens": 144000,
+      "max_non_streaming_output_tokens": 16000,
+      "max_output_tokens": 32000,
+      "max_prompt_tokens": 128000,
+      "vision": {
+        "max_prompt_image_size": 3145728,
+        "max_prompt_images": 5,
+        "supported_media_types": [
+          "image/jpeg",
+          "image/png",
+          "image/webp"
+        ]
+      }
+    },
+    "object": "model_capabilities",
+    "supports": {
+      "max_thinking_budget": 32000,
+      "min_thinking_budget": 1024,
+      "parallel_tool_calls": true,
+      "streaming": true,
+      "tool_calls": true,
+      "vision": true,
+      "web_search": true
+    },
+    "tokenizer": "o200k_base",
+    "type": "chat"
+  },
+  "id": "claude-sonnet-4.5",
+  "is_chat_default": false,
+  "is_chat_fallback": false,
+  "model_picker_category": "versatile",
+  "model_picker_enabled": true,
+  "name": "Claude Sonnet 4.5",
+  "object": "model",
+  "policy": {
+    "state": "enabled",
+    "terms": "Enable access to the latest Claude Sonnet 4.5 model from Anthropic. [Learn more about how GitHub Copilot serves Claude Sonnet 4.5](https://docs.github.com/en/copilot/using-github-copilot/ai-models/using-claude-sonnet-in-github-copilot)."
+  },
+  "preview": false,
+  "supported_endpoints": [
+    "/chat/completions"
+  ],
+  "vendor": "Anthropic",
+  "version": "claude-sonnet-4.5"
+}
+2026-02-13T12:37:24.110Z [INFO] Retrieved 4 memories from the Memory API.
+2026-02-13T12:37:24.110Z [INFO] Memory retrieval for prompt creation completed: success=true, memoriesCount=4, duration=546ms
+2026-02-13T12:37:24.113Z [DEBUG] Sending telemetry event: copilot-cli/cli.telemetry
+2026-02-13T12:37:24.113Z [DEBUG] Sending telemetry event: copilot-cli/cli.telemetry
+2026-02-13T12:37:24.115Z [INFO] --- Start of group: Completion request configuration:  ---
+2026-02-13T12:37:24.115Z [DEBUG] Client options: 
+2026-02-13T12:37:24.115Z [DEBUG] {
+  "model": "claude-sonnet-4.5",
+  "toolTokenBudgetProportion": 0.25,
+  "retryPolicy": {
+    "maxRetries": 5,
+    "errorCodesToRetry": [],
+    "rateLimitRetryPolicy": {
+      "defaultRetryAfterSeconds": 5,
+      "initialRetryBackoffExtraSeconds": 1,
+      "retryBackoffExtraGrowth": 2,
+      "maxRetryAfterSeconds": 180
+    }
+  },
+  "thinkingMode": false,
+  "thinkingBudget": 1024,
+  "requestHeaders": {},
+  "enableCacheControl": true
+}
+2026-02-13T12:37:24.115Z [DEBUG] Request options: 
+2026-02-13T12:37:24.115Z [DEBUG] {
+  "failIfInitialInputsTooLong": false,
+  "processors": {
+    "preRequest": [
+      "CompactionProcessor",
+      "BasicTruncator",
+      "ImmediatePromptProcessor",
+      "{\"type\":\"PremiumRequestProcessor\"}",
+      "SupportImageToolsVisionProcessor"
+    ],
+    "preToolsExecution": [
+      "{\"type\":\"PreToolUseHooksProcessor\"}"
+    ],
+    "postToolExecution": [
+      "SupportImageToolsVisionProcessor"
+    ],
+    "onRequestError": [
+      "SupportImageToolsVisionProcessor",
+      "CompactionProcessor",
+      "BasicTruncator",
+      "StreamingErrorRetryProcessor"
+    ],
+    "onStreamingChunk": [
+      "StreamingChunkDisplay",
+      "ReportIntentExtractor"
+    ]
+  },
+  "executeToolsInParallel": true,
+  "abortSignal": {},
+  "stream": true
+}
+2026-02-13T12:37:24.115Z [DEBUG] Tools: 
+2026-02-13T12:37:24.119Z [DEBUG] [
+  {
+    "type": "function",
+    "function": {
+      "name": "bash",
+      "description": "Runs a Bash command in an interactive Bash session.\n* The \"command\" parameter does NOT need to be XML-escaped.\n* You don't have internet access via this tool.\n* You can run Python, Node.js and Go code with `python`, `node` and `go`.\n* Each shellId identifies a persistent session. State is saved across calls.\n* `initial_wait` must be 30-600 seconds. Give long-running commands time to produce output.\n* If a command hasn't completed within initial_wait, it returns partial output and continues running. Use `read_bash` for more output or `stop_bash` to stop it.\n* You can install Linux, Python, JavaScript and Go packages with the `apt`, `pip`, `npm` and `go` commands.",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "command": {
+            "type": "string",
+            "description": "The Bash command and arguments to run."
+          },
+          "description": {
+            "type": "string",
+            "description": "A short human-readable description of what the command does, limited to 100 characters, for example \"List files in the current directory\", \"Install dependencies with npm\" or \"Run RSpec tests\"."
+          },
+          "shellId": {
+            "type": "string",
+            "description": "(Optional) Identifier for the Bash session. If provided, the command will run in that session, reusing any environment variables or state. If not provided, a new session with auto-generated ID will be created. For async mode, the generated shellId is returned and should be used with read_bash, write_bash, and stop_bash."
+          },
+          "mode": {
+            "type": "string",
+            "enum": [
+              "sync",
+              "async"
+            ],
+            "description": "Execution mode: \"sync\" runs synchronously and waits for completion (default), \"async\" runs in the background. You can send input to \"async\" commands using the `write_bash` tool and read output using the `read_bash` tool."
+          },
+          "detach": {
+            "type": "boolean",
+            "description": "(Optional) Only valid when mode=\"async\". If true, the process runs as a fully independent background process that persists even after agent shutdown (ALWAYS use for servers, daemons, and any process that must stay alive). If false or omitted, the async process is attached to the session and WILL BE KILLED when session shuts down."
+          },
+          "initial_wait": {
+            "type": "number",
+            "description": "(Optional) Time in seconds to wait for initial output when mode is \"sync\". The command continues running in the background after this time. Default is 30 seconds if not provided."
+          }
+        },
+        "required": [
+          "command",
+          "description"
+        ]
+      }
+    }
+  },
+  {
+    "type": "function",
+    "function": {
+      "name": "write_bash",
+      "description": "Sends input to the specified command or Bash session.\n* This tool can be used to send input to a running Bash command or an interactive console app.\n* Bash commands are run in an interactive Bash session with a TTY device and Bash command processor.\n* shellId (required) must match the shellId used to invoke the async bash command.\n* You can send text, {up}, {down}, {left}, {right}, {enter}, and {backspace} as input.\n* Some applications present a list of options to select from. The selection is often denoted using ❯, >, or different formatting.\n* When presented with a list of items, make a selection by sending arrow keys like {up} or {down} to move the selection to your chosen item and then {enter} to select it.\n* The response will contain any output read after \"delay\" seconds. Delay should be appropriate for the task and never less than 10 seconds.",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "shellId": {
+            "type": "string",
+            "description": "Indicates which Bash session to run the command in. Multiple sessions may be used to run different commands at the same time."
+          },
+          "input": {
+            "type": "string",
+            "description": "The input to send to the command or session."
+          },
+          "delay": {
+            "type": "number",
+            "description": "(Optional) The amount of time in seconds to wait before reading the output that resulted from the input."
+          }
+        },
+        "required": [
+          "shellId",
+          "delay"
+        ]
+      }
+    }
+  },
+  {
+    "type": "function",
+    "function": {
+      "name": "read_bash",
+      "description": "Reads output from a Bash command.\n* Reads the output of a command running in an \"async\" Bash session.\n* The shellId MUST be the same one used to invoke the bash command.\n* You can call this tool multiple times to read output produced since the last call.\n* Each request has a cost, so provide a reasonable \"delay\" parameter value for the task, to minimize the need for repeated reads that return no output.\n* If a read request generates no output, consider using exponential backoff in choosing the delay between reads of the same command.\n* Though `write_bash` accepts ANSI control codes, this tool does not include them in the output.",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "shellId": {
+            "type": "string",
+            "description": "The ID of the shell session used to invoke the Bash command. Look back to the bash call to find the shellId."
+          },
+          "delay": {
+            "type": "number",
+            "description": "(Optional) The amount of time in seconds to wait before reading the output."
+          }
+        },
+        "required": [
+          "shellId",
+          "delay"
+        ]
+      }
+    }
+  },
+  {
+    "type": "function",
+    "function": {
+      "name": "stop_bash",
+      "description": "Stops a running Bash command.\n* Stops a running Bash command by terminating the entire Bash session and process.\n* This tool can be used to stop commands that have not exited on their own.\n* Any environment variables defined will have to be redefined after using this tool if the same session ID is used to run a new command.\n* The shellId must match the shellId used to invoke the bash command.",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "shellId": {
+            "type": "string",
+            "description": "The ID of the Bash session used to invoke the bash command."
+          }
+        },
+        "required": [
+          "shellId"
+        ]
+      }
+    }
+  },
+  {
+    "type": "function",
+    "function": {
+      "name": "list_bash",
+      "description": "Lists all active Bash sessions.\n* Returns information about all currently running Bash sessions.\n* Useful for discovering shellIds to use with read_bash, write_bash, or stop_bash.\n* Shows shellId, command, mode, PID, status, and whether there is unread output.",
+      "parameters": {
+        "type": "object",
+        "properties": {},
+        "required": []
+      }
+    }
+  },
+  {
+    "type": "function",
+    "function": {
+      "name": "store_memory",
+      "description": "Store a fact about the codebase in memory, so that it can be used in future code generation or review tasks. The fact should be a clear and concise statement about the codebase conventions, structure, logic, or usage. It may be based on the code itself, or on information provided by the user.",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "subject": {
+            "type": "string",
+            "description": "The topic to which this memory relates. 1-2 words. Examples: 'naming conventions', 'testing practices', 'documentation', 'logging', 'authentication', 'sanitization', 'error handling'."
+          },
+          "fact": {
+            "type": "string",
+            "description": "A clear and short description of a fact about the codebase or a convention used in the codebase. Must be less than 200 characters. Examples: 'Use JWT for authentication.', 'Follow PEP 257 docstring conventions.', 'Use single quotes for strings in Python.', 'Use Winston for logging.'"
+          },
+          "citations": {
+            "type": "string",
+            "description": "The source of this fact, such as a file and line number in the codebase (e.g., 'path/file.go:123'). If the convention is not explicitly stated in the codebase, you can point at several examples that illustrate it, selecting the most diverse set of examples you can find (e.g. from multiple files or contexts). If the fact is based on user input, the citations should be 'User input: ' followed by the contents of the input."
+          },
+          "reason": {
+            "type": "string",
+            "description": "A clear and detailed explanation of the reason behind storing this fact. Must be at least 2-3 sentences long, and include which future tasks this fact will be useful for and why it is important to remember this fact."
+          },
+          "category": {
+            "type": "string",
+            "description": "The type of memory being stored. This can be 'bootstrap_and_build' (info about how to bootstrap and build the project), 'user_preferences' (preferences of the user, such as coding style, tabs vs. spaces, favorite libraries, etc.), 'general' (file independent facts), or 'file_specific' (information about a specific file in the codebase)."
+          }
+        },
+        "required": [
+          "subject",
+          "fact",
+          "citations",
+          "reason",
+          "category"
+        ]
+      }
+    }
+  },
+  {
+    "type": "function",
+    "function": {
+      "name": "view",
+      "description": "Tool for viewing files and directories.\n* If `path` is an image file, returns the image as base64-encoded data along with its MIME type.\n* If `path` is any other type of file, `view` displays the content with line numbers prefixed to each line in the format `N. ` where N is the line number (e.g., `1. `, `2. `, etc.).\n* If `path` is a directory, `view` lists non-hidden files and directories up to 2 levels deep\n* Path *MUST* be absolute",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "path": {
+            "type": "string",
+            "description": "Full absolute path to file or directory. File MUST exist to view."
+          },
+          "view_range": {
+            "type": "array",
+            "items": {
+              "type": "integer"
+            },
+            "description": "Optional parameter when `path` points to a file. If none is given, the full file is shown. If provided, the file will be shown in the indicated line number range, e.g. [11, 12] will show lines 11 and 12. Indexing at 1 to start. Setting `[start_line, -1]` shows all lines from `start_line` to the end of the file."
+          },
+          "forceReadLargeFiles": {
+            "type": "boolean",
+            "description": "When true, skips the large file size check and reads the entire file. Default is false. Only use when you specifically need the full file content and are willing to use context tokens."
+          }
+        },
+        "required": [
+          "path"
+        ]
+      }
+    }
+  },
+  {
+    "type": "function",
+    "function": {
+      "name": "create",
+      "description": "Tool for creating new files.\n* Creates a new file with the specified content at the given path\n* Cannot be used if the specified path already exists\n* Parent directories must exist before creating the file\n* Path *MUST* be absolute",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "path": {
+            "type": "string",
+            "description": "Full absolute path to file to create. File MUST not exist before creating."
+          },
+          "file_text": {
+            "type": "string",
+            "description": "The content of the file to be created."
+          }
+        },
+        "required": [
+          "path",
+          "file_text"
+        ]
+      }
+    }
+  },
+  {
+    "type": "function",
+    "function": {
+      "name": "edit",
+      "description": "Tool for making string replacements in files.\n* Replaces exactly one occurrence of `old_str` with `new_str` in the specified file\n* When called multiple times in a single response, edits are independently made in the order calls are specified\n* The `old_str` parameter must match EXACTLY one or more consecutive lines from the original file\n* If `old_str` is not unique in the file, replacement will not be performed\n* Make sure to include enough context in `old_str` to make it unique\n* Path *MUST* be absolute",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "path": {
+            "type": "string",
+            "description": "Full absolute path to file to edit. File MUST exist to edit."
+          },
+          "old_str": {
+            "type": "string",
+            "description": "The string in the file to replace. Leading and ending whitespaces from file content should be preserved!"
+          },
+          "new_str": {
+            "type": "string",
+            "description": "The new string to replace old_str with."
+          }
+        },
+        "required": [
+          "path"
+        ]
+      }
+    }
+  },
+  {
+    "type": "function",
+    "function": {
+      "name": "web_fetch",
+      "description": "Fetches a URL from the internet and returns the page as either markdown or raw HTML. Use this to safely retrieve up-to-date information from HTML web pages.",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "url": {
+            "type": "string",
+            "description": "The URL to fetch"
+          },
+          "max_length": {
+            "type": "number",
+            "description": "Maximum number of characters to return (default: 5000, maximum: 20000)"
+          },
+          "start_index": {
+            "type": "number",
+            "description": "Start index for pagination. Use this to continue reading if content was truncated (default: 0)"
+          },
+          "raw": {
+            "type": "boolean",
+            "description": "If true, returns raw HTML. If false, converts to simplified markdown (default: false)"
+          }
+        },
+        "required": [
+          "url"
+        ]
+      }
+    }
+  },
+  {
+    "type": "function",
+    "function": {
+      "name": "report_intent",
+      "description": "Use this tool to update the current intent of the session. This is displayed in the user interface and is important to help the user understand what you're doing.\nRules:\n- Call this tool ONLY when you are also calling other tools. Do not call this tool in isolation.\n- Put this tool call first in your collection of tool calls.\n- Always call it at least once per user message (on your first tool-calling turn after a user message).\n- Don't then re-call it if the reported intent is still applicable\nWhen to update intent (examples):\n- ✅ \"Exploring codebase\" → \"Installing dependencies\" (new phase)\n- ✅ \"Running tests\" → \"Debugging test failures\" (new phase)\n- ✅ \"Creating hook script\" → \"Fixing security issue\" (new phase)\n- ❌ \"Installing Pandas 2.2.3\" → \"Installing Pandas with pip3\" (same goal, different tactic: should just have said \"Installing Pandas\")\n- ❌ \"Running transformation script\" → \"Running with python3\" (same goal, fallback attempt)\nPhrasing guidelines:\n- The intent text must be succinct - 4 words max\n- Keep it high-level - it should summarize a series of steps and focus on the goal\n- Use gerund form\n- Bad examples:\n  - 'I am going to read the codebase and understand it.' (too long and no gerund)\n  - 'Writing test1.js' (too low-level: describe the goal, not the specific file)\n  - 'Updating logic' (too vague: at least add one word to hint at what logic)\n- Good examples:\n  - 'Exploring codebase'\n  - 'Creating parser tests'\n  - 'Fixing homepage CSS'",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "intent": {
+            "type": "string",
+            "description": "A description of what you are currently doing or planning to do."
+          }
+        },
+        "required": [
+          "intent"
+        ]
+      }
+    }
+  },
+  {
+    "type": "function",
+    "function": {
+      "name": "fetch_copilot_cli_documentation",
+      "description": "Fetches documentation about you, the GitHub Copilot CLI, and your capabilities. Use this tool when the user asks how to use you, what you can do, or about specific features of the GitHub Copilot CLI.",
+      "parameters": {
+        "type": "object",
+        "properties": {}
+      }
+    }
+  },
+  {
+    "type": "function",
+    "function": {
+      "name": "update_todo",
+      "description": "Use this TODO tool to manage the tasks that must be completed to solve the problem. Use this tool VERY frequently to keep track of your progress towards completing the overall goal, keeping all item statuses up to date.\nCall this tool to make the initial todo list for a complex problem. Then call this tool every time you finish a task and check off the corresponding item in the TODO list. If new tasks are identified, add them to the list as well. Re-planning is allowed if necessary.\nThis tool accepts markdown input to track what has been completed, and what still needs to be done.\nThis tool does not return meaningful data or make changes to the repository, but helps you organize your work and keeps you on-task.\nCall this tool at the same time as the next necessary tool calls, so that you can keep your TODO list updated while continuing to make progress on the problem.",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "todos": {
+            "type": "string",
+            "description": "A markdown checklist of TODO items showing completed and pending tasks."
+          }
+        },
+        "required": [
+          "todos"
+        ]
+      }
+    }
+  },
+  {
+    "type": "function",
+    "function": {
+      "name": "read_agent",
+      "description": "Retrieves the status and results of a background agent.\n* Use this tool to check on agents started with mode: \"background\" in the task tool.\n* Returns the agent status (running, completed, failed) and results if available.\n* Set wait: true to block until the agent completes (with optional timeout).\n* If the agent is still running and wait is false, returns current status.",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "agent_id": {
+            "type": "string",
+            "description": "The ID of the background agent to read results from. This is returned when starting an agent with mode: \"background\"."
+          },
+          "wait": {
+            "type": "boolean",
+            "description": "If true, wait for the agent to complete before returning. If false (default), return immediately with current status."
+          },
+          "timeout": {
+            "type": "number",
+            "description": "Maximum time in seconds to wait if wait is true. Default is 30, maximum is 300."
+          }
+        },
+        "required": [
+          "agent_id"
+        ]
+      }
+    }
+  },
+  {
+    "type": "function",
+    "function": {
+      "name": "list_agents",
+      "description": "Lists all background agents and their current status.\n* Shows running, completed, and failed background agents.\n* Use this to discover agent_ids for use with read_agent tool.\n* Set include_completed: false to only show running agents.",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "include_completed": {
+            "type": "boolean",
+            "description": "Whether to include completed and failed agents in the list. Default is true."
+          }
+        }
+      }
+    }
+  },
+  {
+    "type": "function",
+    "function": {
+      "name": "grep",
+      "description": "Fast and precise code search using ripgrep. Search for patterns in file contents.",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "pattern": {
+            "type": "string",
+            "description": "The regular expression pattern to search for in file contents"
+          },
+          "path": {
+            "type": "string",
+            "description": "File or directory to search in. Defaults to current working directory"
+          },
+          "output_mode": {
+            "type": "string",
+            "enum": [
+              "content",
+              "files_with_matches",
+              "count"
+            ],
+            "description": "Output format. Defaults to \"files_with_matches\". \"content\": Shows matching lines (supports context flags and line numbers). \"files_with_matches\": Shows only file paths. \"count\": Shows match counts per file"
+          },
+          "glob": {
+            "type": "string",
+            "description": "Glob pattern to filter files (e.g., \"*.js\", \"*.{ts,tsx}\")"
+          },
+          "type": {
+            "type": "string",
+            "description": "File type filter (e.g., \"js\", \"py\", \"rust\", \"go\", \"java\")"
+          },
+          "-i": {
+            "type": "boolean",
+            "description": "Case insensitive search"
+          },
+          "-A": {
+            "type": "number",
+            "description": "Lines of context after match (requires output_mode: \"content\")"
+          },
+          "-B": {
+            "type": "number",
+            "description": "Lines of context before match (requires output_mode: \"content\")"
+          },
+          "-C": {
+            "type": "number",
+            "description": "Lines of context before and after match (requires output_mode: \"content\")"
+          },
+          "-n": {
+            "type": "boolean",
+            "description": "Show line numbers (requires output_mode: \"content\")"
+          },
+          "head_limit": {
+            "type": "number",
+            "description": "Limit output to first N results"
+          },
+          "multiline": {
+            "type": "boolean",
+            "description": "Enable multiline mode where patterns can span lines. Default: false. Use for cross-line patterns."
+          }
+        },
+        "required": [
+          "pattern"
+        ]
+      }
+    }
+  },
+  {
+    "type": "function",
+    "function": {
+      "name": "glob",
+      "description": "Fast file pattern matching using glob patterns. Find files by name patterns.",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "pattern": {
+            "type": "string",
+            "description": "The glob pattern to match files against (e.g., \"**/*.js\", \"src/**/*.ts\", \"*.{ts,tsx}\")"
+          },
+          "path": {
+            "type": "string",
+            "description": "The directory to search in. Defaults to current working directory if not specified. IMPORTANT: Omit this field to use the default directory - DO NOT enter 'undefined' or 'null'"
+          }
+        },
+        "required": [
+          "pattern"
+        ]
+      }
+    }
+  },
+  {
+    "type": "function",
+    "function": {
+      "name": "task",
+      "description": "Custom agent: Launch specialized agents in separate context windows for specific tasks.\n\nThe Task tool launches specialized agents that autonomously handle complex tasks. Each agent type has specific capabilities and tools available to it.\n\nAvailable agent types:\n- **explore**: Fast agent specialized for exploring codebases and answering questions about code. Use this when you need to quickly find files by patterns (eg. \"src/components/**/*.tsx\"), search code for keywords (eg. \"API endpoints\"), or answer questions about the codebase (eg. \"how do API endpoints work?\", \"what does this codebase do?\", \"where is authentication logic?\"). Returns focused answers under 300 words. Safe to call in parallel. (Tools: grep/glob/view, Haiku model)\n\n- **task**: Agent for executing commands with verbose output (tests, builds, lints, dependency installs). Returns brief summary on success (\"All 247 tests passed\", \"Build succeeded\"), full output on failure (stack traces, compiler errors). Keeps main context clean by minimizing successful output. Use for tasks where you only need to know success/failure status. (Tools: All CLI tools, Haiku model)\n\n- **general-purpose**: Full-capability agent running in a subprocess. Use for complex multi-step tasks requiring the complete toolset and high-quality reasoning. Runs in a separate context window to keep your main conversation clean. (Tools: All CLI tools, Sonnet model)\n\n- **code-review**: Agent for reviewing code changes with extremely high signal-to-noise ratio. Analyzes staged/unstaged changes and branch diffs. Only surfaces issues that genuinely matter - bugs, security vulnerabilities, logic errors. Never comments on style, formatting, or trivial matters. Will NOT modify code. (Tools: All CLI tools for investigation)\n\nWhen NOT to use Task tool:\n- Reading specific file paths you already know - use view tool instead\n- Simple single grep/glob search - use grep/glob tools directly\n- Commands where you need immediate full output in your context - use bash directly\n- File operations on known files - use edit/create tools directly\n\nUsage notes:\n- Can launch multiple explore/code-review agents in parallel (task, general-purpose have side effects)\n- Each agent is stateless - provide complete context in your prompt\n- Agent results are returned in a single message\n- Use explore proactively for codebase questions before making changes\n- Use 'model' parameter to override the default model (17 models available)",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "description": {
+            "type": "string",
+            "description": "A short (3-5 word) description of the task. This will be displayed as the intent in the UI."
+          },
+          "prompt": {
+            "type": "string",
+            "description": "The task for the agent to perform. Be specific about what you want."
+          },
+          "agent_type": {
+            "type": "string",
+            "enum": [
+              "explore",
+              "task",
+              "general-purpose",
+              "code-review"
+            ],
+            "description": "The type of specialized agent to use for this task."
+          },
+          "model": {
+            "type": "string",
+            "description": "Optional model override. Use this to run an agent with a different model than its default.\n\nAvailable models:\n  - 'claude-sonnet-4.5' (Claude Sonnet 4.5) - standard\n  - 'claude-haiku-4.5' (Claude Haiku 4.5) - fast/cheap\n  - 'claude-opus-4.6' (Claude Opus 4.6) - premium\n  - 'claude-opus-4.6-fast' (Claude Opus 4.6 (fast mode)) - premium\n  - 'claude-opus-4.5' (Claude Opus 4.5) - premium\n  - 'claude-sonnet-4' (Claude Sonnet 4) - standard\n  - 'gemini-3-pro-preview' (Gemini 3 Pro (Preview)) - standard\n  - 'gpt-5.3-codex' (GPT-5.3-Codex) - standard\n  - 'gpt-5.2-codex' (GPT-5.2-Codex) - standard\n  - 'gpt-5.2' (GPT-5.2) - standard\n  - 'gpt-5.1-codex-max' (GPT-5.1-Codex-Max) - standard\n  - 'gpt-5.1-codex' (GPT-5.1-Codex) - standard\n  - 'gpt-5.1' (GPT-5.1) - standard\n  - 'gpt-5' (GPT-5) - standard\n  - 'gpt-5.1-codex-mini' (GPT-5.1-Codex-Mini) - fast/cheap\n  - 'gpt-5-mini' (GPT-5 mini) - fast/cheap\n  - 'gpt-4.1' (GPT-4.1) - fast/cheap"
+          },
+          "mode": {
+            "type": "string",
+            "enum": [
+              "sync",
+              "background"
+            ],
+            "description": "Default to \"sync\" which waits for the agent to complete. Only use \"background\" when you need to make parallel tool calls to other non-task tools while the agent runs. When running multiple tasks that are required to make further progress, do it sync."
+          }
+        },
+        "required": [
+          "description",
+          "prompt",
+          "agent_type"
+        ]
+      }
+    }
+  },
+  {
+    "type": "function",
+    "function": {
+      "name": "safeoutputs-create_issue",
+      "description": "[safeoutputs] Create a new GitHub issue for tracking bugs, feature requests, or tasks. Use this for actionable work items that need assignment, labeling, and status tracking. For reports, announcements, or status updates that don't require task tracking, use create_discussion instead. CONSTRAINTS: Maximum 10 issue(s) can be created. Title will be prefixed with \"[star-list-maintainer] \".",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "body": {
+            "description": "Detailed issue description in Markdown. Do NOT repeat the title as a heading since it already appears as the issue's h1. Include context, reproduction steps, or acceptance criteria as appropriate.",
+            "type": "string"
+          },
+          "labels": {
+            "description": "Labels to categorize the issue (e.g., 'bug', 'enhancement'). Labels must exist in the repository.",
+            "items": {
+              "type": "string"
+            },
+            "type": "array"
+          },
+          "parent": {
+            "description": "Parent issue number for creating sub-issues. This is the numeric ID from the GitHub URL (e.g., 42 in github.com/owner/repo/issues/42). Can also be a temporary_id (e.g., 'aw_abc123def456') from a previously created issue in the same workflow run.",
+            "type": [
+              "number",
+              "string"
+            ]
+          },
+          "temporary_id": {
+            "description": "Unique temporary identifier for referencing this issue before it's created. Format: 'aw_' followed by 12 hex characters (e.g., 'aw_abc123def456'). Use '#aw_ID' in body text to reference other issues by their temporary_id; these are replaced with actual issue numbers after creation.",
+            "type": "string"
+          },
+          "title": {
+            "description": "Concise issue title summarizing the bug, feature, or task. The title appears as the main heading, so keep it brief and descriptive.",
+            "type": "string"
+          }
+        },
+        "required": [
+          "title",
+          "body"
+        ],
+        "additionalProperties": false
+      }
+    }
+  },
+  {
+    "type": "function",
+    "function": {
+      "name": "safeoutputs-missing_data",
+      "description": "[safeoutputs] Report that data or information needed to complete the task is not available. Use this when you cannot accomplish what was requested because required data, context, or information is missing.",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "alternatives": {
+            "description": "Any workarounds, manual steps, or alternative approaches the user could take (max 256 characters).",
+            "type": "string"
+          },
+          "context": {
+            "description": "Additional context about the missing data or where it should come from (max 256 characters).",
+            "type": "string"
+          },
+          "data_type": {
+            "description": "Type or description of the missing data or information (max 128 characters). Be specific about what data is needed.",
+            "type": "string"
+          },
+          "reason": {
+            "description": "Explanation of why this data is needed to complete the task (max 256 characters).",
+            "type": "string"
+          }
+        },
+        "required": [],
+        "additionalProperties": false
+      }
+    }
+  },
+  {
+    "type": "function",
+    "function": {
+      "name": "safeoutputs-missing_tool",
+      "description": "[safeoutputs] Report that a tool or capability needed to complete the task is not available, or share any information you deem important about missing functionality or limitations. Use this when you cannot accomplish what was requested because the required functionality is missing or access is restricted.",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "alternatives": {
+            "description": "Any workarounds, manual steps, or alternative approaches the user could take (max 256 characters).",
+            "type": "string"
+          },
+          "reason": {
+            "description": "Explanation of why this tool is needed or what information you want to share about the limitation (max 256 characters).",
+            "type": "string"
+          },
+          "tool": {
+            "description": "Optional: Name or description of the missing tool or capability (max 128 characters). Be specific about what functionality is needed.",
+            "type": "string"
+          }
+        },
+        "required": [
+          "reason"
+        ],
+        "additionalProperties": false
+      }
+    }
+  },
+  {
+    "type": "function",
+    "function": {
+      "name": "safeoutputs-noop",
+      "description": "[safeoutputs] Log a transparency message when no significant actions are needed. Use this to confirm workflow completion and provide visibility when analysis is complete but no changes or outputs are required (e.g., 'No issues found', 'All checks passed'). This ensures the workflow produces human-visible output even when no other actions are taken.",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "message": {
+            "description": "Status or completion message to log. Should explain what was analyzed and the outcome (e.g., 'Code review complete - no issues found', 'Analysis complete - all tests passing').",
+            "type": "string"
+          }
+        },
+        "required": [
+          "message"
+        ],
+        "additionalProperties": false
+      }
+    }
+  },
+  {
+    "type": "function",
+    "function": {
+      "name": "github-get_commit",
+      "description": "[github] Get details for a commit from a GitHub repository",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "include_diff": {
+            "default": true,
+            "description": "Whether to include file diffs and stats in the response. Default is true.",
+            "type": "boolean"
+          },
+          "owner": {
+            "description": "Repository owner",
+            "type": "string"
+          },
+          "page": {
+            "description": "Page number for pagination (min 1)",
+            "minimum": 1,
+            "type": "number"
+          },
+          "perPage": {
+            "description": "Results per page for pagination (min 1, max 100)",
+            "maximum": 100,
+            "minimum": 1,
+            "type": "number"
+          },
+          "repo": {
+            "description": "Repository name",
+            "type": "string"
+          },
+          "sha": {
+            "description": "Commit SHA, branch name, or tag name",
+            "type": "string"
+          }
+        },
+        "required": [
+          "owner",
+          "repo",
+          "sha"
+        ]
+      }
+    }
+  },
+  {
+    "type": "function",
+    "function": {
+      "name": "github-get_file_contents",
+      "description": "[github] Get the contents of a file or directory from a GitHub repository",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "owner": {
+            "description": "Repository owner (username or organization)",
+            "type": "string"
+          },
+          "path": {
+            "default": "/",
+            "description": "Path to file/directory",
+            "type": "string"
+          },
+          "ref": {
+            "description": "Accepts optional git refs such as `refs/tags/{tag}`, `refs/heads/{branch}` or `refs/pull/{pr_number}/head`",
+            "type": "string"
+          },
+          "repo": {
+            "description": "Repository name",
+            "type": "string"
+          },
+          "sha": {
+            "description": "Accepts optional commit SHA. If specified, it will be used instead of ref",
+            "type": "string"
+          }
+        },
+        "required": [
+          "owner",
+          "repo"
+        ]
+      }
+    }
+  },
+  {
+    "type": "function",
+    "function": {
+      "name": "github-get_latest_release",
+      "description": "[github] Get the latest release in a GitHub repository",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "owner": {
+            "description": "Repository owner",
+            "type": "string"
+          },
+          "repo": {
+            "description": "Repository name",
+            "type": "string"
+          }
+        },
+        "required": [
+          "owner",
+          "repo"
+        ]
+      }
+    }
+  },
+  {
+    "type": "function",
+    "function": {
+      "name": "github-get_me",
+      "description": "[github] Get details of the authenticated GitHub user. Use this when a request is about the user's own profile for GitHub. Or when information is missing to build other tool calls.",
+      "parameters": {
+        "type": "object",
+        "properties": {}
+      }
+    }
+  },
+  {
+    "type": "function",
+    "function": {
+      "name": "github-get_release_by_tag",
+      "description": "[github] Get a specific release by its tag name in a GitHub repository",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "owner": {
+            "description": "Repository owner",
+            "type": "string"
+          },
+          "repo": {
+            "description": "Repository name",
+            "type": "string"
+          },
+          "tag": {
+            "description": "Tag name (e.g., 'v1.0.0')",
+            "type": "string"
+          }
+        },
+        "required": [
+          "owner",
+          "repo",
+          "tag"
+        ]
+      }
+    }
+  },
+  {
+    "type": "function",
+    "function": {
+      "name": "github-get_tag",
+      "description": "[github] Get details about a specific git tag in a GitHub repository",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "owner": {
+            "description": "Repository owner",
+            "type": "string"
+          },
+          "repo": {
+            "description": "Repository name",
+            "type": "string"
+          },
+          "tag": {
+            "description": "Tag name",
+            "type": "string"
+          }
+        },
+        "required": [
+          "owner",
+          "repo",
+          "tag"
+        ]
+      }
+    }
+  },
+  {
+    "type": "function",
+    "function": {
+      "name": "github-get_team_members",
+      "description": "[github] Get member usernames of a specific team in an organization. Limited to organizations accessible with current credentials",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "org": {
+            "description": "Organization login (owner) that contains the team.",
+            "type": "string"
+          },
+          "team_slug": {
+            "description": "Team slug",
+            "type": "string"
+          }
+        },
+        "required": [
+          "org",
+          "team_slug"
+        ]
+      }
+    }
+  },
+  {
+    "type": "function",
+    "function": {
+      "name": "github-get_teams",
+      "description": "[github] Get details of the teams the user is a member of. Limited to organizations accessible with current credentials",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "user": {
+            "description": "Username to get teams for. If not provided, uses the authenticated user.",
+            "type": "string"
+          }
+        }
+      }
+    }
+  },
+  {
+    "type": "function",
+    "function": {
+      "name": "github-list_branches",
+      "description": "[github] List branches in a GitHub repository",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "owner": {
+            "description": "Repository owner",
+            "type": "string"
+          },
+          "page": {
+            "description": "Page number for pagination (min 1)",
+            "minimum": 1,
+            "type": "number"
+          },
+          "perPage": {
+            "description": "Results per page for pagination (min 1, max 100)",
+            "maximum": 100,
+            "minimum": 1,
+            "type": "number"
+          },
+          "repo": {
+            "description": "Repository name",
+            "type": "string"
+          }
+        },
+        "required": [
+          "owner",
+          "repo"
+        ]
+      }
+    }
+  },
+  {
+    "type": "function",
+    "function": {
+      "name": "github-list_commits",
+      "description": "[github] Get list of commits of a branch in a GitHub repository. Returns at least 30 results per page by default, but can return more if specified using the perPage parameter (up to 100).",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "author": {
+            "description": "Author username or email address to filter commits by",
+            "type": "string"
+          },
+          "owner": {
+            "description": "Repository owner",
+            "type": "string"
+          },
+          "page": {
+            "description": "Page number for pagination (min 1)",
+            "minimum": 1,
+            "type": "number"
+          },
+          "perPage": {
+            "description": "Results per page for pagination (min 1, max 100)",
+            "maximum": 100,
+            "minimum": 1,
+            "type": "number"
+          },
+          "repo": {
+            "description": "Repository name",
+            "type": "string"
+          },
+          "sha": {
+            "description": "Commit SHA, branch or tag name to list commits of. If not provided, uses the default branch of the repository. If a commit SHA is provided, will list commits up to that SHA.",
+            "type": "string"
+          }
+        },
+        "required": [
+          "owner",
+          "repo"
+        ]
+      }
+    }
+  },
+  {
+    "type": "function",
+    "function": {
+      "name": "github-list_releases",
+      "description": "[github] List releases in a GitHub repository",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "owner": {
+            "description": "Repository owner",
+            "type": "string"
+          },
+          "page": {
+            "description": "Page number for pagination (min 1)",
+            "minimum": 1,
+            "type": "number"
+          },
+          "perPage": {
+            "description": "Results per page for pagination (min 1, max 100)",
+            "maximum": 100,
+            "minimum": 1,
+            "type": "number"
+          },
+          "repo": {
+            "description": "Repository name",
+            "type": "string"
+          }
+        },
+        "required": [
+          "owner",
+          "repo"
+        ]
+      }
+    }
+  },
+  {
+    "type": "function",
+    "function": {
+      "name": "github-list_starred_repositories",
+      "description": "[github] List starred repositories",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "direction": {
+            "description": "The direction to sort the results by.",
+            "enum": [
+              "asc",
+              "desc"
+            ],
+            "type": "string"
+          },
+          "page": {
+            "description": "Page number for pagination (min 1)",
+            "minimum": 1,
+            "type": "number"
+          },
+          "perPage": {
+            "description": "Results per page for pagination (min 1, max 100)",
+            "maximum": 100,
+            "minimum": 1,
+            "type": "number"
+          },
+          "sort": {
+            "description": "How to sort the results. Can be either 'created' (when the repository was starred) or 'updated' (when the repository was last pushed to).",
+            "enum": [
+              "created",
+              "updated"
+            ],
+            "type": "string"
+          },
+          "username": {
+            "description": "Username to list starred repositories for. Defaults to the authenticated user.",
+            "type": "string"
+          }
+        }
+      }
+    }
+  },
+  {
+    "type": "function",
+    "function": {
+      "name": "github-list_tags",
+      "description": "[github] List git tags in a GitHub repository",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "owner": {
+            "description": "Repository owner",
+            "type": "string"
+          },
+          "page": {
+            "description": "Page number for pagination (min 1)",
+            "minimum": 1,
+            "type": "number"
+          },
+          "perPage": {
+            "description": "Results per page for pagination (min 1, max 100)",
+            "maximum": 100,
+            "minimum": 1,
+            "type": "number"
+          },
+          "repo": {
+            "description": "Repository name",
+            "type": "string"
+          }
+        },
+        "required": [
+          "owner",
+          "repo"
+        ]
+      }
+    }
+  },
+  {
+    "type": "function",
+    "function": {
+      "name": "github-search_code",
+      "description": "[github] Fast and precise code search across ALL GitHub repositories using GitHub's native search engine. Best for finding exact symbols, functions, classes, or specific code patterns.",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "order": {
+            "description": "Sort order for results",
+            "enum": [
+              "asc",
+              "desc"
+            ],
+            "type": "string"
+          },
+          "page": {
+            "description": "Page number for pagination (min 1)",
+            "minimum": 1,
+            "type": "number"
+          },
+          "perPage": {
+            "description": "Results per page for pagination (min 1, max 100)",
+            "maximum": 100,
+            "minimum": 1,
+            "type": "number"
+          },
+          "query": {
+            "description": "Search query using GitHub's powerful code search syntax. Examples: 'content:Skill language:Java org:github', 'NOT is:archived language:Python OR language:go', 'repo:github/github-mcp-server'. Supports exact matching, language filters, path filters, and more.",
+            "type": "string"
+          },
+          "sort": {
+            "description": "Sort field ('indexed' only)",
+            "type": "string"
+          }
+        },
+        "required": [
+          "query"
+        ]
+      }
+    }
+  },
+  {
+    "type": "function",
+    "function": {
+      "name": "github-search_repositories",
+      "description": "[github] Find GitHub repositories by name, description, readme, topics, or other metadata. Perfect for discovering projects, finding examples, or locating specific repositories across GitHub.",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "minimal_output": {
+            "default": true,
+            "description": "Return minimal repository information (default: true). When false, returns full GitHub API repository objects.",
+            "type": "boolean"
+          },
+          "order": {
+            "description": "Sort order",
+            "enum": [
+              "asc",
+              "desc"
+            ],
+            "type": "string"
+          },
+          "page": {
+            "description": "Page number for pagination (min 1)",
+            "minimum": 1,
+            "type": "number"
+          },
+          "perPage": {
+            "description": "Results per page for pagination (min 1, max 100)",
+            "maximum": 100,
+            "minimum": 1,
+            "type": "number"
+          },
+          "query": {
+            "description": "Repository search query. Examples: 'machine learning in:name stars:>1000 language:python', 'topic:react', 'user:facebook'. Supports advanced search syntax for precise filtering.",
+            "type": "string"
+          },
+          "sort": {
+            "description": "Sort repositories by field, defaults to best match",
+            "enum": [
+              "stars",
+              "forks",
+              "help-wanted-issues",
+              "updated"
+            ],
+            "type": "string"
+          }
+        },
+        "required": [
+          "query"
+        ]
+      }
+    },
+    "copilot_cache_control": {
+      "type": "ephemeral"
+    }
+  }
+]
+2026-02-13T12:37:24.119Z [DEBUG] Final request options: 
+2026-02-13T12:37:24.119Z [DEBUG] {
+  "thinking_budget": 1024,
+  "temperature": 1,
+  "snippy": {
+    "enabled": false
+  }
+}
+2026-02-13T12:37:24.119Z [INFO] --- End of group ---
+2026-02-13T12:37:24.120Z [DEBUG] Sending telemetry event: copilot-cli/cli.telemetry
+2026-02-13T12:37:24.653Z [INFO] CompactionProcessor: Utilization 11.3% (14445/128000 tokens) below threshold 80%
+2026-02-13T12:37:24.697Z [DEBUG] Sending telemetry event: copilot-cli/cli.telemetry
+2026-02-13T12:37:24.698Z [DEBUG] PremiumRequestProcessor: Setting X-Initiator to 'user'
+2026-02-13T12:37:24.698Z [INFO] --- Start of group: Sending request to the AI model ---
+2026-02-13T12:37:24.705Z [DEBUG] Flushed 4 events to session c459cd0d-f0bd-4625-9886-20da567ef45b
+2026-02-13T12:37:35.822Z [DEBUG] Sending telemetry event: copilot-cli/cli.telemetry
+2026-02-13T12:37:35.823Z [DEBUG] Sending telemetry event: copilot-cli/cli.model_call
+2026-02-13T12:37:35.823Z [DEBUG] Sending telemetry event: copilot-cli/request.sent
+2026-02-13T12:37:35.824Z [DEBUG] response (Request-ID 00000-164df44c-e9f2-4428-bc1b-b808b165b884):
+2026-02-13T12:37:35.824Z [DEBUG] data:
+2026-02-13T12:37:35.825Z [DEBUG] {
+  "usage": {
+    "completion_tokens": 482,
+    "prompt_tokens": 17171,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 17653
+  },
+  "id": "msg_vrtx_01SCMtDiJ1rtGNxFpkvEMpHa",
+  "choices": [
+    {
+      "index": 0,
+      "finish_reason": "tool_calls",
+      "logprobs": null,
+      "message": {
+        "reasoning_text": "Let me understand this task:\n\n1. I need to read the user's existing GitHub star lists (which are collections/groups of starred repositories)\n2. Read all starred repositories \n3. Check which repos are already in lists\n4. For repos not in any list, add them to the most appropriate existing list\n5. For repos in a list but better matched elsewhere, move them\n6. For repos with no clear fit, create a GitHub issue for manual review\n7. Never create new lists automatically\n8. Be idempotent\n9. Summarize the actions taken\n\nFirst, I need to check what tools are available. The system message mentions \"safeoutputs MCP server\" and that gh CLI is NOT authenticated, so I can't use `gh` commands.\n\nLooking at the available tools, I can see:\n- `github-list_starred_repositories` - to get starred repos\n- Various GitHub tools for reading data\n- `safeoutputs-create_issue` - for creating issues\n- `safeoutputs-noop` - for status messages\n\nHowever, I notice there's NO tool available for reading or modifying Star Lists. The memory actually confirms this:\n\"GitHub toolsets expose list_starred_repositories but not Star Lists read/move APIs; automate via recommendations, not direct list mutation.\"\n\nThis is a critical issue - I cannot actually read or modify star lists with the available tools. The GitHub API tools don't include star list management.\n\nI should report this as a missing tool/capability since I cannot complete the task as requested.",
+        "role": "assistant",
+        "reasoning_opaque": "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",
+        "content": "I need to check what GitHub API capabilities are available for star lists.",
+        "refusal": null,
+        "tool_calls": [
+          {
+            "id": "toolu_vrtx_01JW1asWMcmgJhjbjBP2nNqn",
+            "type": "function",
+            "function": {
+              "name": "report_intent",
+              "arguments": "{\"intent\": \"Investigating star list capabilities\"}"
+            }
+          },
+          {
+            "id": "toolu_vrtx_01XQ1FNGb5evFy5ysR65LkyP",
+            "type": "function",
+            "function": {
+              "name": "github-get_me",
+              "arguments": ""
+            }
+          },
+          {
+            "id": "toolu_vrtx_01ETUNbVb72saXwTzjMzGJQZ",
+            "type": "function",
+            "function": {
+              "name": "github-list_starred_repositories",
+              "arguments": "{\"perPage\": 5}"
+            }
+          }
+        ],
+        "parsed": null
+      }
+    }
+  ],
+  "created": 1770986255,
+  "model": "claude-sonnet-4.5",
+  "object": "chat.completion"
+}
+2026-02-13T12:37:35.825Z [INFO] --- End of group ---
+2026-02-13T12:37:35.826Z [DEBUG] Sending telemetry event: copilot-cli/cli.telemetry
+2026-02-13T12:37:35.827Z [DEBUG] Tool calls count: 3
+2026-02-13T12:37:35.827Z [DEBUG] Running tool calls in parallel
+2026-02-13T12:37:35.830Z [DEBUG] Sending telemetry event: copilot-cli/cli.tool_call
+2026-02-13T12:37:35.830Z [DEBUG] Sending telemetry event: copilot-cli/cli.telemetry
+2026-02-13T12:37:35.930Z [DEBUG] Flushed 5 events to session c459cd0d-f0bd-4625-9886-20da567ef45b
+2026-02-13T12:37:36.283Z [DEBUG] Unable to parse tool invocation as JSON. Treating it as a string for filtering: SyntaxError: Unexpected token 'i', "failed to ge"... is not valid JSON
+2026-02-13T12:37:36.283Z [DEBUG] Tool invocation result: failed to get user: GET https://api.github.com/user: 403 Resource not accessible by integration []
+2026-02-13T12:37:36.283Z [DEBUG] Sending telemetry event: copilot-cli/cli.tool_call
+2026-02-13T12:37:36.284Z [DEBUG] Sending telemetry event: copilot-cli/cli.telemetry
+2026-02-13T12:37:36.323Z [DEBUG] Unable to parse tool invocation as JSON. Treating it as a string for filtering: SyntaxError: Unexpected token 'i', "failed to li"... is not valid JSON
+2026-02-13T12:37:36.323Z [DEBUG] Tool invocation result: failed to list starred repositories for user '': GET https://api.github.com/user/starred?page=1&per_page=5: 403 Resource not accessible by integration []
+2026-02-13T12:37:36.323Z [DEBUG] Sending telemetry event: copilot-cli/cli.tool_call
+2026-02-13T12:37:36.323Z [DEBUG] Sending telemetry event: copilot-cli/cli.telemetry
+2026-02-13T12:37:36.331Z [DEBUG] Sending telemetry event: copilot-cli/cli.telemetry
+2026-02-13T12:37:36.331Z [DEBUG] Sending telemetry event: copilot-cli/cli.telemetry
+2026-02-13T12:37:36.332Z [DEBUG] Sending telemetry event: copilot-cli/cli.telemetry
+2026-02-13T12:37:36.362Z [INFO] CompactionProcessor: Utilization 11.9% (15201/128000 tokens) below threshold 80%
+2026-02-13T12:37:36.446Z [DEBUG] Sending telemetry event: copilot-cli/cli.telemetry
+2026-02-13T12:37:36.446Z [DEBUG] PremiumRequestProcessor: Setting X-Initiator to 'agent'
+2026-02-13T12:37:36.446Z [INFO] --- Start of group: Sending request to the AI model ---
+2026-02-13T12:37:36.453Z [DEBUG] Flushed 4 events to session c459cd0d-f0bd-4625-9886-20da567ef45b
+2026-02-13T12:37:40.328Z [DEBUG] Sending telemetry event: copilot-cli/cli.telemetry
+2026-02-13T12:37:40.328Z [DEBUG] Sending telemetry event: copilot-cli/cli.model_call
+2026-02-13T12:37:40.329Z [DEBUG] Sending telemetry event: copilot-cli/request.sent
+2026-02-13T12:37:40.329Z [DEBUG] response (Request-ID 00000-3ffaa8b6-0401-4236-8f8e-e4f4a507a749):
+2026-02-13T12:37:40.329Z [DEBUG] data:
+2026-02-13T12:37:40.329Z [DEBUG] {
+  "usage": {
+    "completion_tokens": 152,
+    "prompt_tokens": 17804,
+    "prompt_tokens_details": {
+      "cached_tokens": 15940
+    },
+    "total_tokens": 17956
+  },
+  "id": "msg_vrtx_01Mn4zm1rQBjd9LNPp9PwqPi",
+  "choices": [
+    {
+      "index": 0,
+      "finish_reason": "tool_calls",
+      "logprobs": null,
+      "message": {
+        "role": "assistant",
+        "content": null,
+        "refusal": null,
+        "tool_calls": [
+          {
+            "id": "toolu_vrtx_01527fBPESJtkVMFUYB1syeP",
+            "type": "function",
+            "function": {
+              "name": "safeoutputs-missing_tool",
+              "arguments": "{\"tool\": \"GitHub Star Lists API and authenticated GitHub access\", \"reason\": \"Cannot access GitHub API for starred repositories or star lists. GitHub token lacks required permissions (403 errors), and no star list read/move APIs are available in the toolset.\", \"alternatives\": \"Manual maintenance via GitHub web UI, or workflow needs enhanced GitHub token permissions and star list management tools.\"}"
+            }
+          }
+        ],
+        "parsed": null
+      }
+    }
+  ],
+  "created": 1770986260,
+  "model": "claude-sonnet-4.5",
+  "object": "chat.completion"
+}
+2026-02-13T12:37:40.329Z [INFO] --- End of group ---
+2026-02-13T12:37:40.330Z [DEBUG] Sending telemetry event: copilot-cli/cli.telemetry
+2026-02-13T12:37:40.330Z [DEBUG] Tool calls count: 1
+2026-02-13T12:37:40.330Z [DEBUG] Running tool calls in parallel
+2026-02-13T12:37:40.356Z [DEBUG] Tool invocation result: {"result":"success"}
+2026-02-13T12:37:40.356Z [DEBUG] Sending telemetry event: copilot-cli/cli.tool_call
+2026-02-13T12:37:40.356Z [DEBUG] Sending telemetry event: copilot-cli/cli.telemetry
+2026-02-13T12:37:40.361Z [DEBUG] Sending telemetry event: copilot-cli/cli.telemetry
+2026-02-13T12:37:40.361Z [DEBUG] Sending telemetry event: copilot-cli/cli.telemetry
+2026-02-13T12:37:40.361Z [DEBUG] Sending telemetry event: copilot-cli/cli.telemetry
+2026-02-13T12:37:40.382Z [INFO] CompactionProcessor: Utilization 12.0% (15305/128000 tokens) below threshold 80%
+2026-02-13T12:37:40.423Z [DEBUG] Sending telemetry event: copilot-cli/cli.telemetry
+2026-02-13T12:37:40.423Z [DEBUG] PremiumRequestProcessor: Setting X-Initiator to 'agent'
+2026-02-13T12:37:40.423Z [INFO] --- Start of group: Sending request to the AI model ---
+2026-02-13T12:37:40.462Z [DEBUG] Flushed 5 events to session c459cd0d-f0bd-4625-9886-20da567ef45b
+2026-02-13T12:37:43.507Z [DEBUG] Sending telemetry event: copilot-cli/cli.telemetry
+2026-02-13T12:37:43.507Z [DEBUG] Sending telemetry event: copilot-cli/cli.model_call
+2026-02-13T12:37:43.508Z [DEBUG] Sending telemetry event: copilot-cli/request.sent
+2026-02-13T12:37:43.508Z [DEBUG] response (Request-ID 00000-bd39c488-12b9-4fa9-ba37-9a619a0550a8):
+2026-02-13T12:37:43.508Z [DEBUG] data:
+2026-02-13T12:37:43.508Z [DEBUG] {
+  "usage": {
+    "completion_tokens": 77,
+    "prompt_tokens": 17973,
+    "prompt_tokens_details": {
+      "cached_tokens": 17797
+    },
+    "total_tokens": 18050
+  },
+  "id": "msg_vrtx_01NbeHVhgsNn3VrNF4FUkKD7",
+  "choices": [
+    {
+      "message": {
+        "role": "assistant",
+        "content": "The workflow cannot complete because:\n\n1. **No GitHub API access**: The GitHub token returns 403 errors for user data and starred repositories\n2. **No star list tools**: The available GitHub tools don't include star list read/write APIs (confirmed by repository memory)\n\nThis workflow requires enhanced GitHub App permissions and star list management API support to function.",
+        "refusal": null,
+        "parsed": null
+      },
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null
+    }
+  ],
+  "created": 1770986263,
+  "model": "claude-sonnet-4.5",
+  "object": "chat.completion"
+}
+2026-02-13T12:37:43.508Z [INFO] --- End of group ---
+2026-02-13T12:37:43.508Z [DEBUG] Sending telemetry event: copilot-cli/cli.telemetry
+2026-02-13T12:37:43.509Z [DEBUG] Ignoring event of kind: response
+2026-02-13T12:37:43.509Z [DEBUG] Sending telemetry event: copilot-cli/cli.telemetry
+2026-02-13T12:37:43.509Z [DEBUG] Sending telemetry event: copilot-cli/cli.telemetry
+2026-02-13T12:37:43.516Z [DEBUG] Flushed 2 events to session c459cd0d-f0bd-4625-9886-20da567ef45b
+2026-02-13T12:37:43.521Z [DEBUG] executePromptDirectly completing: hasError=false, will return true
+2026-02-13T12:37:43.533Z [ERROR] MCP transport for github closed
+2026-02-13T12:37:43.533Z [ERROR] MCP client for github closed
+2026-02-13T12:37:43.534Z [ERROR] MCP transport for safeoutputs closed
+2026-02-13T12:37:43.534Z [ERROR] MCP client for safeoutputs closed
+2026-02-13T12:37:43.534Z [DEBUG] runPromptMode: executePromptDirectly returned succeeded=true
+2026-02-13T12:37:43.534Z [DEBUG] runPromptMode: exiting with code 0
+2026-02-13T12:37:43.534Z [DEBUG] [shutdown] Starting shutdown with 4 disposables
+2026-02-13T12:37:43.534Z [DEBUG] [shutdown] Starting dispose: closeAllDatabases
+2026-02-13T12:37:43.534Z [DEBUG] [shutdown] Starting dispose: apt
+2026-02-13T12:37:43.536Z [DEBUG] [shutdown] Starting dispose: $X
+2026-02-13T12:37:43.537Z [DEBUG] [shutdown] Completed dispose: $X (1ms)
+2026-02-13T12:37:43.537Z [DEBUG] [shutdown] Completed dispose: closeAllDatabases (3ms)
+2026-02-13T12:37:43.537Z [DEBUG] [shutdown] Completed dispose: apt (3ms)
+2026-02-13T12:37:43.537Z [DEBUG] [shutdown] Starting dispose: Egt
+2026-02-13T12:37:43.540Z [DEBUG] [shutdown] Completed dispose: Egt (3ms)
+2026-02-13T12:37:43.540Z [DEBUG] [shutdown] Shutdown complete

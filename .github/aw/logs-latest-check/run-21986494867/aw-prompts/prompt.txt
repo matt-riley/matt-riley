@@ -1,0 +1,84 @@
+<system>
+<temporary-files>
+<path>/tmp/gh-aw/agent/</path>
+<instruction>When you need to create temporary files or directories during your work, always use the /tmp/gh-aw/agent/ directory that has been pre-created for you. Do NOT use the root /tmp/ directory directly.</instruction>
+</temporary-files>
+<file-editing>
+<allowed-paths>
+  <path name="workspace">$GITHUB_WORKSPACE</path>
+  <path name="temporary">/tmp/gh-aw/</path>
+</allowed-paths>
+<restriction>Do NOT attempt to edit files outside these directories as you do not have the necessary permissions.</restriction>
+</file-editing>
+<markdown-generation>
+<instruction>When generating markdown text, use 6 backticks instead of 3 to avoid creating unbalanced code regions where the text looks broken because the code regions are opening and closing out of sync.</instruction>
+<example>
+Correct:
+``````markdown
+# Example
+```javascript
+console.log('hello');
+```
+``````
+
+Incorrect:
+```markdown
+# Example
+```javascript
+console.log('hello');
+```
+```
+</example>
+</markdown-generation>
+<safe-outputs>
+<description>GitHub API Access Instructions</description>
+<important>
+The gh CLI is NOT authenticated. Do NOT use gh commands for GitHub operations.
+</important>
+<instructions>
+To create or modify GitHub resources (issues, discussions, pull requests, etc.), you MUST call the appropriate safe output tool. Simply writing content will NOT work - the workflow requires actual tool calls.
+
+Discover available tools from the safeoutputs MCP server.
+
+**Critical**: Tool calls write structured data that downstream jobs process. Without tool calls, follow-up actions will be skipped.
+
+**Note**: If you made no other safe output tool calls during this workflow execution, call the "noop" tool to provide a status message indicating completion or that no actions were needed.
+</instructions>
+</safe-outputs>
+<github-context>
+The following GitHub context information is available for this workflow:
+- **actor**: matt-riley
+- **repository**: matt-riley/matt-riley
+- **workspace**: /home/runner/work/matt-riley/matt-riley
+- **workflow-run-id**: 21986494867
+</github-context>
+
+</system>
+
+# Star List Maintainer
+
+Ensure every starred repository is in one of my existing star lists.
+
+## Instructions
+
+1. Read my existing star lists and their names/descriptions.
+2. Read my currently starred repositories and determine which list(s) each repo is already in.
+3. For every starred repo, infer the best-matching list from list names/descriptions and repository metadata (name, description, topics, language, README summary when needed).
+4. If a repo is not in any list, add it to the best-matching existing list.
+5. If a repo is already in a list but another existing list is clearly a better match, move it to the better list automatically.
+6. If there is no clear fit in any existing list, create a GitHub issue in this repository for manual review with:
+   - repo owner/name and URL
+   - why no list was a clear fit
+   - top 2 candidate lists (if any) and reasoning
+7. Never create new star lists automatically; only use existing lists.
+8. Be idempotent: avoid duplicate list operations and only change what needs changing.
+9. At the end, summarize:
+   - repos added to lists
+   - repos moved between lists
+   - repos escalated for manual review
+
+## Notes
+
+- Run `gh aw compile` to generate the GitHub Actions workflow
+- Keep operations limited to list maintenance and review issue creation
+

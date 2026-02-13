@@ -1,0 +1,24 @@
+﻿2026-02-13T12:38:21.3164333Z ##[group]Run actions/github-script@ed597411d8f924073f98dfc5c65a23a2325f34cd
+2026-02-13T12:38:21.3164972Z with:
+2026-02-13T12:38:21.3165760Z   script: const { setupGlobals } = require('/opt/gh-aw/actions/setup_globals.cjs');
+setupGlobals(core, github, context, exec, io);
+const { main } = require('/opt/gh-aw/actions/setup_threat_detection.cjs');
+await main();
+
+2026-02-13T12:38:21.3166783Z   github-token: ***
+2026-02-13T12:38:21.3167001Z   debug: false
+2026-02-13T12:38:21.3167220Z   user-agent: actions/github-script
+2026-02-13T12:38:21.3167731Z   result-encoding: json
+2026-02-13T12:38:21.3167944Z   retries: 0
+2026-02-13T12:38:21.3168174Z   retry-exempt-status-codes: 400,401,403,404,422
+2026-02-13T12:38:21.3168453Z env:
+2026-02-13T12:38:21.3168641Z   WORKFLOW_NAME: Star List Maintainer
+2026-02-13T12:38:21.3169903Z   WORKFLOW_DESCRIPTION: Keep starred repositories organized into existing GitHub star lists. On each run,
+review existing and new stars, assign each to the best matching existing list,
+and automatically move stars when another list is a better match.
+2026-02-13T12:38:21.3170910Z   HAS_PATCH: false
+2026-02-13T12:38:21.3171108Z ##[endgroup]
+2026-02-13T12:38:21.3884336Z Prompt file found: /tmp/gh-aw/threat-detection/aw-prompts/prompt.txt (3423 bytes)
+2026-02-13T12:38:21.3885643Z Agent output file found: /tmp/gh-aw/threat-detection/agent_output.json (441 bytes)
+2026-02-13T12:38:21.3886626Z No patch file found at: /tmp/gh-aw/threat-detection/aw.patch
+2026-02-13T12:38:21.3917031Z Threat detection setup completed
