@@ -1,0 +1,167 @@
+name: Weekly Starred README Sync
+
+on:
+  schedule:
+    - cron: "0 4 * * 1"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: weekly-starred-readme-sync
+  cancel-in-progress: false
+
+jobs:
+  update-readme:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          ref: master
+          token: ${{ secrets.STAR_LIST_PAT }}
+
+      - name: Update README starred repositories section
+        env:
+          STAR_LIST_PAT: ${{ secrets.STAR_LIST_PAT }}
+          TARGET_GITHUB_USER: matt-riley
+        run: |
+          python - <<'PY'
+          import json
+          import os
+          import re
+          import urllib.request
+          from datetime import datetime, timezone
+          from pathlib import Path
+
+          START_MARKER = "<!-- STARRED-REPOS-START -->"
+          END_MARKER = "<!-- STARRED-REPOS-END -->"
+
+
+          def request_json(url: str, headers: dict) -> tuple[list | dict, str]:
+              req = urllib.request.Request(url, headers=headers)
+              with urllib.request.urlopen(req) as resp:
+                  data = json.loads(resp.read().decode("utf-8"))
+                  return data, resp.headers.get("Link", "")
+
+
+          def next_url(link_header: str) -> str | None:
+              if not link_header:
+                  return None
+              for part in link_header.split(","):
+                  section = part.split(";")
+                  if len(section) < 2:
+                      continue
+                  url_part = section[0].strip()
+                  rel_part = section[1].strip()
+                  if rel_part == 'rel="next"' and url_part.startswith("<") and url_part.endswith(">"):
+                      return url_part[1:-1]
+              return None
+
+
+          def text(value) -> str:
+              if value is None:
+                  return "n/a"
+              value = str(value).strip()
+              return value if value else "n/a"
+
+
+          token = os.getenv("STAR_LIST_PAT", "").strip()
+          target_user = os.getenv("TARGET_GITHUB_USER", "matt-riley")
+          if not token:
+              raise SystemExit("Missing STAR_LIST_PAT secret.")
+
+          headers = {
+              "Authorization": f"Bearer {token}",
+              "Accept": "application/vnd.github.star+json",
+              "X-GitHub-Api-Version": "2022-11-28",
+              "User-Agent": "weekly-starred-readme-sync",
+          }
+
+          user_data, _ = request_json("https://api.github.com/user", {
+              "Authorization": f"Bearer {token}",
+              "Accept": "application/vnd.github+json",
+              "X-GitHub-Api-Version": "2022-11-28",
+              "User-Agent": "weekly-starred-readme-sync",
+          })
+          source_user = user_data.get("login") or target_user
+
+          starred = []
+          url = "https://api.github.com/user/starred?per_page=100"
+          while url:
+              data, link = request_json(url, headers)
+              starred.extend(data)
+              url = next_url(link)
+
+          lines = []
+          lines.append("## Starred Repositories (Weekly Snapshot)")
+          lines.append("")
+          lines.append(f"_Last updated: {datetime.now(timezone.utc).strftime('%Y-%m-%d %H:%M:%S UTC')}_")
+          lines.append(f"_Source account: `{source_user}`_")
+          lines.append("")
+          lines.append(f"Total starred repositories: **{len(starred)}**")
+          lines.append("")
+
+          if not starred:
+              lines.append("_No starred repositories found._")
+          else:
+              for index, item in enumerate(starred, start=1):
+                  repo = item.get("repo", {})
+                  full_name = repo.get("full_name", "unknown/unknown")
+                  html_url = repo.get("html_url", "")
+                  topics = repo.get("topics") or []
+                  topics_text = ", ".join(topics) if topics else "n/a"
+                  license_info = repo.get("license") or {}
+                  license_name = license_info.get("spdx_id") or license_info.get("name") or "n/a"
+                  homepage = text(repo.get("homepage"))
+                  description = text(repo.get("description"))
+                  language = text(repo.get("language"))
+                  archived = "yes" if repo.get("archived") else "no"
+                  is_fork = "yes" if repo.get("fork") else "no"
+                  is_private = "yes" if repo.get("private") else "no"
+
+                  lines.append(f"### {index}. [{full_name}]({html_url})")
+                  lines.append("")
+                  lines.append(f"- Starred at: `{text(item.get('starred_at'))}`")
+                  lines.append(f"- Description: {description}")
+                  lines.append(f"- Topics: {topics_text}")
+                  lines.append(f"- Language: `{language}`")
+                  lines.append(f"- License: `{license_name}`")
+                  lines.append(f"- Visibility: `{'private' if is_private == 'yes' else 'public'}`")
+                  lines.append(f"- Metrics: ⭐ `{repo.get('stargazers_count', 0)}` | Forks `{repo.get('forks_count', 0)}` | Watchers `{repo.get('watchers_count', 0)}` | Open issues `{repo.get('open_issues_count', 0)}`")
+                  lines.append(f"- Repo state: archived `{archived}` | fork `{is_fork}` | disabled `{'yes' if repo.get('disabled') else 'no'}`")
+                  lines.append(f"- Default branch: `{text(repo.get('default_branch'))}`")
+                  lines.append(f"- Created: `{text(repo.get('created_at'))}`")
+                  lines.append(f"- Updated: `{text(repo.get('updated_at'))}`")
+                  lines.append(f"- Last push: `{text(repo.get('pushed_at'))}`")
+                  lines.append(f"- Size (KB): `{repo.get('size', 0)}`")
+                  lines.append(f"- Homepage: {homepage}")
+                  lines.append(f"- Clone URL: `{text(repo.get('clone_url'))}`")
+                  lines.append("")
+
+          block = f"{START_MARKER}\n" + "\n".join(lines).rstrip() + f"\n{END_MARKER}"
+          readme_path = Path("README.md")
+          readme = readme_path.read_text(encoding="utf-8")
+
+          pattern = re.compile(re.escape(START_MARKER) + r".*?" + re.escape(END_MARKER), re.DOTALL)
+          if pattern.search(readme):
+              updated = pattern.sub(block, readme)
+          else:
+              updated = readme.rstrip() + "\n\n" + block + "\n"
+
+          readme_path.write_text(updated if updated.endswith("\n") else updated + "\n", encoding="utf-8")
+          PY
+
+      - name: Commit and push README changes
+        run: |
+          if git diff --quiet -- README.md; then
+            echo "README.md unchanged."
+            exit 0
+          fi
+
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add README.md
+          git commit -m "chore: update starred repositories in README"
+          git push origin HEAD:master
