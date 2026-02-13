@@ -4,6 +4,8 @@ description: |
   `.github/star-list-assignments.yml` by opening an automated pull request.
 
 on:
+  schedule:
+    - cron: "0 3 * * *"
   issues:
     types: [edited, reopened]
   issue_comment:
@@ -30,39 +32,42 @@ safe-outputs:
     labels: [star-list-maintainer]
     draft: true
     if-no-changes: ignore
+  update-issue:
+    body: true
+    max: 1
+    target: "*"
 ---
 
 # Star List Assignment Sync
 
-Apply checked checklist commands from star-list-maintainer issue content to `.github/star-list-assignments.yml`.
+Find the star-list tracking issue, apply checked checklist commands to `.github/star-list-assignments.yml`, and remove processed checked items from the issue body.
 
 ## Instructions
 
-1. Determine triggering source content:
-   - for `issue_comment` events, use the triggering comment body
-   - for `issues` events, use the triggering issue body
-2. Continue only if the related issue is the star-list tracking issue:
-   - title is `[star-list-maintainer] Star list maintenance actions`
-   - or label `star-list-maintainer` exists
-   If neither condition is true, no-op.
-3. Read `.github/star-lists.yml` and `.github/star-list-assignments.yml`.
-4. Parse only checked markdown task lines (`- [x]` or `- [X]`) that match exactly:
+1. Resolve the star-list tracking issue:
+   - for `issues` and `issue_comment` events, start from the triggering issue
+   - for `workflow_dispatch`, find the open issue titled `[star-list-maintainer] Star list maintenance actions` (prefer one with label `star-list-maintainer`)
+   If no matching issue is found, no-op.
+2. Read the resolved issue body plus `.github/star-lists.yml` and `.github/star-list-assignments.yml`.
+3. Parse only checked markdown task lines from the issue body (`- [x]` or `- [X]`) that match exactly:
    - `ASSIGN owner/repo -> list-id`
    - `REMOVE owner/repo`
-5. Validate commands:
+4. Validate commands:
    - `owner/repo` must be valid `owner/name` format
    - `list-id` in `ASSIGN` must exist in `.github/star-lists.yml`
    Ignore invalid commands and include them in the workflow summary.
-6. Apply valid commands idempotently:
+5. Apply valid commands idempotently:
    - `ASSIGN` sets or updates `assignments[owner/repo] = list-id`
    - `REMOVE` deletes `assignments[owner/repo]`
-7. Write `.github/star-list-assignments.yml` with assignment keys sorted alphabetically.
-8. If no file change results, no-op and do not create comments (avoid event-loop noise).
+6. Write `.github/star-list-assignments.yml` with assignment keys sorted alphabetically.
+7. Remove all checked checklist command lines (`- [x]`/`- [X]`) from the issue body so processed items are no longer mentioned in the issue.
+8. If the issue body changed, update the tracking issue body using `update-issue` with replace semantics.
 9. If file changes, create one draft pull request that includes:
    - applied commands
    - ignored/invalid commands
-   - source issue URL and, if applicable, source comment URL
-10. Never modify any file other than `.github/star-list-assignments.yml`.
+   - source issue URL
+10. If neither issue body nor assignment file changed, no-op.
+11. Never modify any file other than `.github/star-list-assignments.yml`.
 
 ## Notes
 

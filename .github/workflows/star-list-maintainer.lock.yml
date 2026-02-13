@@ -24,13 +24,12 @@
 # against in-repo list metadata and assignment state, then report exact manual
 # list actions when changes are needed.
 #
-# frontmatter-hash: 88c9bd02d1e5e26424cddbc96e1322d670873c6a66b6d5134b581bd3917f873d
+# frontmatter-hash: 201517b217b906ac96906f9e71d29be3b3559f86ee1fce2172d0b99456ce8588
 
 name: "Star List Maintainer"
 "on":
   schedule:
-  - cron: "57 3 * * *"
-    # Friendly format: daily (scattered)
+  - cron: "20 3 * * *"
   workflow_dispatch:
 
 permissions: {}
@@ -802,7 +801,7 @@ jobs:
           destination: /opt/gh-aw/actions
       - name: Download agent output artifact
         continue-on-error: true
-        uses: actions/download-artifact@37930b1c2abaa49bbe596cd826c3c89aef350131 # v7.0.0
+        uses: actions/download-artifact@018cc2cf5baa6db3ef3c5f8a56943fffe632ef53 # v6.0.0
         with:
           name: agent-output
           path: /tmp/gh-aw/safeoutputs/
@@ -909,13 +908,13 @@ jobs:
           destination: /opt/gh-aw/actions
       - name: Download agent artifacts
         continue-on-error: true
-        uses: actions/download-artifact@37930b1c2abaa49bbe596cd826c3c89aef350131 # v7.0.0
+        uses: actions/download-artifact@018cc2cf5baa6db3ef3c5f8a56943fffe632ef53 # v6.0.0
         with:
           name: agent-artifacts
           path: /tmp/gh-aw/threat-detection/
       - name: Download agent output artifact
         continue-on-error: true
-        uses: actions/download-artifact@37930b1c2abaa49bbe596cd826c3c89aef350131 # v7.0.0
+        uses: actions/download-artifact@018cc2cf5baa6db3ef3c5f8a56943fffe632ef53 # v6.0.0
         with:
           name: agent-output
           path: /tmp/gh-aw/threat-detection/
@@ -1021,7 +1020,7 @@ jobs:
           destination: /opt/gh-aw/actions
       - name: Download agent output artifact
         continue-on-error: true
-        uses: actions/download-artifact@37930b1c2abaa49bbe596cd826c3c89aef350131 # v7.0.0
+        uses: actions/download-artifact@018cc2cf5baa6db3ef3c5f8a56943fffe632ef53 # v6.0.0
         with:
           name: agent-output
           path: /tmp/gh-aw/safeoutputs/

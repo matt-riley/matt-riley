@@ -22,7 +22,7 @@
 # Sync checked star-list maintenance checklist commands into
 # `.github/star-list-assignments.yml` by opening an automated pull request.
 #
-# frontmatter-hash: e5b7292bfc2da097107434f9c2f9c8e25aa588bd27c083df05c9ab0bde1744df
+# frontmatter-hash: 75106a8e627a299101cf576735c7049488d018a41acee7c1035734e57b33bd52
 
 name: "Star List Assignment Sync"
 "on":
@@ -34,6 +34,8 @@ name: "Star List Assignment Sync"
     types:
     - edited
     - reopened
+  schedule:
+  - cron: "0 3 * * *"
   workflow_dispatch:
 
 permissions: {}
@@ -190,7 +192,7 @@ jobs:
           mkdir -p /tmp/gh-aw/safeoutputs
           mkdir -p /tmp/gh-aw/mcp-logs/safeoutputs
           cat > /opt/gh-aw/safeoutputs/config.json << 'GH_AW_SAFE_OUTPUTS_CONFIG_EOF'
-          {"create_pull_request":{},"missing_data":{},"missing_tool":{},"noop":{"max":1}}
+          {"create_pull_request":{},"missing_data":{},"missing_tool":{},"noop":{"max":1},"update_issue":{"max":1}}
           GH_AW_SAFE_OUTPUTS_CONFIG_EOF
           cat > /opt/gh-aw/safeoutputs/tools.json << 'GH_AW_SAFE_OUTPUTS_TOOLS_EOF'
           [
@@ -226,6 +228,70 @@ jobs:
                 "type": "object"
               },
               "name": "create_pull_request"
+            },
+            {
+              "description": "Update an existing GitHub issue's status, title, labels, assignees, milestone, or body. Body updates support replacing, appending to, prepending content, or updating a per-run \"island\" section. CONSTRAINTS: Maximum 1 issue(s) can be updated. Target: *. Body updates are allowed.",
+              "inputSchema": {
+                "additionalProperties": false,
+                "properties": {
+                  "assignees": {
+                    "description": "Replace the issue assignees with this list of GitHub usernames (e.g., ['octocat', 'mona']).",
+                    "items": {
+                      "type": "string"
+                    },
+                    "type": "array"
+                  },
+                  "body": {
+                    "description": "Issue body content in Markdown. For 'replace', this becomes the entire body. For 'append'/'prepend', this content is added with a separator and an attribution footer. For 'replace-island', only the run-specific section is updated.",
+                    "type": "string"
+                  },
+                  "issue_number": {
+                    "description": "Issue number to update. This is the numeric ID from the GitHub URL (e.g., 789 in github.com/owner/repo/issues/789). Required when the workflow target is '*' (any issue).",
+                    "type": [
+                      "number",
+                      "string"
+                    ]
+                  },
+                  "labels": {
+                    "description": "Replace the issue labels with this list (e.g., ['bug', 'tracking:foo']). Labels must exist in the repository.",
+                    "items": {
+                      "type": "string"
+                    },
+                    "type": "array"
+                  },
+                  "milestone": {
+                    "description": "Milestone number to assign (e.g., 1). Use null to clear.",
+                    "type": [
+                      "number",
+                      "string"
+                    ]
+                  },
+                  "operation": {
+                    "description": "How to update the issue body: 'append' (default - add to end with separator), 'prepend' (add to start with separator), 'replace' (overwrite entire body), or 'replace-island' (update a run-specific section).",
+                    "enum": [
+                      "replace",
+                      "append",
+                      "prepend",
+                      "replace-island"
+                    ],
+                    "type": "string"
+                  },
+                  "status": {
+                    "description": "New issue status: 'open' to reopen a closed issue, 'closed' to close an open issue.",
+                    "enum": [
+                      "open",
+                      "closed"
+                    ],
+                    "type": "string"
+                  },
+                  "title": {
+                    "description": "New issue title to replace the existing title.",
+                    "type": "string"
+                  }
+                },
+                "type": "object"
+              },
+              "name": "update_issue"
             },
             {
               "description": "Report that a tool or capability needed to complete the task is not available, or share any information you deem important about missing functionality or limitations. Use this when you cannot accomplish what was requested because the required functionality is missing or access is restricted.",
@@ -360,6 +426,32 @@ jobs:
                   "maxLength": 65000
                 }
               }
+            },
+            "update_issue": {
+              "defaultMax": 1,
+              "fields": {
+                "body": {
+                  "type": "string",
+                  "sanitize": true,
+                  "maxLength": 65000
+                },
+                "issue_number": {
+                  "issueOrPRNumber": true
+                },
+                "status": {
+                  "type": "string",
+                  "enum": [
+                    "open",
+                    "closed"
+                  ]
+                },
+                "title": {
+                  "type": "string",
+                  "sanitize": true,
+                  "maxLength": 128
+                }
+              },
+              "customValidation": "requiresOneOf:status,title,body"
             }
           }
           GH_AW_SAFE_OUTPUTS_VALIDATION_EOF
@@ -1059,7 +1151,7 @@ jobs:
         uses: actions/github-script@ed597411d8f924073f98dfc5c65a23a2325f34cd # v8
         env:
           GH_AW_AGENT_OUTPUT: ${{ env.GH_AW_AGENT_OUTPUT }}
-          GH_AW_SAFE_OUTPUTS_HANDLER_CONFIG: "{\"create_pull_request\":{\"base_branch\":\"${{ github.ref_name }}\",\"draft\":true,\"if_no_changes\":\"ignore\",\"labels\":[\"star-list-maintainer\"],\"max\":1,\"max_patch_size\":1024,\"title_prefix\":\"[star-list-sync] \"},\"missing_data\":{},\"missing_tool\":{}}"
+          GH_AW_SAFE_OUTPUTS_HANDLER_CONFIG: "{\"create_pull_request\":{\"base_branch\":\"${{ github.ref_name }}\",\"draft\":true,\"if_no_changes\":\"ignore\",\"labels\":[\"star-list-maintainer\"],\"max\":1,\"max_patch_size\":1024,\"title_prefix\":\"[star-list-sync] \"},\"missing_data\":{},\"missing_tool\":{},\"update_issue\":{\"allow_body\":true,\"max\":1,\"target\":\"*\"}}"
         with:
           github-token: ${{ secrets.GH_AW_GITHUB_TOKEN || secrets.GITHUB_TOKEN }}
           script: |

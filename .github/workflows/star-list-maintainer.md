@@ -6,7 +6,8 @@ description: |
   list actions when changes are needed.
 
 on:
-  schedule: daily
+  schedule:
+    - cron: "20 3 * * *"
   workflow_dispatch:
 
 permissions:
