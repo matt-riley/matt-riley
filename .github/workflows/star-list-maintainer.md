@@ -52,10 +52,13 @@ Produce reliable star-list maintenance recommendations from repository state fil
    - find an existing open issue in this repo titled `[star-list-maintainer] Star list maintenance actions`
    - if found, add one comment with the current run report
    - if not found, create that issue with the full report
-8. Report must include:
-   - exact repos to add/move/remove in list terms
+8. In every actionable report, include an `## Action checklist` section using strict checkbox command lines:
+   - `- [ ] ASSIGN owner/repo -> list-id` for add/move recommendations
+   - `- [ ] REMOVE owner/repo` for stale assignment removals
+9. Also include:
    - confidence/reasoning for each recommendation
-   - exact updates to apply in `star-list-assignments.yml` after manual list changes
+   - optional notes section for repos with no clear fit
+10. Keep command lines machine-parseable and unique per action (no duplicate command entries).
 
 ## Notes
 
