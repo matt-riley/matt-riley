@@ -32,7 +32,7 @@ jobs:
           import os
           import re
           import urllib.request
-          from datetime import datetime, timezone
+          from datetime import datetime, timedelta, timezone
           from pathlib import Path
 
           START_MARKER = "<!-- STARRED-REPOS-START -->"
@@ -94,50 +94,42 @@ jobs:
               starred.extend(data)
               url = next_url(link)
 
+          one_week_ago = datetime.now(timezone.utc) - timedelta(days=7)
+          recent_starred = []
+          for item in starred:
+              starred_at = item.get("starred_at")
+              if not starred_at:
+                  continue
+              try:
+                  starred_at_dt = datetime.fromisoformat(starred_at.replace("Z", "+00:00"))
+              except ValueError:
+                  continue
+              if starred_at_dt >= one_week_ago:
+                  recent_starred.append(item)
+
           lines = []
-          lines.append("## Starred Repositories (Weekly Snapshot)")
+          lines.append("## Starred Repositories (Past Week)")
           lines.append("")
           lines.append(f"_Last updated: {datetime.now(timezone.utc).strftime('%Y-%m-%d %H:%M:%S UTC')}_")
           lines.append(f"_Source account: `{source_user}`_")
           lines.append("")
-          lines.append(f"Total starred repositories: **{len(starred)}**")
+          lines.append(f"Total repositories starred this week: **{len(recent_starred)}**")
           lines.append("")
 
-          if not starred:
-              lines.append("_No starred repositories found._")
+          if not recent_starred:
+              lines.append("_No repositories starred in the past week._")
           else:
-              for index, item in enumerate(starred, start=1):
+              for index, item in enumerate(recent_starred, start=1):
                   repo = item.get("repo", {})
                   full_name = repo.get("full_name", "unknown/unknown")
                   html_url = repo.get("html_url", "")
-                  topics = repo.get("topics") or []
-                  topics_text = ", ".join(topics) if topics else "n/a"
-                  license_info = repo.get("license") or {}
-                  license_name = license_info.get("spdx_id") or license_info.get("name") or "n/a"
-                  homepage = text(repo.get("homepage"))
                   description = text(repo.get("description"))
-                  language = text(repo.get("language"))
-                  archived = "yes" if repo.get("archived") else "no"
-                  is_fork = "yes" if repo.get("fork") else "no"
-                  is_private = "yes" if repo.get("private") else "no"
+                  homepage = text(repo.get("homepage"))
 
                   lines.append(f"### {index}. [{full_name}]({html_url})")
                   lines.append("")
-                  lines.append(f"- Starred at: `{text(item.get('starred_at'))}`")
                   lines.append(f"- Description: {description}")
-                  lines.append(f"- Topics: {topics_text}")
-                  lines.append(f"- Language: `{language}`")
-                  lines.append(f"- License: `{license_name}`")
-                  lines.append(f"- Visibility: `{'private' if is_private == 'yes' else 'public'}`")
-                  lines.append(f"- Metrics: ⭐ `{repo.get('stargazers_count', 0)}` | Forks `{repo.get('forks_count', 0)}` | Watchers `{repo.get('watchers_count', 0)}` | Open issues `{repo.get('open_issues_count', 0)}`")
-                  lines.append(f"- Repo state: archived `{archived}` | fork `{is_fork}` | disabled `{'yes' if repo.get('disabled') else 'no'}`")
-                  lines.append(f"- Default branch: `{text(repo.get('default_branch'))}`")
-                  lines.append(f"- Created: `{text(repo.get('created_at'))}`")
-                  lines.append(f"- Updated: `{text(repo.get('updated_at'))}`")
-                  lines.append(f"- Last push: `{text(repo.get('pushed_at'))}`")
-                  lines.append(f"- Size (KB): `{repo.get('size', 0)}`")
                   lines.append(f"- Homepage: {homepage}")
-                  lines.append(f"- Clone URL: `{text(repo.get('clone_url'))}`")
                   lines.append("")
 
           block = f"{START_MARKER}\n" + "\n".join(lines).rstrip() + f"\n{END_MARKER}"
