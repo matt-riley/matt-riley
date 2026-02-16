@@ -3,10 +3,50 @@
 <!-- STARRED-REPOS-START -->
 ## Starred Repositories (Past Week)
 
-_Last updated: 2026-02-13 17:45:49 UTC_
+_Last updated: 2026-02-16 04:48:30 UTC_
 _Source account: `matt-riley`_
 
-Total repositories starred this week: **7**
+Total repositories starred this week: **8**
+
+### [lettertwo/occurrence.nvim](https://github.com/lettertwo/occurrence.nvim)
+
+> A Neovim plugin to mark occurrences of words/patterns/selections in a buffer and perform operations on them.  Inspired by vim-mode-plus's occurrence feature.
+
+**Homepage:** n/a
+
+---
+
+### [aikhe/wrapped.nvim](https://github.com/aikhe/wrapped.nvim)
+
+> View your Neovim configuration insights, history, and heatmaps.
+
+**Homepage:** n/a
+
+---
+
+### [bajor/nvim-raccoon](https://github.com/bajor/nvim-raccoon)
+
+> Neovim plugin for reviewing PRs and browsing commits
+
+**Homepage:** n/a
+
+---
+
+### [zion-off/mole.nvim](https://github.com/zion-off/mole.nvim)
+
+> code annotation plugin for neovim
+
+**Homepage:** n/a
+
+---
+
+### [michael-andreuzza/bearnie](https://github.com/michael-andreuzza/bearnie)
+
+> Accessible components for Astro and Tailwind CSS. Components are copied to your project. You own and control the code.
+
+**Homepage:** [https://bearnie.dev](https://bearnie.dev)
+
+---
 
 ### [github/gh-aw](https://github.com/github/gh-aw)
 
@@ -26,39 +66,7 @@ Total repositories starred this week: **7**
 
 ### [lucasgelfond/zerobrew](https://github.com/lucasgelfond/zerobrew)
 
-> A drop-in, 5-20x faster, experimental Homebrew alternative
-
-**Homepage:** n/a
-
----
-
-### [rapidaai/voice-ai](https://github.com/rapidaai/voice-ai)
-
-> Rapida is an open-source, end-to-end voice AI orchestration platform for building real-time conversational voice agents with audio streaming, STT, TTS, VAD, multi-channel integration, agent state management, and observability.
-
-**Homepage:** [https://rapida.ai](https://rapida.ai)
-
----
-
-### [danyjacob45/go-concurrency-exercises](https://github.com/danyjacob45/go-concurrency-exercises)
-
-> A comprehensive set of exercises to master Go concurrency nuances and patterns
-
-**Homepage:** n/a
-
----
-
-### [shanraisshan/claude-code-best-practice](https://github.com/shanraisshan/claude-code-best-practice)
-
-> practice made claude perfect
-
-**Homepage:** n/a
-
----
-
-### [charmbracelet/fantasy](https://github.com/charmbracelet/fantasy)
-
-> Build AI agents with Go. Multiple providers, multiple models, one API 🧙
+> A 5-20x faster experimental Homebrew alternative
 
 **Homepage:** n/a
 <!-- STARRED-REPOS-END -->
