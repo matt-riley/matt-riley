@@ -3,70 +3,94 @@
 <!-- STARRED-REPOS-START -->
 ## Starred Repositories (Past Week)
 
-_Last updated: 2026-02-16 04:48:30 UTC_
+_Last updated: 2026-02-23 04:47:55 UTC_
 _Source account: `matt-riley`_
 
-Total repositories starred this week: **8**
+Total repositories starred this week: **11**
 
-### [lettertwo/occurrence.nvim](https://github.com/lettertwo/occurrence.nvim)
+### [ComposioHQ/agent-orchestrator](https://github.com/ComposioHQ/agent-orchestrator)
 
-> A Neovim plugin to mark occurrences of words/patterns/selections in a buffer and perform operations on them.  Inspired by vim-mode-plus's occurrence feature.
+> Agentic orchestrator for parallel coding agents — plans tasks, spawns agents, and autonomously handles CI    fixes, merge conflicts, and code reviews.
+
+**Homepage:** [https://composio.dev](https://composio.dev)
+
+---
+
+### [aarondfrancis/counselors](https://github.com/aarondfrancis/counselors)
+
+> Fan out prompts to multiple AI coding agents in parallel
 
 **Homepage:** n/a
 
 ---
 
-### [aikhe/wrapped.nvim](https://github.com/aikhe/wrapped.nvim)
+### [KittenML/KittenTTS](https://github.com/KittenML/KittenTTS)
 
-> View your Neovim configuration insights, history, and heatmaps.
-
-**Homepage:** n/a
-
----
-
-### [bajor/nvim-raccoon](https://github.com/bajor/nvim-raccoon)
-
-> Neovim plugin for reviewing PRs and browsing commits
+> State-of-the-art TTS model under 25MB 😻
 
 **Homepage:** n/a
 
 ---
 
-### [zion-off/mole.nvim](https://github.com/zion-off/mole.nvim)
+### [knadh/oat](https://github.com/knadh/oat)
 
-> code annotation plugin for neovim
+> Ultra-lightweight, zero dependency, semantic HTML, CSS, JS UI library. ~8KB min+gz.
+
+**Homepage:** [https://oat.ink](https://oat.ink)
+
+---
+
+### [bigguy345/Github-Copilot-Atlas](https://github.com/bigguy345/Github-Copilot-Atlas)
+
+> n/a
 
 **Homepage:** n/a
 
 ---
 
-### [michael-andreuzza/bearnie](https://github.com/michael-andreuzza/bearnie)
+### [martindur/zdiff.nvim](https://github.com/martindur/zdiff.nvim)
 
-> Accessible components for Astro and Tailwind CSS. Components are copied to your project. You own and control the code.
+> Diff plugin inspired by Zed's multi-buffer diff view
 
-**Homepage:** [https://bearnie.dev](https://bearnie.dev)
-
----
-
-### [github/gh-aw](https://github.com/github/gh-aw)
-
-> GitHub Agentic Workflows
-
-**Homepage:** [https://gh.io/gh-aw](https://gh.io/gh-aw)
+**Homepage:** n/a
 
 ---
 
-### [aperturerobotics/goscript](https://github.com/aperturerobotics/goscript)
+### [supermacro/neverthrow](https://github.com/supermacro/neverthrow)
 
-> Go to TypeScript transpiler
+> Type-Safe Errors for JS & TypeScript
 
-**Homepage:** [https://goscript.spacewave.app](https://goscript.spacewave.app)
+**Homepage:** n/a
 
 ---
 
-### [lucasgelfond/zerobrew](https://github.com/lucasgelfond/zerobrew)
+### [jamiepine/voicebox](https://github.com/jamiepine/voicebox)
 
-> A 5-20x faster experimental Homebrew alternative
+> The open-source voice synthesis studio powered by Qwen3-TTS.
+
+**Homepage:** [https://voicebox.sh](https://voicebox.sh)
+
+---
+
+### [sipeed/picoclaw](https://github.com/sipeed/picoclaw)
+
+> Tiny, Fast, and Deployable anywhere — automate the mundane, unleash your creativity
+
+**Homepage:** [https://picoclaw.io](https://picoclaw.io)
+
+---
+
+### [localgpt-app/localgpt](https://github.com/localgpt-app/localgpt)
+
+> Local AI assistant, dreaming explorable worlds.
+
+**Homepage:** [https://localgpt.app/](https://localgpt.app/)
+
+---
+
+### [hesamsheikh/awesome-openclaw-usecases](https://github.com/hesamsheikh/awesome-openclaw-usecases)
+
+> A community collection of OpenClaw use cases for making life easier.
 
 **Homepage:** n/a
 <!-- STARRED-REPOS-END -->
