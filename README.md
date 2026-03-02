@@ -3,94 +3,86 @@
 <!-- STARRED-REPOS-START -->
 ## Starred Repositories (Past Week)
 
-_Last updated: 2026-02-23 04:47:55 UTC_
+_Last updated: 2026-03-02 04:40:57 UTC_
 _Source account: `matt-riley`_
 
-Total repositories starred this week: **11**
+Total repositories starred this week: **10**
 
-### [ComposioHQ/agent-orchestrator](https://github.com/ComposioHQ/agent-orchestrator)
+### [sivchari/awsim](https://github.com/sivchari/awsim)
 
-> Agentic orchestrator for parallel coding agents — plans tasks, spawns agents, and autonomously handles CI    fixes, merge conflicts, and code reviews.
-
-**Homepage:** [https://composio.dev](https://composio.dev)
-
----
-
-### [aarondfrancis/counselors](https://github.com/aarondfrancis/counselors)
-
-> Fan out prompts to multiple AI coding agents in parallel
+> A lightweight AWS service emulator written in Go for CI/CD environments
 
 **Homepage:** n/a
 
 ---
 
-### [KittenML/KittenTTS](https://github.com/KittenML/KittenTTS)
+### [backendsystems/nibble](https://github.com/backendsystems/nibble)
 
-> State-of-the-art TTS model under 25MB 😻
-
-**Homepage:** n/a
-
----
-
-### [knadh/oat](https://github.com/knadh/oat)
-
-> Ultra-lightweight, zero dependency, semantic HTML, CSS, JS UI library. ~8KB min+gz.
-
-**Homepage:** [https://oat.ink](https://oat.ink)
-
----
-
-### [bigguy345/Github-Copilot-Atlas](https://github.com/bigguy345/Github-Copilot-Atlas)
-
-> n/a
+> a local network scanner tui tool
 
 **Homepage:** n/a
 
 ---
 
-### [martindur/zdiff.nvim](https://github.com/martindur/zdiff.nvim)
+### [odvcencio/gotreesitter](https://github.com/odvcencio/gotreesitter)
 
-> Diff plugin inspired by Zed's multi-buffer diff view
-
-**Homepage:** n/a
-
----
-
-### [supermacro/neverthrow](https://github.com/supermacro/neverthrow)
-
-> Type-Safe Errors for JS & TypeScript
+> Pure Go tree-sitter runtime
 
 **Homepage:** n/a
 
 ---
 
-### [jamiepine/voicebox](https://github.com/jamiepine/voicebox)
+### [dlvhdr/diffnav](https://github.com/dlvhdr/diffnav)
 
-> The open-source voice synthesis studio powered by Qwen3-TTS.
-
-**Homepage:** [https://voicebox.sh](https://voicebox.sh)
-
----
-
-### [sipeed/picoclaw](https://github.com/sipeed/picoclaw)
-
-> Tiny, Fast, and Deployable anywhere — automate the mundane, unleash your creativity
-
-**Homepage:** [https://picoclaw.io](https://picoclaw.io)
-
----
-
-### [localgpt-app/localgpt](https://github.com/localgpt-app/localgpt)
-
-> Local AI assistant, dreaming explorable worlds.
-
-**Homepage:** [https://localgpt.app/](https://localgpt.app/)
-
----
-
-### [hesamsheikh/awesome-openclaw-usecases](https://github.com/hesamsheikh/awesome-openclaw-usecases)
-
-> A community collection of OpenClaw use cases for making life easier.
+> A git diff pager based on delta but with a file tree, à la GitHub.
 
 **Homepage:** n/a
+
+---
+
+### [milanglacier/minuet-ai.nvim](https://github.com/milanglacier/minuet-ai.nvim)
+
+> 💃 Dance with Intelligence in Your Code. Minuet offers code completion as-you-type from popular LLMs including OpenAI, Gemini, Claude, Ollama, Llama.cpp, Codestral, and more.
+
+**Homepage:** n/a
+
+---
+
+### [abhigyanpatwari/GitNexus](https://github.com/abhigyanpatwari/GitNexus)
+
+> GitNexus: The Zero-Server Code Intelligence Engine -       GitNexus is a client-side knowledge graph creator that runs entirely in your browser. Drop in a GitHub repo or ZIP file, and get an interactive knowledge graph wit a built in Graph RAG Agent. Perfect for code exploration
+
+**Homepage:** [https://gitnexus.vercel.app](https://gitnexus.vercel.app)
+
+---
+
+### [3ndG4me/socat](https://github.com/3ndG4me/socat)
+
+> Mirror of the socat source code with pre-built releases for Linux (x64 and x86), Windows (x64 and x86), and MacOS (x64)
+
+**Homepage:** [http://www.dest-unreach.org/socat/](http://www.dest-unreach.org/socat/)
+
+---
+
+### [AlexsJones/llmfit](https://github.com/AlexsJones/llmfit)
+
+> Hundreds models & providers. One command to find what runs on your hardware.
+
+**Homepage:** n/a
+
+---
+
+### [PeonPing/peon-ping](https://github.com/PeonPing/peon-ping)
+
+> Warcraft III Peon voice notifications (+ more!) for Claude Code, Codex, IDEs, and any AI agent. Stop babysitting your terminal. Employ a Peon today.
+
+**Homepage:** [https://www.peonping.com](https://www.peonping.com)
+
+---
+
+### [decaporg/decap-cms](https://github.com/decaporg/decap-cms)
+
+> A Git-based CMS for Static Site Generators
+
+**Homepage:** [https://decapcms.org](https://decapcms.org)
 <!-- STARRED-REPOS-END -->
