@@ -3,86 +3,62 @@
 <!-- STARRED-REPOS-START -->
 ## Starred Repositories (Past Week)
 
-_Last updated: 2026-03-02 04:40:57 UTC_
+_Last updated: 2026-03-09 04:42:18 UTC_
 _Source account: `matt-riley`_
 
-Total repositories starred this week: **10**
+Total repositories starred this week: **7**
 
-### [sivchari/awsim](https://github.com/sivchari/awsim)
+### [rtk-ai/rtk](https://github.com/rtk-ai/rtk)
 
-> A lightweight AWS service emulator written in Go for CI/CD environments
+> CLI proxy that reduces LLM token consumption by 60-90% on common dev commands. Single Rust binary, zero dependencies
+
+**Homepage:** [https://www.rtk-ai.app](https://www.rtk-ai.app)
+
+---
+
+### [tmuxpack/tpack](https://github.com/tmuxpack/tpack)
+
+> A drop-in replacement for tmux-plugin-manager (tpm) with a TUI. Written in Go.
 
 **Homepage:** n/a
 
 ---
 
-### [backendsystems/nibble](https://github.com/backendsystems/nibble)
+### [vercel-labs/agent-browser](https://github.com/vercel-labs/agent-browser)
 
-> a local network scanner tui tool
+> Browser automation CLI for AI agents
+
+**Homepage:** [https://agent-browser.dev](https://agent-browser.dev)
+
+---
+
+### [pranshuparmar/witr](https://github.com/pranshuparmar/witr)
+
+> Why is this running?
 
 **Homepage:** n/a
 
 ---
 
-### [odvcencio/gotreesitter](https://github.com/odvcencio/gotreesitter)
+### [flamestro/deff](https://github.com/flamestro/deff)
 
-> Pure Go tree-sitter runtime
-
-**Homepage:** n/a
-
----
-
-### [dlvhdr/diffnav](https://github.com/dlvhdr/diffnav)
-
-> A git diff pager based on delta but with a file tree, à la GitHub.
+> interactive, side-by-side file review for git diffs with per-file navigation, vertical and horizontal scrolling, syntax highlighting, and added/deleted line tinting
 
 **Homepage:** n/a
 
 ---
 
-### [milanglacier/minuet-ai.nvim](https://github.com/milanglacier/minuet-ai.nvim)
+### [msitarzewski/agency-agents](https://github.com/msitarzewski/agency-agents)
 
-> 💃 Dance with Intelligence in Your Code. Minuet offers code completion as-you-type from popular LLMs including OpenAI, Gemini, Claude, Ollama, Llama.cpp, Codestral, and more.
-
-**Homepage:** n/a
-
----
-
-### [abhigyanpatwari/GitNexus](https://github.com/abhigyanpatwari/GitNexus)
-
-> GitNexus: The Zero-Server Code Intelligence Engine -       GitNexus is a client-side knowledge graph creator that runs entirely in your browser. Drop in a GitHub repo or ZIP file, and get an interactive knowledge graph wit a built in Graph RAG Agent. Perfect for code exploration
-
-**Homepage:** [https://gitnexus.vercel.app](https://gitnexus.vercel.app)
-
----
-
-### [3ndG4me/socat](https://github.com/3ndG4me/socat)
-
-> Mirror of the socat source code with pre-built releases for Linux (x64 and x86), Windows (x64 and x86), and MacOS (x64)
-
-**Homepage:** [http://www.dest-unreach.org/socat/](http://www.dest-unreach.org/socat/)
-
----
-
-### [AlexsJones/llmfit](https://github.com/AlexsJones/llmfit)
-
-> Hundreds models & providers. One command to find what runs on your hardware.
+> A complete AI agency at your fingertips - From frontend wizards to Reddit community ninjas, from whimsy injectors to reality checkers. Each agent is a specialized expert with personality, processes, and proven deliverables.
 
 **Homepage:** n/a
 
 ---
 
-### [PeonPing/peon-ping](https://github.com/PeonPing/peon-ping)
+### [pinchtab/pinchtab](https://github.com/pinchtab/pinchtab)
 
-> Warcraft III Peon voice notifications (+ more!) for Claude Code, Codex, IDEs, and any AI agent. Stop babysitting your terminal. Employ a Peon today.
+> High-performance browser automation bridge and multi-instance orchestrator with advanced stealth injection and real-time dashboard.
 
-**Homepage:** [https://www.peonping.com](https://www.peonping.com)
-
----
-
-### [decaporg/decap-cms](https://github.com/decaporg/decap-cms)
-
-> A Git-based CMS for Static Site Generators
-
-**Homepage:** [https://decapcms.org](https://decapcms.org)
+**Homepage:** n/a
 <!-- STARRED-REPOS-END -->
