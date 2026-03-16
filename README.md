@@ -3,62 +3,38 @@
 <!-- STARRED-REPOS-START -->
 ## Starred Repositories (Past Week)
 
-_Last updated: 2026-03-09 04:42:18 UTC_
+_Last updated: 2026-03-16 05:00:03 UTC_
 _Source account: `matt-riley`_
 
-Total repositories starred this week: **7**
+Total repositories starred this week: **4**
 
-### [rtk-ai/rtk](https://github.com/rtk-ai/rtk)
+### [garrytan/gstack](https://github.com/garrytan/gstack)
 
-> CLI proxy that reduces LLM token consumption by 60-90% on common dev commands. Single Rust binary, zero dependencies
-
-**Homepage:** [https://www.rtk-ai.app](https://www.rtk-ai.app)
-
----
-
-### [tmuxpack/tpack](https://github.com/tmuxpack/tpack)
-
-> A drop-in replacement for tmux-plugin-manager (tpm) with a TUI. Written in Go.
+> Use Garry Tan's exact Claude Code setup: 6 opinionated tools that serve as CEO, Eng Manager, Release Manager and QA Engineer
 
 **Homepage:** n/a
 
 ---
 
-### [vercel-labs/agent-browser](https://github.com/vercel-labs/agent-browser)
+### [mcollina/skills](https://github.com/mcollina/skills)
 
-> Browser automation CLI for AI agents
-
-**Homepage:** [https://agent-browser.dev](https://agent-browser.dev)
-
----
-
-### [pranshuparmar/witr](https://github.com/pranshuparmar/witr)
-
-> Why is this running?
+> My own collection of skills for modern Node.js development
 
 **Homepage:** n/a
 
 ---
 
-### [flamestro/deff](https://github.com/flamestro/deff)
+### [open-webui/open-terminal](https://github.com/open-webui/open-terminal)
 
-> interactive, side-by-side file review for git diffs with per-file navigation, vertical and horizontal scrolling, syntax highlighting, and added/deleted line tinting
+> A computer you can curl ⚡
 
-**Homepage:** n/a
-
----
-
-### [msitarzewski/agency-agents](https://github.com/msitarzewski/agency-agents)
-
-> A complete AI agency at your fingertips - From frontend wizards to Reddit community ninjas, from whimsy injectors to reality checkers. Each agent is a specialized expert with personality, processes, and proven deliverables.
-
-**Homepage:** n/a
+**Homepage:** [https://openterminal.sh/](https://openterminal.sh/)
 
 ---
 
-### [pinchtab/pinchtab](https://github.com/pinchtab/pinchtab)
+### [owncast/owncast](https://github.com/owncast/owncast)
 
-> High-performance browser automation bridge and multi-instance orchestrator with advanced stealth injection and real-time dashboard.
+> Take control over your live stream video by running it yourself.  Streaming + chat out of the box.
 
-**Homepage:** n/a
+**Homepage:** [https://owncast.online](https://owncast.online)
 <!-- STARRED-REPOS-END -->
