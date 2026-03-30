@@ -3,62 +3,102 @@
 <!-- STARRED-REPOS-START -->
 ## Starred Repositories (Past Week)
 
-_Last updated: 2026-03-23 04:51:14 UTC_
+_Last updated: 2026-03-30 05:04:20 UTC_
 _Source account: `matt-riley`_
 
-Total repositories starred this week: **7**
+Total repositories starred this week: **12**
 
-### [rustdesk/rustdesk](https://github.com/rustdesk/rustdesk)
+### [specialfish9/gohole](https://github.com/specialfish9/gohole)
 
-> An open-source remote desktop application designed for self-hosting, as an alternative to TeamViewer.
-
-**Homepage:** [https://rustdesk.com](https://rustdesk.com)
-
----
-
-### [carlos-algms/agentic.nvim](https://github.com/carlos-algms/agentic.nvim)
-
-> Agentic Chat Interface directly in Neovim with ACP providers from Claude-Code, Gemini, Codex, OpenCode, and Cursor-agent
+> Self-hosted DNS-based Ad and tracker blocker, written in Go
 
 **Homepage:** n/a
 
 ---
 
-### [strongdm/attractor](https://github.com/strongdm/attractor)
+### [caliber-ai-org/ai-setup](https://github.com/caliber-ai-org/ai-setup)
 
-> nlspec of StrongDM's Attractor, a non-interactive Coding Agent sufficient for use in a Software Factory
+> Continuously sync your AI setups with one command. Codebase tailor suited agent skills, MCPs and config files for Claude Code, Cursor, and Codex.
 
-**Homepage:** [https://factory.strongdm.ai/products/attractor](https://factory.strongdm.ai/products/attractor)
+**Homepage:** [https://caliber-ai.dev](https://caliber-ai.dev)
 
 ---
 
-### [ASSERT-KTH/meta-circular](https://github.com/ASSERT-KTH/meta-circular)
+### [firecrawl/firecrawl](https://github.com/firecrawl/firecrawl)
 
-> meta-circular coding agent
+> 🔥 The Web Data API for AI - Turn entire websites into LLM-ready markdown or structured data
+
+**Homepage:** [https://firecrawl.dev](https://firecrawl.dev)
+
+---
+
+### [RecoLabs/gnata](https://github.com/RecoLabs/gnata)
+
+> Pure-Go implementation of JSONata 2.x for high-throughput streaming evaluation
 
 **Homepage:** n/a
 
 ---
 
-### [templui/templui](https://github.com/templui/templui)
+### [vectorize-io/hindsight](https://github.com/vectorize-io/hindsight)
 
-> A growing collection of beautifully designed UI components for Go and templ. Install via CLI. Customize everything. Own your code.
+> Hindsight: Agent Memory That  Learns
 
-**Homepage:** [https://templui.io](https://templui.io)
-
----
-
-### [lightpanda-io/browser](https://github.com/lightpanda-io/browser)
-
-> Lightpanda: the headless browser designed for AI and automation
-
-**Homepage:** [https://lightpanda.io](https://lightpanda.io)
+**Homepage:** [https://hindsight.vectorize.io/](https://hindsight.vectorize.io/)
 
 ---
 
-### [ShiftinBits/pmux-agent](https://github.com/ShiftinBits/pmux-agent)
+### [millionco/expect](https://github.com/millionco/expect)
 
-> Agent and CLI package for pmux
+> Let agents test your code in a real browser
 
-**Homepage:** [https://docs.pmux.io](https://docs.pmux.io)
+**Homepage:** [https://expect.dev](https://expect.dev)
+
+---
+
+### [HKUDS/OpenSpace](https://github.com/HKUDS/OpenSpace)
+
+> "OpenSpace: Make Your Agents: Smarter, Low-Cost, Self-Evolving" -- Community: https://open-space.cloud/
+
+**Homepage:** n/a
+
+---
+
+### [patrickchugh/terravision](https://github.com/patrickchugh/terravision)
+
+> Terravision creates Professional Cloud Architecture Diagrams from your Terraform code automatically. Supports AWS, Google and Azure.
+
+**Homepage:** n/a
+
+---
+
+### [paulalden/dotfiles](https://github.com/paulalden/dotfiles)
+
+> n/a
+
+**Homepage:** n/a
+
+---
+
+### [JKHeadley/instar](https://github.com/JKHeadley/instar)
+
+> Persistent Claude Code agents with scheduling, sessions, memory, and Telegram.
+
+**Homepage:** [https://instar.sh](https://instar.sh)
+
+---
+
+### [bramcohen/manyana](https://github.com/bramcohen/manyana)
+
+> n/a
+
+**Homepage:** n/a
+
+---
+
+### [dashersw/gea](https://github.com/dashersw/gea)
+
+> A batteries-included, reactive JavaScript UI framework. No virtual DOM. Compile-time JSX transforms. Proxy-based stores. Surgical DOM patching.
+
+**Homepage:** [https://geajs.com](https://geajs.com)
 <!-- STARRED-REPOS-END -->
