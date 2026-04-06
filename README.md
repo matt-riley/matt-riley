@@ -3,102 +3,102 @@
 <!-- STARRED-REPOS-START -->
 ## Starred Repositories (Past Week)
 
-_Last updated: 2026-03-30 05:04:20 UTC_
+_Last updated: 2026-04-06 05:03:57 UTC_
 _Source account: `matt-riley`_
 
 Total repositories starred this week: **12**
 
-### [specialfish9/gohole](https://github.com/specialfish9/gohole)
+### [samleeney/tmux-agent-status](https://github.com/samleeney/tmux-agent-status)
 
-> Self-hosted DNS-based Ad and tracker blocker, written in Go
-
-**Homepage:** n/a
-
----
-
-### [caliber-ai-org/ai-setup](https://github.com/caliber-ai-org/ai-setup)
-
-> Continuously sync your AI setups with one command. Codebase tailor suited agent skills, MCPs and config files for Claude Code, Cursor, and Codex.
-
-**Homepage:** [https://caliber-ai.dev](https://caliber-ai.dev)
-
----
-
-### [firecrawl/firecrawl](https://github.com/firecrawl/firecrawl)
-
-> 🔥 The Web Data API for AI - Turn entire websites into LLM-ready markdown or structured data
-
-**Homepage:** [https://firecrawl.dev](https://firecrawl.dev)
-
----
-
-### [RecoLabs/gnata](https://github.com/RecoLabs/gnata)
-
-> Pure-Go implementation of JSONata 2.x for high-throughput streaming evaluation
+> See at a glance which tmux sessions have Claude working vs idle
 
 **Homepage:** n/a
 
 ---
 
-### [vectorize-io/hindsight](https://github.com/vectorize-io/hindsight)
+### [kevinrgu/autoagent](https://github.com/kevinrgu/autoagent)
 
-> Hindsight: Agent Memory That  Learns
-
-**Homepage:** [https://hindsight.vectorize.io/](https://hindsight.vectorize.io/)
-
----
-
-### [millionco/expect](https://github.com/millionco/expect)
-
-> Let agents test your code in a real browser
-
-**Homepage:** [https://expect.dev](https://expect.dev)
-
----
-
-### [HKUDS/OpenSpace](https://github.com/HKUDS/OpenSpace)
-
-> "OpenSpace: Make Your Agents: Smarter, Low-Cost, Self-Evolving" -- Community: https://open-space.cloud/
+> autonomous harness engineering
 
 **Homepage:** n/a
 
 ---
 
-### [patrickchugh/terravision](https://github.com/patrickchugh/terravision)
+### [NousResearch/hermes-agent](https://github.com/NousResearch/hermes-agent)
 
-> Terravision creates Professional Cloud Architecture Diagrams from your Terraform code automatically. Supports AWS, Google and Azure.
+> The agent that grows with you
+
+**Homepage:** [https://hermes-agent.nousresearch.com](https://hermes-agent.nousresearch.com)
+
+---
+
+### [HKUDS/OpenHarness](https://github.com/HKUDS/OpenHarness)
+
+> "OpenHarness: Open Agent Harness"
 
 **Homepage:** n/a
 
 ---
 
-### [paulalden/dotfiles](https://github.com/paulalden/dotfiles)
+### [emdash-cms/emdash](https://github.com/emdash-cms/emdash)
 
-> n/a
+> EmDash is a full-stack TypeScript CMS based on Astro; the spiritual successor to WordPress
+
+**Homepage:** [https://emdashcms.com](https://emdashcms.com)
+
+---
+
+### [thoughtfulllc/gridland](https://github.com/thoughtfulllc/gridland)
+
+> Terminal apps that run anywhere - even the browser!
+
+**Homepage:** [https://gridland.io](https://gridland.io)
+
+---
+
+### [volcengine/OpenViking](https://github.com/volcengine/OpenViking)
+
+> OpenViking is an open-source context database designed specifically for AI Agents(such as openclaw). OpenViking unifies the management of context (memory, resources, and skills) that Agents need through a file system paradigm, enabling hierarchical context delivery and self-evolving.
+
+**Homepage:** [https://openviking.ai](https://openviking.ai)
+
+---
+
+### [VoltAgent/awesome-design-md](https://github.com/VoltAgent/awesome-design-md)
+
+> Collection of DESIGN.md files that capture design systems from popular websites. Drop one into your project and let coding agents build matching UI.
 
 **Homepage:** n/a
 
 ---
 
-### [JKHeadley/instar](https://github.com/JKHeadley/instar)
+### [pbakaus/impeccable](https://github.com/pbakaus/impeccable)
 
-> Persistent Claude Code agents with scheduling, sessions, memory, and Telegram.
+> The design language that makes your AI harness better at design.
 
-**Homepage:** [https://instar.sh](https://instar.sh)
-
----
-
-### [bramcohen/manyana](https://github.com/bramcohen/manyana)
-
-> n/a
-
-**Homepage:** n/a
+**Homepage:** [https://impeccable.style](https://impeccable.style)
 
 ---
 
-### [dashersw/gea](https://github.com/dashersw/gea)
+### [canyonroad/agentsh](https://github.com/canyonroad/agentsh)
 
-> A batteries-included, reactive JavaScript UI framework. No virtual DOM. Compile-time JSX transforms. Proxy-based stores. Surgical DOM patching.
+> Execution-Layer Security (ELS) for AI agents — policy-enforced shell with audit.
 
-**Homepage:** [https://geajs.com](https://geajs.com)
+**Homepage:** [https://www.agentsh.org](https://www.agentsh.org)
+
+---
+
+### [chenglou/pretext](https://github.com/chenglou/pretext)
+
+> Fast, accurate & comprehensive text measurement & layout
+
+**Homepage:** [http://chenglou.me/pretext/](http://chenglou.me/pretext/)
+
+---
+
+### [karansinghgit/speaktype](https://github.com/karansinghgit/speaktype)
+
+> 100% offline, open-source, Voice Dictation app for macOS
+
+**Homepage:** [https://tryspeaktype.com](https://tryspeaktype.com)
 <!-- STARRED-REPOS-END -->
