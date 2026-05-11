@@ -3,46 +3,54 @@
 <!-- STARRED-REPOS-START -->
 ## Starred Repositories (Past Week)
 
-_Last updated: 2026-05-04 05:17:13 UTC_
+_Last updated: 2026-05-11 05:27:58 UTC_
 _Source account: `matt-riley`_
 
-Total repositories starred this week: **5**
+Total repositories starred this week: **6**
 
-### [nicobailon/pi-web-access](https://github.com/nicobailon/pi-web-access)
+### [var-gg/pindoc](https://github.com/var-gg/pindoc)
 
-> Web search and content extraction extension for Pi coding agent
-
-**Homepage:** n/a
-
----
-
-### [paperclipai/paperclip](https://github.com/paperclipai/paperclip)
-
-> Open-source orchestration for zero-human companies
-
-**Homepage:** [https://paperclip.ing](https://paperclip.ing)
-
----
-
-### [jshchnz/codemaxxing](https://github.com/jshchnz/codemaxxing)
-
-> n/a
+> Where agent work becomes lasting memory. The wiki you never type into.
 
 **Homepage:** n/a
 
 ---
 
-### [PanAchy/copilot-arewecooked](https://github.com/PanAchy/copilot-arewecooked)
+### [Hmbown/DeepSeek-TUI](https://github.com/Hmbown/DeepSeek-TUI)
 
-> Estimate your GitHub Copilot AI-credit cost in preparation for June 1st.
+> Coding agent for DeepSeek models that runs in your terminal
+
+**Homepage:** [https://deepseek-tui.com/](https://deepseek-tui.com/)
+
+---
+
+### [antirez/ds4](https://github.com/antirez/ds4)
+
+> DeepSeek 4 Flash local inference engine for Metal
 
 **Homepage:** n/a
 
 ---
 
-### [mattpocock/skills](https://github.com/mattpocock/skills)
+### [Agent-Field/agentfield](https://github.com/Agent-Field/agentfield)
 
-> Skills for Real Engineers. Straight from my .claude directory.
+> Build, run and scale AI agents like API and microservices - observable,auditable and identity-aware from day one.
+
+**Homepage:** [http://www.agentfield.ai](http://www.agentfield.ai)
+
+---
+
+### [qualisero/awesome-pi-agent](https://github.com/qualisero/awesome-pi-agent)
+
+> Awesome list of add-ons, hooks, tools, skills, and resources for the pi coding agent (pi-mono).
 
 **Homepage:** n/a
+
+---
+
+### [Vanilagy/mediabunny](https://github.com/Vanilagy/mediabunny)
+
+> Pure TypeScript media toolkit for reading, writing, and converting video and audio files, directly in the browser.
+
+**Homepage:** [https://mediabunny.dev/](https://mediabunny.dev/)
 <!-- STARRED-REPOS-END -->
