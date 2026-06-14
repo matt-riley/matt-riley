@@ -1,4 +1,12 @@
-![Github Logo](./github-logo.svg)
+![Matt Riley](assets/profile-header.jpg)
+
+**Matt Riley** — Leeds, United Kingdom
+
+Senior software engineer building backend systems, web applications, and developer tooling. Neovim maximalist, terminal UI tinkerer, and agent infrastructure explorer. 80s/90s hip-hop on heavy rotation.
+
+[Blog & résumé](https://mattriley.work) · [Tools, plugins & Homebrew formulas](https://mattriley.tools)
+
+The crates below are regenerated every Monday from my recent GitHub stars — a live signal of tools and ideas currently on rotation.
 
 <!-- STARRED-REPOS-START -->
 ## Starred Repositories (Past Week)
